@@ -13,13 +13,12 @@ export default {
   }),
 
   mounted() {
-    this.$router.push("/index");
+    this.$router.push("/class");
   }
 };
 </script>
 
 <style>
-
 #app {
   /* font-family: "Nanum Gothic", sans-serif; */
   font-family: "NanumSquare", sans-serif;
@@ -90,7 +89,7 @@ export default {
   font-family: "GmarketSansBold", sans-serif !important;
 }
 
-.text-purple{
+.text-purple {
   color: #5b3690;
 }
 
@@ -101,5 +100,4 @@ export default {
   font-weight: normal;
   font-style: normal;
 }
-
 </style>
