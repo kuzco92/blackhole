@@ -1,7 +1,7 @@
 
 <template>
   <v-app style="background-color:#00000000">
-    <v-container fluid class="py-0 px-0">
+    <v-container fluid class=" px-0 py-0">
       <v-img src="../assets/main_header_img.jpg">
         <div class="white--text d-flex">
           <span
@@ -28,7 +28,7 @@
             >영 단 어 프 로 그 램
           </span>
         </div>
-        <v-container style="height:100%" fluid>
+        <v-container class="pb-16" style="height:98%" fluid>
           <v-row style="height:100%">
             <v-col cols="12" md="4" align-self="end">
               <div class="h2 gmarket white--text">
@@ -47,7 +47,7 @@
               <div class="d-flex flex-row align-center">
                 <div>
                   <div class="caption-text white--text">NEXT PAGE</div>
-                  <div class="white--text">
+                  <div class="white--text h6">
                     무료수업<br />
                     신청하기
                   </div>
@@ -58,10 +58,11 @@
               </div>
             </v-col>
           </v-row>
+          <div class="d-flex  justify-center white--text mb-10">Show More</div>
         </v-container>
       </v-img>
     </v-container>
-    <v-container class="px-0 py-0" fluid>
+    <v-container fluid class="px-0 py-0">
       <v-img src="../assets/blackhole_main_img2.jpg"></v-img>
     </v-container>
   </v-app>
