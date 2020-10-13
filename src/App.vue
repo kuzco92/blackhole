@@ -13,7 +13,7 @@ export default {
   }),
 
   mounted() {
-    this.$router.push("/");
+    this.$router.push("/class");
   }
 };
 </script>

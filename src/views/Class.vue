@@ -2,6 +2,12 @@
 <template>
   <v-app style="background-color:#00000000">
     <v-container fluid class="py-0 px-0">
+      <v-img
+        src="../assets/blackhole_class-page_header.jpg"
+        width="100%"
+      ></v-img>
+    </v-container>
+    <v-container fluid class="py-0 px-0">
       <div class="mt-2 text-center gmarket h3 white--text bordered-text">
         블랙홀 학습방법
       </div>
