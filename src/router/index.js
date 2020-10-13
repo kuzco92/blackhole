@@ -9,6 +9,11 @@ const routes = [{
     name: "Index",
     component: require("../views/Index.vue").default
   },
+   {
+    path: "/main",
+    name: "Main",
+    component: require("../views/Main.vue").default
+  },
   {
     path: "/class",
     name: "Class",
