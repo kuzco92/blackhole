@@ -3,62 +3,92 @@
   <v-app style="background-color:#00000000">
     <v-container fluid class=" px-0 py-0">
       <v-img src="../assets/main_header_img.jpg">
-        <div class="white--text d-flex">
-          <span
-            class="mx-auto h5 nanum"
-            style="letter-spacing:15px;text-shadow:0 0 20px white"
+        <v-container class="px-0 py-0" fluid fill-height>
+          <v-card
+            color="#FFFFFF5A"
+            width="80%"
+            class="mx-auto rounded-tr-xl rounded-br-xl my-5"
+            tile
           >
-            국 내 최 초 !
-          </span>
-          <span
-            class="mx-auto h5 nanum"
-            style="letter-spacing:15px;text-shadow:0 0 20px white"
-          >
-            초 중 등
-          </span>
-          <span
-            class="mx-auto h5 nanum"
-            style="letter-spacing:15px;text-shadow:0 0 20px white"
-          >
-            쌍 방 향 온 라 인
-          </span>
-          <span
-            class="mx-auto h5 nanum"
-            style="letter-spacing:15px;text-shadow:0 0 20px white"
-            >영 단 어 프 로 그 램
-          </span>
-        </div>
-        <v-container class="pb-16" style="height:98%" fluid>
-          <v-row style="height:100%">
-            <v-col cols="12" md="4" align-self="end">
-              <div class="h2 gmarket white--text">
-                초중등 영어는 <br />
-                단어부터
-              </div>
-              <div class="white--text">
-                실시간 외국인 수업,
-                <span class="font-weight-black">블랙홀 영어</span>
-              </div>
-            </v-col>
-            <v-col cols="6">
-              <v-img src="../assets/tab.png"></v-img>
-            </v-col>
-            <v-col align-self="end">
-              <div class="d-flex flex-row align-center">
-                <div>
-                  <div class="caption-text white--text">NEXT PAGE</div>
-                  <div class="white--text h6">
-                    무료수업<br />
-                    신청하기
-                  </div>
+            <v-container class="px-0 py-0">
+              <v-row>
+                <v-col cols="2">
+                  <v-img width="150" src="../assets/logo.png"></v-img>
+                </v-col>
+                <v-col cols="2" class="d-flex align-center">
+                  <div class="white--text">수업안내</div>
+                </v-col>
+                <v-col cols="2" class="d-flex align-center">
+                  <div class="white--text">무료수업체험</div>
+                </v-col>
+                <v-col cols="2" class="d-flex align-center">
+                  <div class="white--text">게시판</div>
+                </v-col>
+                <v-col cols="2" class="d-flex align-center">
+                  <div class="white--text">마이페이지</div>
+                </v-col>
+                <v-col cols="2" class="d-flex align-center">
+                  <v-icon color="white">search</v-icon>
+                </v-col>
+              </v-row>
+            </v-container>
+          </v-card>
+          <div class="white--text d-flex mx-auto justify-space-between">
+            <span
+              class="mx-auto h5 nanum"
+              style="letter-spacing:15px;text-shadow:0 0 20px white"
+            >
+              국 내 최 초 !
+            </span>
+            <span
+              class="mx-auto h5 nanum"
+              style="letter-spacing:15px;text-shadow:0 0 20px white"
+            >
+              초 중 등
+            </span>
+            <span
+              class="mx-auto h5 nanum"
+              style="letter-spacing:15px;text-shadow:0 0 20px white"
+            >
+              쌍 방 향 온 라 인
+            </span>
+            <span
+              class="mx-auto h5 nanum"
+              style="letter-spacing:15px;text-shadow:0 0 20px white"
+              >영 단 어 프 로 그 램
+            </span>
+          </div>
+          <v-container fluid fill-height>
+            <v-row>
+              <v-col cols="12" md="4" align-self="end">
+                <div class="h2 gmarket white--text">
+                  초중등 영어는 <br />
+                  단어부터
                 </div>
-                <v-icon color="yellow" x-large
-                  >fas fa-arrow-circle-right</v-icon
-                >
-              </div>
-            </v-col>
-          </v-row>
-          <div class="d-flex  justify-center white--text mb-10">Show More</div>
+                <div class="white--text">
+                  실시간 외국인 수업,
+                  <span class="font-weight-black">블랙홀 영어</span>
+                </div>
+              </v-col>
+              <v-col cols="6">
+                <v-img src="../assets/tab.png" width="70%"></v-img>
+              </v-col>
+              <v-col align-self="end">
+                <div class="d-flex flex-row align-center">
+                  <div>
+                    <div class="caption-text white--text">NEXT PAGE</div>
+                    <div class="white--text h6">
+                      무료수업<br />
+                      신청하기
+                    </div>
+                  </div>
+                  <v-icon color="yellow" x-large
+                    >fas fa-arrow-circle-right</v-icon
+                  >
+                </div>
+              </v-col>
+            </v-row>
+          </v-container>
         </v-container>
       </v-img>
     </v-container>
@@ -258,8 +288,137 @@
           단어암기 끝장 솔루션! 블랙홀과 함께해요~
         </div>
         <v-container>
-          <v-row> </v-row>
+          <v-row>
+            <v-col cols="12" md="4">
+              <v-card
+                flat
+                style="border: 1px solid #34163e"
+                width="100%"
+                class="pa-5 rounded-xl"
+                height="400"
+              >
+                <v-card
+                  class="rounded-pill white--text text-center pa-3 mx-auto mb-5"
+                  color="#4d2794"
+                  width="80%"
+                  >적극적인 수업참여
+                </v-card>
+                <div
+                  class="text-center"
+                  style="line-break:strict; word-break:keep-all"
+                >
+                  처음엔 뭐 다 비슷비슷하겠지.... 했었는데 아이 눈높이에 맞춰
+                  수업하시는 선생님의 질문에 적극적으로 대답하는 아이의 모습이
+                  보였고, 단어 암기도 퀴즈를 풀고 맞추는 기분이라며 내일은 더
+                  잘할거라고 이야기했습니다. 이젠 내일을, 블랙홀을
+                  기대하게되네요^^
+                  <br /><br />
+                  오늘도 아이들은 선생님과의 수업시간을 먼저 체크하고
+                  기다리네요. 블랙홀영어!!! 아이들에게 내일은 더 잘할수 있다는
+                  자신감을 갖게 해주셔서 정말 감사합니다!!!
+                </div>
+                <div class="text-right mt-5 text-purple">
+                  [중1] 용인 정인이 학부모님
+                </div>
+              </v-card>
+            </v-col>
+            <v-col cols="12" md="4">
+              <v-card
+                flat
+                style="border: 1px solid #34163e"
+                width="100%"
+                class="pa-5 rounded-xl"
+                height="400"
+              >
+                <v-card
+                  class="rounded-pill white--text text-center pa-3 mx-auto mb-5"
+                  color="#4d2794"
+                  width="80%"
+                >
+                  국제학교식 수업
+                </v-card>
+                <div
+                  class="text-center"
+                  style="line-break:strict; word-break:keep-all"
+                >
+                  처음엔 단어량이 적었는데 점차 양이 늘어가면서 단어 실력이
+                  확실히 좋아진 것을 느낀다.
+                  <br />
+                  <br />
+                  외국인강사와 함께100% 영어로만 소통하는 국제학교식 수업으로
+                  단어를 계속 노출시키면서 마지막엔 스펠링까지 쓰게 하게끔 하여
+                  결국은 단어를 외우지 않으면 안 되게 끔 하는 시스템이 큰
+                  장점이다. 단어 하나를 가지고도 쓰고 말하고 독해하며 외우게
+                  하는 블랙홀 수업방식에 너무 만족해하며 수업하고 있다
+                </div>
+                <div
+                  class="text-right mt-5 text-purple"
+                  style="position:absolute;width:100%;right:20px;bottom:20px"
+                >
+                  [중2] 수원 주현 학부모님
+                </div>
+              </v-card>
+            </v-col>
+            <v-col cols="12" md="4">
+              <v-card
+                flat
+                style="border: 1px solid #34163e"
+                width="100%"
+                class="pa-5 rounded-xl"
+                height="400"
+              >
+                <v-card
+                  class="rounded-pill white--text text-center pa-3 mx-auto mb-5"
+                  color="#4d2794"
+                  width="80%"
+                >
+                  탁월한 복습량
+                </v-card>
+                <div
+                  class="text-center"
+                  style="line-break:strict; word-break:keep-all"
+                >
+                  전시간에 배운 단어들을 복습하며 암기하다 보니 내 단어 실력이
+                  증가했음을 알 수 있었다. 또한 원어민 선생님과의 대화를 통해서
+                  내가 모르는 단어가 있을 때엔 앞뒤 문맥에 맞추어 단어의 뜻을
+                  추측하는 능력을 기를 수 있게 되었고, 전혀 감이 잡히지 않는
+                  단어의 경우 선생님께 따로 여쭈워보면 내가 아는 쉬운 단어로
+                  바꾸어 말씀해주시거나 그 단어의 뜻을 설명해주셔서 정말 많은
+                  도움이 되었다.
+                </div>
+                <div
+                  class="text-right mt-5 text-purple"
+                  style="position:absolute;width:100%;right:20px;bottom:20px"
+                >
+                  [고1] 다인 학생 후기
+                </div>
+              </v-card>
+            </v-col>
+          </v-row>
         </v-container>
+      </v-card>
+    </v-container>
+    <v-container class="px-0 py-0" fluid>
+      <v-card
+        tile
+        color="rgba(202,206,209, 0.5)"
+        class="text-center pa-10"
+        style="position:relative"
+      >
+        <v-img src="../assets/img-copyright.png" width="250" class="mx-auto">
+          <v-card style="background-color:#caced10a" width="100%" height="100%">
+          </v-card>
+        </v-img>
+        <v-card
+          width="70%"
+          class="mx-auto gmarket h5 pa-10 rounded-xl"
+          style="position:absolute;bottom:20px;transform:translateX(-50%);left:50%"
+          color="#FFFFFF2a"
+        >
+          블랙홀영어의 컨텐츠 및 도구들을 이용한 <br />
+          쌍방향 온라인 수업방식을 유에듀케이션의 승인을 받지않고 <br />
+          사용하는 행위는 불법임을 인지해주시기 바랍니다.
+        </v-card>
       </v-card>
     </v-container>
   </v-app>

@@ -2,16 +2,77 @@
 <template>
   <v-app style="background-color:#00000000">
     <v-container fluid class="py-0 px-0">
-      <v-img
-        src="../assets/blackhole_class-page_header.jpg"
-        width="100%"
-      ></v-img>
+      <v-img src="../assets/blackhole_class-page_header.jpg" width="100%">
+        <v-card height="100%" class="d-flex flex-column" color="#ffffff00">
+          <div class="mt-5">
+            <v-card
+              color="#FFFFFF5A"
+              width="80%"
+              class="mx-auto rounded-tr-xl rounded-br-xl"
+              tile
+            >
+              <v-container class="px-0 py-0">
+                <v-row>
+                  <v-col cols="2">
+                    <v-img width="150" src="../assets/logo.png"></v-img>
+                  </v-col>
+                  <v-col cols="2" class="d-flex align-center">
+                    <div class="white--text">수업안내</div>
+                  </v-col>
+                  <v-col cols="2" class="d-flex align-center">
+                    <div class="white--text">무료수업체험</div>
+                  </v-col>
+                  <v-col cols="2" class="d-flex align-center">
+                    <div class="white--text">게시판</div>
+                  </v-col>
+                  <v-col cols="2" class="d-flex align-center">
+                    <div class="white--text">마이페이지</div>
+                  </v-col>
+                  <v-col cols="2" class="d-flex align-center">
+                    <v-icon color="white">search</v-icon>
+                  </v-col>
+                </v-row>
+              </v-container>
+            </v-card>
+          </div>
+          <div class="my-auto mx-auto text-center">
+            <div class="white--text h3 gmarket">수업안내</div>
+            <div class="white--text">HOME > 수업안내</div>
+          </div>
+
+          <div>
+            <v-card
+              tile
+              style="background: linear-gradient(to right, #8a1f7d, #9a63d8)"
+              class="d-flex align-center justify-center pa-10 "
+            >
+              <v-container>
+                <v-row>
+                  <v-col cols="12" sm="6" class="h4 nanum d-flex align-center">
+                    <div style="color:#9b63d8" class="h4 nanum text-right">
+                      쌍방향 온라인 수업
+                    </div>
+                  </v-col>
+                  <v-col cols="12" sm="6">
+                    <div class="h4 nanum white--text">
+                      2명의 외국인 강사가 영어로만 하는 국제학교식 수업,
+                    </div>
+                    <div class="h4 nanum white--text">
+                      블랙홀 영단어에서만 만날 수 있습니다.
+                    </div>
+                  </v-col>
+                </v-row>
+              </v-container>
+            </v-card>
+          </div>
+        </v-card>
+      </v-img>
     </v-container>
     <v-container fluid class="py-0 px-0">
       <div class="mt-2 text-center gmarket h3 white--text bordered-text">
         블랙홀 학습방법
       </div>
-      <v-card>
+      <v-card flat>
         <v-container>
           <v-row justify="center">
             <v-col cols="4">
