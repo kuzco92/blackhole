@@ -93,6 +93,10 @@ export default {
   color: #5b3690;
 }
 
+.nav-link {
+  cursor: pointer;
+}
+
 @font-face {
   font-family: "GmarketSansBold";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff")

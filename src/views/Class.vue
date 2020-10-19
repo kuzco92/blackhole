@@ -14,10 +14,20 @@
               <v-container class="px-0 py-0">
                 <v-row>
                   <v-col cols="2">
-                    <v-img width="150" src="../assets/logo.png"></v-img>
+                    <v-img
+                      class="nav-link"
+                      width="150"
+                      @click="$router.push('/main')"
+                      src="../assets/logo.png"
+                    ></v-img>
                   </v-col>
                   <v-col cols="2" class="d-flex align-center">
-                    <div class="white--text">수업안내</div>
+                    <div
+                      class="white--text nav-link"
+                      @click="$router.push('/class')"
+                    >
+                      수업안내
+                    </div>
                   </v-col>
                   <v-col cols="2" class="d-flex align-center">
                     <div class="white--text">무료수업체험</div>
@@ -237,30 +247,34 @@
         </v-container>
       </v-card>
     </v-container>
+
     <v-container>
-      <v-card>
+      <v-img src="../assets/img-bg-pink.png" height="auto" class="d-flex">
         <div class="mt-2 text-center gmarket h3 white--text bordered-text">
           수강료
         </div>
-        <v-card flat class="d-flex mx-auto flex-column" max-width="550">
-          <div class="mb-2 text-center text-md-left h5 nanum mt-5">
+
+        <div class="d-flex flex-column">
+          <div class="mb-2 text-center h5 nanum mt-5 d-inline-flex ">
             <span class="font-weight-black">주 5회</span> 3개월과정(60회)
             <span class="font-weight-black">462,000원</span> (154,000원/월)
           </div>
-          <div class="mb-2 text-center text-md-left h5 nanum">
+          <div class="mb-2 text-center h5 nanum d-inline-flex">
             <span class="font-weight-black">주 3회</span> 3개월과정(36회)
             <span class="font-weight-black">294,000원</span> (98,000원/월)
           </div>
-          <div class="mb-2 text-center text-md-left h5 nanum">
+          <div class="mb-2 text-center h5 nanum d-inline-flex">
             <span class="font-weight-black">주 2회</span> 3개월과정(24회)
             <span class="font-weight-black">207,000원</span> (69,000원/월)
           </div>
-          <div class="mt-10">
-            1회 수업 : 회당 40분 이상 소요 / 한 과정당 3개월~6개월 소요
-          </div>
-        </v-card>
-      </v-card>
+        </div>
+
+        <div class="mt-10">
+          1회 수업 : 회당 40분 이상 소요 / 한 과정당 3개월~6개월 소요
+        </div>
+      </v-img>
     </v-container>
+
     <v-container>
       <v-tabs grow>
         <v-tab><span class="h5 nanum">홀딩 및 보강 규정</span></v-tab>

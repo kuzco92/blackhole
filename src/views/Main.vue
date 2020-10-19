@@ -2,95 +2,116 @@
 <template>
   <v-app style="background-color:#00000000">
     <v-container fluid class=" px-0 py-0">
-      <v-img src="../assets/main_header_img.jpg">
-        <v-container class="px-0 py-0" fluid fill-height>
-          <v-card
-            color="#FFFFFF5A"
-            width="80%"
-            class="mx-auto rounded-tr-xl rounded-br-xl my-5"
-            tile
-          >
-            <v-container class="px-0 py-0">
+      <v-card tile>
+        <v-img src="../assets/main_header_img.jpg">
+          <v-card height="100%" style="background:#00000000">
+            <v-container
+              fluid
+              class="px-0 py-0 d-flex flex-column"
+              style="height:100%"
+            >
+              <v-card
+                color="#FFFFFF5A"
+                width="80%"
+                class="mx-auto rounded-tr-xl rounded-br-xl my-5"
+                tile
+              >
+                <v-container class="px-0 py-0">
+                  <v-row>
+                    <v-col cols="2">
+                      <v-img
+                        class="nav-link"
+                        width="150"
+                        @click="$router.push('/main')"
+                        src="../assets/logo.png"
+                      ></v-img>
+                    </v-col>
+                    <v-col cols="2" class="d-flex align-center">
+                      <div
+                        class="white--text nav-link"
+                        @click="$router.push('/class')"
+                      >
+                        수업안내
+                      </div>
+                    </v-col>
+                    <v-col cols="2" class="d-flex align-center">
+                      <div class="white--text">무료수업체험</div>
+                    </v-col>
+                    <v-col cols="2" class="d-flex align-center">
+                      <div class="white--text">게시판</div>
+                    </v-col>
+                    <v-col cols="2" class="d-flex align-center">
+                      <div class="white--text">마이페이지</div>
+                    </v-col>
+                    <v-col cols="2" class="d-flex align-center">
+                      <v-icon color="white">search</v-icon>
+                    </v-col>
+                  </v-row>
+                </v-container>
+              </v-card>
+              <div class="white--text d-flex mx-auto justify-space-between">
+                <span
+                  class="mx-auto h5 nanum"
+                  style="letter-spacing:15px;text-shadow:0 0 20px white"
+                >
+                  국 내 최 초 !
+                </span>
+                <span
+                  class="mx-auto h5 nanum"
+                  style="letter-spacing:15px;text-shadow:0 0 20px white"
+                >
+                  초 중 등
+                </span>
+                <span
+                  class="mx-auto h5 nanum"
+                  style="letter-spacing:15px;text-shadow:0 0 20px white"
+                >
+                  쌍 방 향 온 라 인
+                </span>
+                <span
+                  class="mx-auto h5 nanum"
+                  style="letter-spacing:15px;text-shadow:0 0 20px white"
+                  >영 단 어 프 로 그 램
+                </span>
+              </div>
+
               <v-row>
-                <v-col cols="2">
-                  <v-img width="150" src="../assets/logo.png"></v-img>
+                <v-col cols="12" md="4" align-self="end">
+                  <div class="h2 gmarket white--text">
+                    초중등 영어는 <br />
+                    단어부터
+                  </div>
+                  <div class="white--text">
+                    실시간 외국인 수업,
+                    <span class="font-weight-black">블랙홀 영어</span>
+                  </div>
                 </v-col>
-                <v-col cols="2" class="d-flex align-center">
-                  <div class="white--text">수업안내</div>
+                <v-col cols="12" md="6" align-self="start">
+                  <v-img src="../assets/tab.png" width="70%"></v-img>
                 </v-col>
-                <v-col cols="2" class="d-flex align-center">
-                  <div class="white--text">무료수업체험</div>
-                </v-col>
-                <v-col cols="2" class="d-flex align-center">
-                  <div class="white--text">게시판</div>
-                </v-col>
-                <v-col cols="2" class="d-flex align-center">
-                  <div class="white--text">마이페이지</div>
-                </v-col>
-                <v-col cols="2" class="d-flex align-center">
-                  <v-icon color="white">search</v-icon>
+                <v-col cols="12" md="2" align-self="end">
+                  <div class="d-flex flex-row align-center">
+                    <div>
+                      <div class="caption-text white--text">NEXT PAGE</div>
+                      <div class="white--text h6">
+                        무료수업<br />
+                        신청하기
+                      </div>
+                    </div>
+                    <v-icon color="yellow" x-large
+                      >fas fa-arrow-circle-right
+                    </v-icon>
+                  </div>
                 </v-col>
               </v-row>
+
+              <div class="text-center">
+                SHOW MORE
+              </div>
             </v-container>
           </v-card>
-          <div class="white--text d-flex mx-auto justify-space-between">
-            <span
-              class="mx-auto h5 nanum"
-              style="letter-spacing:15px;text-shadow:0 0 20px white"
-            >
-              국 내 최 초 !
-            </span>
-            <span
-              class="mx-auto h5 nanum"
-              style="letter-spacing:15px;text-shadow:0 0 20px white"
-            >
-              초 중 등
-            </span>
-            <span
-              class="mx-auto h5 nanum"
-              style="letter-spacing:15px;text-shadow:0 0 20px white"
-            >
-              쌍 방 향 온 라 인
-            </span>
-            <span
-              class="mx-auto h5 nanum"
-              style="letter-spacing:15px;text-shadow:0 0 20px white"
-              >영 단 어 프 로 그 램
-            </span>
-          </div>
-          <v-container fluid fill-height>
-            <v-row>
-              <v-col cols="12" md="4" align-self="end">
-                <div class="h2 gmarket white--text">
-                  초중등 영어는 <br />
-                  단어부터
-                </div>
-                <div class="white--text">
-                  실시간 외국인 수업,
-                  <span class="font-weight-black">블랙홀 영어</span>
-                </div>
-              </v-col>
-              <v-col cols="6">
-                <v-img src="../assets/tab.png" width="70%"></v-img>
-              </v-col>
-              <v-col align-self="end">
-                <div class="d-flex flex-row align-center">
-                  <div>
-                    <div class="caption-text white--text">NEXT PAGE</div>
-                    <div class="white--text h6">
-                      무료수업<br />
-                      신청하기
-                    </div>
-                  </div>
-                  <v-icon color="yellow" x-large
-                    >fas fa-arrow-circle-right</v-icon
-                  >
-                </div>
-              </v-col>
-            </v-row>
-          </v-container>
-        </v-container>
-      </v-img>
+        </v-img>
+      </v-card>
     </v-container>
     <v-container fluid class="px-0 py-0">
       <v-img src="../assets/blackhole_main_img2.jpg"></v-img>

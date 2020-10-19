@@ -1,0 +1,36 @@
+@font-face {
+    font-family: '';
+    src: url('NanumSquareRoundOTFL00.woff2') format('woff2'),
+        url('NanumSquareRoundOTFL00.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: '';
+    src: url('NanumSquareRoundOTFR00.woff2') format('woff2'),
+        url('NanumSquareRoundOTFR00.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: '';
+    src: url('BRRA.woff2') format('woff2'),
+        url('BRRA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: '';
+    src: url('BRBA.woff2') format('woff2'),
+        url('BRBA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
