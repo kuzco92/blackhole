@@ -127,7 +127,7 @@
       </div>
       <v-card
         flat
-        class="pa-5 mt-10 mx-auto rounded-xl"
+        class="pa-5 mt-10 mx-auto rounded-xl h6"
         max-width="700"
         style="border: 1px solid orange"
       >
@@ -147,12 +147,7 @@
       <v-card flat class="mt-10 mx-auto" max-width="700">
         <v-container>
           <v-row>
-            <v-col
-              cols="12"
-              sm="6"
-              md="4"
-              class="d-flex justify-center justify-sm-end"
-            >
+            <v-col cols="12" sm="6" md="4" class="d-flex justify-center">
               <v-card
                 flat
                 class="rounded-circle d-flex align-center justify-center"
@@ -166,6 +161,7 @@
                 </div>
               </v-card>
             </v-col>
+
             <v-col cols="12" sm="6" md="4" class="d-flex justify-center">
               <v-card
                 flat
@@ -181,10 +177,10 @@
                 </div>
               </v-card>
             </v-col>
-            <v-col cols="12" sm="6" md="4">
+            <v-col cols="12" sm="6" md="4" class="d-flex justify-center">
               <v-card
                 flat
-                class="rounded-circle d-flex align-center justify-center"
+                class="rounded-circle d-flex align-center justify-center "
                 height="200"
                 width="200"
                 style="border: 1px solid #34163e"
@@ -197,7 +193,7 @@
                 </div>
               </v-card>
             </v-col>
-            <v-col cols="12" sm="6" md="4">
+            <v-col cols="12" sm="6" md="4" class="d-flex justify-center">
               <v-card
                 flat
                 class="rounded-circle d-flex align-center justify-center"
@@ -212,7 +208,7 @@
                 </div>
               </v-card>
             </v-col>
-            <v-col cols="12" sm="6" md="4">
+            <v-col cols="12" sm="6" md="4" class="d-flex justify-center">
               <v-card
                 flat
                 class="rounded-circle d-flex align-center justify-center"
@@ -228,7 +224,7 @@
                 </div>
               </v-card>
             </v-col>
-            <v-col cols="12" sm="6" md="4">
+            <v-col cols="12" sm="6" md="4" class="d-flex justify-center">
               <v-card
                 flat
                 class="rounded-circle d-flex align-center justify-center"
@@ -249,26 +245,29 @@
     </v-container>
 
     <v-container fluid class="px-0 py-0">
-      <v-img src="../assets/img-bg-pink.png" height="auto" class="d-flex">
+      <v-img src="../assets/img-bg-pink.png" height="auto">
         <div class="mt-2 text-center gmarket h3 white--text bordered-text">
           수강료
         </div>
 
-        <div class="mb-2 text-center h5 nanum mt-5 ">
-          <span class="font-weight-black">주 5회</span> 3개월과정(60회)
-          <span class="font-weight-black">462,000원</span> (154,000원/월)
-        </div>
-        <div class="mb-2 text-center h5 nanum">
-          <span class="font-weight-black">주 3회</span> 3개월과정(36회)
-          <span class="font-weight-black">294,000원</span> (98,000원/월)
-        </div>
-        <div class="mb-2 text-center h5 nanum">
-          <span class="font-weight-black">주 2회</span> 3개월과정(24회)
-          <span class="font-weight-black">207,000원</span> (69,000원/월)
-        </div>
-
-        <div class="mt-10 text-center">
-          1회 수업 : 회당 40분 이상 소요 / 한 과정당 3개월~6개월 소요
+        <div class="d-flex">
+          <div class="mx-auto">
+            <div class="mb-2 text-left h5 nanum mt-5 ">
+              <span class="font-weight-black">주 5회</span> 3개월과정(60회)
+              <span class="font-weight-black">462,000원</span> (154,000원/월)
+            </div>
+            <div class="mb-2 text-left h5 nanum">
+              <span class="font-weight-black">주 3회</span> 3개월과정(36회)
+              <span class="font-weight-black">294,000원</span> (98,000원/월)
+            </div>
+            <div class="mb-2 text-left h5 nanum">
+              <span class="font-weight-black">주 2회</span> 3개월과정(24회)
+              <span class="font-weight-black">207,000원</span> (69,000원/월)
+            </div>
+            <div class="mt-10 text-left">
+              1회 수업 : 회당 40분 이상 소요 / 한 과정당 3개월~6개월 소요
+            </div>
+          </div>
         </div>
       </v-img>
     </v-container>
