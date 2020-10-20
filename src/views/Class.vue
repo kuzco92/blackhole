@@ -248,37 +248,51 @@
       </v-card>
     </v-container>
 
-    <v-container>
+    <v-container fluid class="px-0 py-0">
       <v-img src="../assets/img-bg-pink.png" height="auto" class="d-flex">
         <div class="mt-2 text-center gmarket h3 white--text bordered-text">
           수강료
         </div>
 
-        <div class="d-flex flex-column">
-          <div class="mb-2 text-center h5 nanum mt-5 d-inline-flex ">
-            <span class="font-weight-black">주 5회</span> 3개월과정(60회)
-            <span class="font-weight-black">462,000원</span> (154,000원/월)
-          </div>
-          <div class="mb-2 text-center h5 nanum d-inline-flex">
-            <span class="font-weight-black">주 3회</span> 3개월과정(36회)
-            <span class="font-weight-black">294,000원</span> (98,000원/월)
-          </div>
-          <div class="mb-2 text-center h5 nanum d-inline-flex">
-            <span class="font-weight-black">주 2회</span> 3개월과정(24회)
-            <span class="font-weight-black">207,000원</span> (69,000원/월)
-          </div>
+        <div class="mb-2 text-center h5 nanum mt-5 ">
+          <span class="font-weight-black">주 5회</span> 3개월과정(60회)
+          <span class="font-weight-black">462,000원</span> (154,000원/월)
+        </div>
+        <div class="mb-2 text-center h5 nanum">
+          <span class="font-weight-black">주 3회</span> 3개월과정(36회)
+          <span class="font-weight-black">294,000원</span> (98,000원/월)
+        </div>
+        <div class="mb-2 text-center h5 nanum">
+          <span class="font-weight-black">주 2회</span> 3개월과정(24회)
+          <span class="font-weight-black">207,000원</span> (69,000원/월)
         </div>
 
-        <div class="mt-10">
+        <div class="mt-10 text-center">
           1회 수업 : 회당 40분 이상 소요 / 한 과정당 3개월~6개월 소요
         </div>
       </v-img>
     </v-container>
 
-    <v-container>
-      <v-tabs grow>
-        <v-tab><span class="h5 nanum">홀딩 및 보강 규정</span></v-tab>
-        <v-tab><span class="h5 nanum">환불규정안내</span></v-tab>
+    <v-container fluid class="px-0 py-0">
+      <v-tabs
+        grow
+        background-color="white"
+        slider-color="#79439f"
+        active-class="active-tab"
+        height="100"
+      >
+        <v-tab
+          class="pa-5"
+          style="background: linear-gradient(to right, #b37acf, #e7c2d8); color: #34163e !important;"
+        >
+          <span class="h5 nanum font-weight-black ">홀딩 및 보강 규정</span>
+        </v-tab>
+        <v-tab
+          class="pa-5"
+          style="background: linear-gradient(to right, #b37acf, #e7c2d8);  color: #34163e !important;"
+        >
+          <span class="h5 nanum font-weight-black ">환불규정안내</span>
+        </v-tab>
         <v-tab-item>
           <v-container>
             <div class="mt-5 font-weight-black text-center text-purple h6">
@@ -340,6 +354,14 @@
 .bordered-text {
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #5b3690;
+}
+
+.v-tab--active {
+  background: #fff !important;
+}
+
+.active-tab {
+  background: #fff;
 }
 </style>
 

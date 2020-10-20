@@ -21,7 +21,7 @@ export default {
 <style>
 #app {
   /* font-family: "Nanum Gothic", sans-serif; */
-  font-family: "NanumSquare", sans-serif;
+  font-family: "NanumSquareRound", sans-serif;
 }
 
 .h1 {
@@ -75,14 +75,14 @@ export default {
 }
 
 .caption-text {
-  font-family: "NanumSquare", sans-serif;
+  font-family: "NanumSquareRound", sans-serif;
   font-size: 0.8rem;
   font-weight: 400;
   letter-spacing: 0.025rem;
 }
 
 .nanum {
-  font-family: "NanumSquare", sans-serif !important;
+  font-family: "NanumSquareRound", sans-serif !important;
 }
 
 .gmarket {
@@ -93,8 +93,16 @@ export default {
   color: #5b3690;
 }
 
+.text-dark-purple {
+  color: #34163e;
+}
+
 .nav-link {
   cursor: pointer;
+}
+
+.brb {
+  font-family: "BRBA", sans-serif !important;
 }
 
 @font-face {
@@ -103,5 +111,11 @@ export default {
     format("woff");
   font-weight: normal;
   font-style: normal;
+}
+
+@font-face {
+  font-family: "BRBA";
+  src: url("~@/assets/fonts/BRBA.woff2") format("woff2"),
+    url("~@/assets/fonts/BRBA.woff") format("woff");
 }
 </style>

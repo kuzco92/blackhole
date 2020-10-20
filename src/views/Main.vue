@@ -75,9 +75,9 @@
                 </span>
               </div>
 
-              <v-row>
+              <v-row class="mx-5">
                 <v-col cols="12" md="4" align-self="end">
-                  <div class="h2 gmarket white--text">
+                  <div class="h2 brb white--text">
                     초중등 영어는 <br />
                     단어부터
                   </div>
@@ -117,7 +117,7 @@
       <v-img src="../assets/blackhole_main_img2.jpg"></v-img>
     </v-container>
     <v-container class="px-0 py-0" fluid>
-      <div class="text-center gmarket h3 mt-15">
+      <div class="text-center brb h3 mt-15">
         초중등 관리형 온라인 영단어 <br />
         블랙홀 영단어가 단어습관을 잡는다.
       </div>
@@ -151,7 +151,8 @@
         <div class="h3 gmarket text-purple mb-5">커리큘럼</div>
         <div class="h5 nanum">영단어 암기 블랙홀이 답인 이유!</div>
         <div class="h5 nanum">
-          기존 원어민 화상영어 또는 인강과는 전혀 다른 새로운 수업방식
+          기존 원어민 화상영어 또는 인강과는 전혀 다른
+          <span class="font-weight-black"> 새로운 수업방식 </span>
         </div>
       </div>
       <div class="d-flex justify-center mt-10">
@@ -272,25 +273,29 @@
         </v-btn>
       </div>
     </v-container>
+
     <v-divider></v-divider>
-    <v-container>
-      <v-row justify="center">
-        <v-col cols="12" md="5">
+
+    <v-container class="pb-16">
+      <v-row justify="center" style="height:100%">
+        <v-col cols="12" md="5" class="d-flex flex-column grey--text">
           <div class="h4 gmarket text-center text-purple">영자신문 활용</div>
-          <v-img src="../assets/img-news.png" height="80%"></v-img>
-          <div>
+          <v-img src="../assets/img-news.png"></v-img>
+          <div class="mt-10">
             * 문장을 통해 중요단어 파악 <br />
             * 문장속에서 의미 파악 <br />
             * 외국인 강사 액센트 지도
           </div>
         </v-col>
-        <v-divider vertical></v-divider>
-        <v-col cols="12" md="5">
+
+        <v-divider vertical v-if="!isMobile"></v-divider>
+
+        <v-col cols="12" md="5" class="d-flex flex-column grey--text">
           <div class="h4 gmarket text-center text-purple">효과적인 암기법</div>
           <div class="text-center mt-5">
             영어학습에서 가장 중요한건? 단어암기!
           </div>
-          <v-img src="../assets/img-graph.png" class="my-10"></v-img>
+          <v-img src="../assets/img-graph.png" class="mt-15 mb-10"></v-img>
           <div class="mt-10">
             <span class="text-purple font-weight-black"> 암기 3단계 :</span>
             암기 – 기억인출 – 철자확인 <br />
@@ -303,7 +308,7 @@
       </v-row>
     </v-container>
     <v-container fluid class="px-0 py-0">
-      <v-card tile color="#e6ddf8">
+      <v-card tile color="#e6ddf8" class="pa-10">
         <div class="text-center h3 gmarket">많은 학부모님들이 인정한</div>
         <div class="text-center h3 gmarket">
           단어암기 끝장 솔루션! 블랙홀과 함께해요~
