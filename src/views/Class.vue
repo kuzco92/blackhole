@@ -10,6 +10,7 @@
               width="80%"
               class="mx-auto rounded-tr-xl rounded-br-xl"
               tile
+              v-if="!isMobile"
             >
               <v-container class="px-0 py-0">
                 <v-row>
@@ -44,6 +45,47 @@
                 </v-row>
               </v-container>
             </v-card>
+
+            <v-container v-else>
+              <div class="d-flex">
+                <v-card color="#00000000" flat>
+                  <v-img
+                    src="../assets/logo.png"
+                    width="150"
+                    @click="$router.push('/main')"
+                  >
+                  </v-img>
+                </v-card>
+                <v-spacer></v-spacer>
+                <v-card
+                  color="#FFFFFF5A"
+                  class="rounded-lg d-flex align-center pa-3 mr-5"
+                  tile
+                >
+                  <v-menu
+                    close-on-click
+                    nudge-bottom="12"
+                    offset-y
+                    bottom
+                    transition="slide-y-transition"
+                    min-width="100%"
+                  >
+                    <template v-slot:activator="{ on: menu }">
+                      <v-icon v-on="menu" x-large>menu</v-icon>
+                    </template>
+                    <v-card color="blue" width="100%" min-width="100%">
+                      <v-list>
+                        <v-list-item @click="$router.push('/class')"
+                          >무료수업체험</v-list-item
+                        >
+                        <v-list-item> 게시판</v-list-item>
+                        <v-list-item>마이페이지</v-list-item>
+                      </v-list>
+                    </v-card>
+                  </v-menu>
+                </v-card>
+              </div>
+            </v-container>
           </div>
           <div class="my-auto mx-auto text-center">
             <div class="white--text h3 gmarket">수업안내</div>

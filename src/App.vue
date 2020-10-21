@@ -97,6 +97,11 @@ export default {
   color: #34163e;
 }
 
+.korean-text {
+  word-break: keep-all;
+  line-break: strict;
+}
+
 .nav-link {
   cursor: pointer;
 }
