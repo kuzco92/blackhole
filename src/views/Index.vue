@@ -3,51 +3,59 @@
   <v-app style="background-color:#00000000">
     <v-container fluid class="py-0 px-0">
       <v-img src="../assets/main_header_img.jpg">
-        <div class="white--text d-flex">
-          <span
-            class="mx-auto h5 nanum"
-            style="letter-spacing:20px;text-shadow:0 0 20px white"
-            >국 내 최 초</span
-          >
-          <span
-            class="mx-auto h5 nanum"
-            style="letter-spacing:20px;text-shadow:0 0 20px white"
-            >초 중 등</span
-          >
-          <span
-            class="mx-auto h5 nanum"
-            style="letter-spacing:20px;text-shadow:0 0 20px white"
-            >쌍 방 향 온 라 인</span
-          >
-          <span
-            class="mx-auto h5 nanum"
-            style="letter-spacing:20px;text-shadow:0 0 20px white"
-            >프 로 그 램</span
-          >
-        </div>
-        <div
-          class="text-center h3 gmarket"
-          style="color:#ca97ea;margin-top:100px"
-        >
-          초중등 영어는? 단어부터!
-        </div>
-        <div class="text-center h2 gmarket white--text mt-5">
-          블랙홀 영단어
-        </div>
-        <div style="position:absolute;bottom:20px;width:100%">
-          <v-img
-            src="../assets/logo.png"
-            width="200"
-            class="d-flex mx-auto"
-          ></v-img>
-        </div>
+        <v-container class="d-flex flex-column fill-height">
+          <div class="white--text d-flex flex-column flex-md-row mb-10 mb-md-0">
+            <span
+              class="mx-auto h5 nanum"
+              style="letter-spacing:20px;text-shadow:0 0 20px white"
+              >국 내 최 초</span
+            >
+            <span
+              class="mx-auto h5 nanum"
+              style="letter-spacing:20px;text-shadow:0 0 20px white"
+              >초 중 등</span
+            >
+            <span
+              class="mx-auto h5 nanum"
+              style="letter-spacing:20px;text-shadow:0 0 20px white"
+              >쌍 방 향 온 라 인</span
+            >
+            <span
+              class="mx-auto h5 nanum"
+              style="letter-spacing:20px;text-shadow:0 0 20px white"
+              >프 로 그 램</span
+            >
+          </div>
+          <div class="my-auto">
+            <div
+              class="text-center gmarket"
+              :class="isMobile ? 'h4' : 'h3'"
+              style="color:#ca97ea;"
+            >
+              초중등 영어는? 단어부터!
+            </div>
+            <div
+              class="text-center gmarket white--text mt-5"
+              :class="isMobile ? 'h3' : 'h2'"
+            >
+              블랙홀 영단어
+            </div>
+          </div>
+          <div class="mt-10 mt-md-0">
+            <v-img
+              src="../assets/logo.png"
+              width="200"
+              class="d-flex mx-auto"
+            ></v-img>
+          </div>
+        </v-container>
       </v-img>
     </v-container>
     <v-container class="px-0 py-5">
-      <div class="text-center text-purple h3 mt-5 mb-10 gmarket">
+      <div class="text-center text-purple h3 mt-5 mb-10 brb korean-text">
         국내최초! 쌍방향 온라인 화상강의
       </div>
-      <v-row>
+      <v-row class="px-3">
         <v-col cols="12" class="py-0">
           <v-text-field
             outlined
@@ -110,7 +118,7 @@
       >
         <v-container>
           <v-row>
-            <v-col cols="6" class="d-flex flex-column  justify-center">
+            <v-col cols="12" md="6" class="d-flex flex-column  justify-center">
               <div class="h4 nanum mb-10" style="color:#34163e">
                 독해단어 <span class="font-weight-bold">10회 인터벌 반복</span>
               </div>
@@ -120,11 +128,11 @@
                 어원단어장을 함께 전송하여 영어를 한층 깊게 학습합니다.
               </div>
             </v-col>
-            <v-col cols="6">
+            <v-col cols="12" md="6">
               <v-img
                 class="mx-auto"
                 src="../assets/IMG2.png"
-                width="90%"
+                :width="isMobile ? '100%' : '90%'"
               ></v-img>
             </v-col>
           </v-row>
@@ -138,14 +146,14 @@
       >
         <v-container>
           <v-row>
-            <v-col cols="6">
+            <v-col cols="12" md="6">
               <v-img
                 class="mx-auto"
                 src="../assets/IMG3.png"
-                width="90%"
+                :width="isMobile ? '100%' : '90%'"
               ></v-img>
             </v-col>
-            <v-col cols="6" class="d-flex flex-column  justify-center">
+            <v-col cols="12" md="6" class="d-flex flex-column  justify-center">
               <div class="h4 nanum mb-10" style="color:#34163e">
                 외국인 강사님과
                 <span class="font-weight-bold">100% 영어학습</span>
@@ -167,7 +175,7 @@
       >
         <v-container>
           <v-row>
-            <v-col cols="6" class="d-flex flex-column  justify-center">
+            <v-col cols="12" md="6" class="d-flex flex-column  justify-center">
               <div class="h4 nanum mb-10" style="color:#34163e">
                 카톡으로
                 <span class="font-weight-bold">관리하는 자녀 수업 스케줄</span>
@@ -178,11 +186,11 @@
                 어원단어장을 함께 전송하여 영어를 한층 깊게 학습합니다.
               </div>
             </v-col>
-            <v-col cols="6">
+            <v-col cols="12" md="6">
               <v-img
                 class="mx-auto"
                 src="../assets/IMG4.png"
-                width="90%"
+                :width="isMobile ? '100%' : '90%'"
               ></v-img>
             </v-col>
           </v-row>

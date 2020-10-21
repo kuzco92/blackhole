@@ -1,6 +1,8 @@
 <template>
   <v-app>
     <router-view></router-view>
+
+    <v-img src="../src/assets/footer.png"></v-img>
   </v-app>
 </template>
 
