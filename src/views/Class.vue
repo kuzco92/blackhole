@@ -89,7 +89,7 @@
           </div>
           <div class="my-auto mx-auto text-center">
             <div class="white--text h3 gmarket">수업안내</div>
-            <div class="white--text">HOME > 수업안내</div>
+            <div class="white--text mb-10 mb-md-0">HOME > 수업안내</div>
           </div>
 
           <div>
@@ -100,16 +100,28 @@
             >
               <v-container>
                 <v-row>
-                  <v-col cols="12" sm="6" class="h4 nanum d-flex align-center">
-                    <div style="color:#9b63d8" class="h4 nanum text-right">
+                  <v-col
+                    cols="12"
+                    sm="6"
+                    class="nanum d-flex align-center"
+                    :class="isMobile ? 'h6' : 'h4'"
+                  >
+                    <div
+                      style="color:#9b63d8"
+                      class="nanum text-right"
+                      :class="isMobile ? 'h6' : 'h4'"
+                    >
                       쌍방향 온라인 수업
                     </div>
                   </v-col>
-                  <v-col cols="12" sm="6">
-                    <div class="h4 nanum white--text">
+                  <v-col cols="12" sm="6" :class="isMobile ? 'h6' : 'h4'">
+                    <div class="nanum white--text">
                       2명의 외국인 강사가 영어로만 하는 국제학교식 수업,
                     </div>
-                    <div class="h4 nanum white--text">
+                    <div
+                      class="nanum white--text"
+                      :class="isMobile ? 'h6' : 'h4'"
+                    >
                       블랙홀 영단어에서만 만날 수 있습니다.
                     </div>
                   </v-col>
@@ -127,9 +139,13 @@
       <v-card flat>
         <v-container>
           <v-row justify="center">
-            <v-col cols="4">
+            <v-col cols="12" md="4">
               <v-card flat class="d-flex flex-column align-center">
-                <v-img src="../assets/forum.png" width="200"></v-img>
+                <v-img
+                  src="../assets/forum.png"
+                  width="200"
+                  class="mb-5"
+                ></v-img>
                 <div class="h4 text-purple gmarket">카카오채널</div>
                 <div class="h5 grey--text  text-center nanum">
                   브랙홀 채널에서 <br />
@@ -137,9 +153,13 @@
                 </div>
               </v-card>
             </v-col>
-            <v-col cols="4" class="d-flex flex-column align-center">
+            <v-col cols="12" md="4" class="d-flex flex-column align-center">
               <v-card flat>
-                <v-img src="../assets/classcard.png" width="200"></v-img>
+                <v-img
+                  src="../assets/classcard.png"
+                  width="200"
+                  class="mb-5 mx-auto"
+                ></v-img>
                 <div class="h4 text-purple text-center gmarket">Class card</div>
                 <div class="h5 grey--text text-center nanum">
                   단어 암기를 위한 <br />
@@ -147,9 +167,13 @@
                 </div>
               </v-card>
             </v-col>
-            <v-col cols="4" class="d-flex flex-column align-center">
+            <v-col cols="12" md="4" class="d-flex flex-column align-center">
               <v-card flat>
-                <v-img src="../assets/email.png" width="200"></v-img>
+                <v-img
+                  src="../assets/email.png"
+                  width="200"
+                  class="mb-5 mx-auto"
+                ></v-img>
                 <div class="h4 text-purple gmarket">ZOOM 화상수업</div>
                 <div class="h5 grey--text text-center nanum">
                   카톡 링크를 통해 접속후 <br />
@@ -173,7 +197,7 @@
         max-width="700"
         style="border: 1px solid orange"
       >
-        <div class="text-center grey--text ">
+        <div class="text-center grey--text korean-text">
           수업에 <span class="font-weight-bold">방해가 되는</span> 행동을 가급적
           삼가해 주세요.
         </div>
@@ -306,7 +330,7 @@
               <span class="font-weight-black">주 2회</span> 3개월과정(24회)
               <span class="font-weight-black">207,000원</span> (69,000원/월)
             </div>
-            <div class="mt-10 text-left">
+            <div class="mt-10 text-left mb-10 mb-md-0">
               1회 수업 : 회당 40분 이상 소요 / 한 과정당 3개월~6개월 소요
             </div>
           </div>
@@ -340,7 +364,7 @@
               [ 홀딩 및 보강 규정 ]
             </div>
 
-            <div class="grey--text mt-10" style="line-height:220%">
+            <div class="grey--text mt-10 pa-3" style="line-height:220%">
               1. 회사의 사정에 의한 홀딩은 단톡으로 날짜를 따로 지정하여 100%
               보강진행을 하고 보강이 어려운 경우 수강 기간을 연장해드립니다.<br />
               2. 고객의 사정에 의한 홀딩은 단톡으로 날짜를 따로 지정하여 연4회
@@ -363,7 +387,7 @@
             [ 환불규정안내 ]
           </div>
 
-          <div class="grey--text mt-10" style="line-height:220%">
+          <div class="grey--text mt-10 pa-3" style="line-height:220%">
             블랙홀 영단어의 모든 수업에 대한 취소와 환불의 규정은
             평생교육-평생교육일반, 학원의 설립ㆍ운영 및 과외교습에 관한 법률과
             공정거래위원회의 소비자분쟁해결 기준을 준수 하며 다음의 환불 규정을
@@ -403,6 +427,12 @@
 
 .active-tab {
   background: #fff;
+}
+</style>
+
+<style>
+.v-slide-group__prev .v-slide-group__prev--disabled {
+  display: none;
 }
 </style>
 
