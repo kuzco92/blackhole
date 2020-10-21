@@ -28,14 +28,14 @@
           </div>
           <div class="my-auto">
             <div
-              class="text-center gmarket"
+              class="text-center brb"
               :class="isMobile ? 'h4' : 'h3'"
               style="color:#ca97ea;"
             >
               초중등 영어는? 단어부터!
             </div>
             <div
-              class="text-center gmarket white--text mt-5"
+              class="text-center brb white--text mt-5"
               :class="isMobile ? 'h3' : 'h2'"
             >
               블랙홀 영단어
@@ -199,7 +199,9 @@
     </v-container>
     <v-container>
       <div class="mt-5 text-purple text-center h4 nanum">체험해보세요,</div>
-      <div class="mt-5 text-purple text-center h3 gmarket font-weight-bold">
+      <div
+        class="mt-5 text-purple text-center h3 brb font-weight-bold korean-text"
+      >
         무료수업 신청하기
       </div>
 
@@ -208,7 +210,7 @@
       </v-card>
     </v-container>
     <v-container class="px-0 py-5">
-      <div class="text-center text-purple h3 mt-5 mb-10 gmarket">
+      <div class="text-center text-purple h3 mt-5 mb-10 brb korrean-text">
         국내최초! 쌍방향 온라인 화상강의
       </div>
       <v-row>
