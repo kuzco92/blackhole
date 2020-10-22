@@ -163,7 +163,7 @@
                         신청하기
                       </div>
                     </div>
-                    <v-icon color="yellow" x-large
+                    <v-icon color="yellow" x-large @click="$router.push('/')"
                       >fas fa-arrow-circle-right
                     </v-icon>
                   </div>
