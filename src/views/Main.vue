@@ -3,7 +3,7 @@
   <v-app style="background-color:#00000000">
     <v-container fluid class=" px-0 py-0">
       <v-card tile>
-        <v-img src="../assets/main_header_img.jpg">
+        <v-img src="../assets/main_header_img.jpg" height="100vh">
           <v-card height="100%" style="background:#00000000">
             <v-container
               fluid
