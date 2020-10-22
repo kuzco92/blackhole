@@ -2,7 +2,7 @@
 <template>
   <v-app style="background-color:#00000000">
     <v-container fluid class="py-0 px-0">
-      <v-img src="../assets/main_header_img.jpg">
+      <v-img src="../assets/main_header_img.jpg" height="100vh">
         <v-container class="d-flex flex-column fill-height">
           <div class="white--text d-flex flex-column flex-md-row mb-10 mb-md-0">
             <span

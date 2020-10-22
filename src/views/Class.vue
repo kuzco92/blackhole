@@ -2,7 +2,11 @@
 <template>
   <v-app style="background-color:#00000000">
     <v-container fluid class="py-0 px-0">
-      <v-img src="../assets/blackhole_class-page_header.jpg" width="100%">
+      <v-img
+        src="../assets/blackhole_class-page_header.jpg"
+        width="100%"
+        height="100vh"
+      >
         <v-card height="100%" class="d-flex flex-column" color="#ffffff00">
           <div class="mt-5">
             <v-card
