@@ -124,7 +124,7 @@
                 </span>
               </div>
 
-              <v-row class="mx-5">
+              <v-row class="mx-5" id="scroll">
                 <v-col
                   cols="12"
                   md="4"
@@ -508,10 +508,28 @@
         class="text-center pa-10"
         style="position:relative"
       >
-        <v-img src="../assets/img-copyright.png" width="250" class="mx-auto">
-          <v-card style="background-color:#caced10a" width="100%" height="100%">
+        <div class="d-flex flex-column flex-md-row">
+          <v-card class="ml-auto mr-5 mb-5 mb-md-0" flat>
+            <v-img src="../assets/img-copyright.png" width="250" contain>
+              <v-card
+                style="background-color:#caced10a"
+                width="100%"
+                height="100%"
+              >
+              </v-card>
+            </v-img>
           </v-card>
-        </v-img>
+          <v-card class="mr-auto ml-5" flat>
+            <v-img src="../assets/img-patent.png" width="250" contain>
+              <v-card
+                style="background-color:#caced1A1"
+                width="100%"
+                height="100%"
+              >
+              </v-card>
+            </v-img>
+          </v-card>
+        </div>
         <v-card
           width="70%"
           class="mx-auto nanum pa-10 rounded-xl"
@@ -549,6 +567,8 @@ export default {
   mounted() {
     this.screenWidth = screen.width;
     this.isMobile = this.screenWidth <= 960 ? true : false;
+
+    document.getElementById("scroll").scrollIntoView();
   },
 
   methods: {
