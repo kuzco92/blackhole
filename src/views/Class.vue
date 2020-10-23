@@ -5,7 +5,7 @@
       <v-img
         src="../assets/blackhole_class-page_header.jpg"
         width="100%"
-        height="100vh"
+        :height="isMobile ? 'auto' : '100vh'"
       >
         <v-card height="100%" class="d-flex flex-column" color="#ffffff00">
           <div class="mt-5">
