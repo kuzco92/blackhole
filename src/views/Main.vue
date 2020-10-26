@@ -512,7 +512,7 @@
         style="position:relative"
       >
         <div class="d-flex flex-column flex-md-row">
-          <v-card class="ml-auto mr-5 mb-5 mb-md-0" flat>
+          <v-card class="mx-auto ml-md-auto mr-5 mb-5 mb-md-0" flat>
             <v-img src="../assets/img-copyright.png" width="250" contain>
               <v-card
                 style="background-color:#caced10a"
@@ -522,7 +522,7 @@
               </v-card>
             </v-img>
           </v-card>
-          <v-card class="mr-auto ml-5" flat>
+          <v-card class="mx-auto mr-md-auto ml-5" flat>
             <v-img src="../assets/img-patent.png" width="250" contain>
               <v-card
                 style="background-color:#caced1A1"
@@ -571,7 +571,7 @@ export default {
     this.screenWidth = screen.width;
     this.isMobile = this.screenWidth <= 960 ? true : false;
 
-    document.getElementById("scroll").scrollIntoView();
+    // document.getElementById("scroll").scrollIntoView();
   },
 
   methods: {

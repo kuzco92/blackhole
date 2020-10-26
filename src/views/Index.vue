@@ -111,6 +111,14 @@
           </v-card>
         </v-col>
       </v-row>
+      <div class="d-flex">
+        <v-btn
+          color="#4d2794"
+          depressed
+          class="white--text mx-auto px-10 rounded-tl-xl rounded-bl-xl rounded-tr-xl"
+          >블랙홀 무료체험
+        </v-btn>
+      </div>
     </v-container>
     <v-container class="px-0 py-0">
       <v-card
@@ -269,6 +277,14 @@
           </v-card>
         </v-col>
       </v-row>
+      <div class="d-flex">
+        <v-btn
+          color="#4d2794"
+          depressed
+          class="white--text mx-auto px-10 rounded-tl-xl rounded-bl-xl rounded-tr-xl"
+          >블랙홀 무료체험
+        </v-btn>
+      </div>
     </v-container>
   </v-app>
 </template>
