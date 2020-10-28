@@ -5,7 +5,11 @@
     <v-container>
       <v-row>
         <v-col cols="12" md="3">
-          <v-img src="../src/assets/logo.png" width="200"></v-img>
+          <v-img
+            src="../src/assets/logo.png"
+            class="mx-auto"
+            width="200"
+          ></v-img>
         </v-col>
         <v-col cols="12" md="6">
           <v-container fluid>
@@ -48,7 +52,7 @@
             </v-row>
             <v-row>
               <v-col>
-                <v-icon>fab fa-instagram-square</v-icon>
+                <v-icon>fab fa-instagram</v-icon>
               </v-col>
               <v-col>
                 <v-icon>fab fa-youtube</v-icon>
