@@ -315,7 +315,7 @@
     </v-container>
 
     <v-container fluid class="px-0 py-0">
-      <v-img src="../assets/img-bg-pink.png" height="auto">
+      <v-img src="../assets/img-bg-pink.png" height="auto" class="pa-5 pa-md-0">
         <div class="mt-2 text-center gmarket h3 white--text bordered-text">
           수강료
         </div>
@@ -349,18 +349,23 @@
         slider-color="#79439f"
         active-class="active-tab"
         height="100"
+        centered
       >
         <v-tab
           class="pa-5"
           style="background: linear-gradient(to right, #b37acf, #e7c2d8); color: #34163e !important;"
         >
-          <span class="h5 nanum font-weight-black ">홀딩 및 보강 규정</span>
+          <span class="nanum font-weight-black" :class="isMobile ? 'h6' : 'h5'"
+            >홀딩 및 보강 규정</span
+          >
         </v-tab>
         <v-tab
           class="pa-5"
           style="background: linear-gradient(to right, #b37acf, #e7c2d8);  color: #34163e !important;"
         >
-          <span class="h5 nanum font-weight-black ">환불규정안내</span>
+          <span class="nanum font-weight-black " :class="isMobile ? 'h6' : 'h5'"
+            >환불규정안내</span
+          >
         </v-tab>
         <v-tab-item>
           <v-container>
@@ -435,8 +440,9 @@
 </style>
 
 <style>
-.v-slide-group__prev .v-slide-group__prev--disabled {
-  display: none;
+.v-slide-group__next,
+.v-slide-group__prev {
+  display: none !important;
 }
 </style>
 
