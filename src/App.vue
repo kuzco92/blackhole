@@ -2,7 +2,70 @@
   <v-app>
     <router-view></router-view>
 
-    <v-img src="../src/assets/footer.png"></v-img>
+    <v-container>
+      <v-row>
+        <v-col cols="12" md="3">
+          <v-img src="../src/assets/logo.png" width="200"></v-img>
+        </v-col>
+        <v-col cols="12" md="6">
+          <v-container fluid>
+            <v-row>
+              <v-col cols="6" md="3">
+                회사소개
+              </v-col>
+              <v-col cols="6" md="3">
+                개인정보처리방침
+              </v-col>
+              <v-col cols="6" md="3">
+                제휴문의
+              </v-col>
+              <v-col cols="6" md="3">
+                패밀리사이트
+              </v-col>
+            </v-row>
+            <v-row class="caption-text korean-text mt-5">
+              (주)유에듀케이션 ㅣ 대표이사 : 정원석 ㅣ 경기도 수원시 권선구
+              세권로 219, 도일빌딩 3층 ㅣ Tel : 1661-3283 ㅣ Fax : 031-216-1157
+              ㅣ 사업자등록번호 : 124-87-33297 ㅣ 개인정보책임관리자 :
+              email@ueducation.co.kr
+            </v-row>
+          </v-container>
+        </v-col>
+        <v-col cols="12" md="3">
+          <v-container fluid>
+            <v-row>
+              <v-col class="text-purple">
+                고객센터
+              </v-col>
+              <v-col class="text-purple">
+                1661-3283
+              </v-col>
+            </v-row>
+            <v-row>
+              <v-col class="caption-text">
+                FOLLOW US
+              </v-col>
+            </v-row>
+            <v-row>
+              <v-col>
+                <v-icon>fab fa-instagram-square</v-icon>
+              </v-col>
+              <v-col>
+                <v-icon>fab fa-youtube</v-icon>
+              </v-col>
+              <v-col>
+                <v-icon>fab fa-facebook</v-icon>
+              </v-col>
+            </v-row>
+          </v-container>
+        </v-col>
+      </v-row>
+      <v-row>
+        <div style="font-size:9px" class="grey--text text-center mx-auto">
+          Copyright ⓒ 2020 BlackHoleEnglish. All Rights Reserved
+        </div>
+      </v-row>
+    </v-container>
   </v-app>
 </template>
 
