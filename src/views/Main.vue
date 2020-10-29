@@ -222,7 +222,7 @@
       </div>
     </v-container>
     <v-divider></v-divider>
-    <v-container class="py-0 px-0">
+    <v-container class="py-0 px-3 px-md-0">
       <div class="text-center">
         <div class="h3 brb text-purple my-5">커리큘럼</div>
         <div class="h5 nanum">영단어 암기 블랙홀이 답인 이유!</div>

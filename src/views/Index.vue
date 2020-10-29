@@ -121,8 +121,8 @@
       </div>
     </v-container>
     <v-container class="px-0 py-0" fluid>
-      <v-card flat color="#ece2f3" tile class="py-5 d-flex marquee-container">
-        <div class="marquee-moving d-flex">
+      <v-card flat color="#ece2f3" tile class="py-5 d-flex ">
+        <div class="d-flex">
           <v-card
             :width="isMobile ? '100%' : '30%'"
             class="pa-3 flex-column justify-center rounded-br-xl"
@@ -270,7 +270,7 @@
         <v-img src="../assets/FREECLASS_IMG1.png"></v-img>
       </v-card>
     </v-container>
-    <v-container class="px-0 py-5">
+    <v-container class="px-2 px-md-0 py-5">
       <div class="text-center text-purple h3 mt-5 mb-10 brb korrean-text">
         국내최초! 쌍방향 온라인 화상강의
       </div>

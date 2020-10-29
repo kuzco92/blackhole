@@ -91,6 +91,7 @@ export default {
 #app {
   /* font-family: "Nanum Gothic", sans-serif; */
   font-family: "NanumSquareRound", sans-serif;
+  overflow-x: hidden;
 }
 
 .h1 {
