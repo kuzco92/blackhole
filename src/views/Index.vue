@@ -116,55 +116,71 @@
           color="#4d2794"
           depressed
           class="white--text mx-auto px-10 rounded-tl-xl rounded-bl-xl rounded-tr-xl"
+          x-large
           >블랙홀 무료체험
         </v-btn>
       </div>
     </v-container>
     <v-container class="px-0 py-0" fluid>
-      <v-card flat color="#ece2f3" tile class="py-5 d-flex ">
-        <div class="d-flex">
+      <v-card
+        flat
+        color="#ece2f3"
+        tile
+        class="py-5 marquee-container"
+        style="white-space:nowrap;overflow-x:scroll"
+      >
+        <div class="marquee-moving">
           <v-card
             :width="isMobile ? '100%' : '30%'"
-            class="pa-3 flex-column justify-center rounded-br-xl"
+            :height="isMobile ? '' : '100%'"
+            class="pa-3  justify-center rounded-br-xl  d-md-table-cell d-inline-block"
             style="border: 1px solid #4d2794"
             tile
           >
-            <div class="grey--text nanum h6 korean-text text-center mb-5">
-              오늘도 아이들은 선생님과의 수업시간을 먼저 체크하고 기다리네요.
-              블랙홀영어!!! 아이들에게 내일은 더 잘할수 있다는 자신감을 갖게
-              해주셔서 정말 감사합니다!!!
-            </div>
-            <div class="text-purple nanum h6 text-center">
-              [중1] 용인 정인이 학부모님
+            <div class="d-flex flex-column justify-center">
+              <div class="grey--text nanum h6 korean-text text-center mb-5">
+                오늘도 아이들은 선생님과의 수업시간을 먼저 체크하고 기다리네요.
+                블랙홀영어!!! 아이들에게 내일은 더 잘할수 있다는 자신감을 갖게
+                해주셔서 정말 감사합니다!!!
+              </div>
+              <div class="text-purple nanum h6 text-center ">
+                [중1] 용인 정인이 학부모님
+              </div>
             </div>
           </v-card>
           <v-card
             :width="isMobile ? '100%' : '30%'"
-            class="pa-3 d-flex flex-column justify-center rounded-br-xl"
+            :height="isMobile ? '' : '100%'"
+            class="pa-3  justify-center rounded-br-xl  d-md-table-cell d-inline-block"
             style="border: 1px solid #4d2794"
             tile
           >
-            <div class="grey--text nanum h6 korean-text text-center mb-5">
-              처음엔 단어량이 적었는데 점차 양이 늘어가면서 단어 실력이 확실히
-              좋아진 것을 느낀다.
-            </div>
-            <div class="text-purple nanum h6 text-center">
-              [중2] 수원 주현 학부모님
+            <div class="d-flex flex-column justify-center">
+              <div class="grey--text nanum h6 korean-text text-center mb-5">
+                처음엔 단어량이 적었는데 점차 양이 늘어가면서 단어 실력이 확실히
+                좋아진 것을 느낀다.
+              </div>
+              <div class="text-purple nanum h6 text-center">
+                [중2] 수원 주현 학부모님
+              </div>
             </div>
           </v-card>
           <v-card
             :width="isMobile ? '100%' : '30%'"
-            class="pa-3 flex-column justify-center rounded-br-xl"
+            :height="isMobile ? '' : '100%'"
+            class="pa-3  justify-center rounded-br-xl d-md-table-cell d-inline-block"
             style="border: 1px solid #4d2794"
             tile
           >
-            <div class="grey--text nanum h6 korean-text text-center mb-5">
-              복습하며 암기하다 보니 내 단어 실력이 증가했음을 알 수 있었다.
-              또한 원어민 선생님이 그 단어의 뜻을 설명해주셔서 정말 많은 도움이
-              되었다
-            </div>
-            <div class="text-purple nanum h6 text-center">
-              [고1] 다인 학생 후기
+            <div class="d-flex flex-column justify-center">
+              <div class="grey--text nanum h6 korean-text text-center mb-5">
+                복습하며 암기하다 보니 내 단어 실력이 증가했음을 알 수 있었다.
+                또한 원어민 선생님이 그 단어의 뜻을 설명해주셔서 정말 많은
+                도움이 되었다
+              </div>
+              <div class="text-purple nanum h6 text-center">
+                [고1] 다인 학생 후기
+              </div>
             </div>
           </v-card>
         </div>
@@ -332,6 +348,7 @@
           color="#4d2794"
           depressed
           class="white--text mx-auto px-10 rounded-tl-xl rounded-bl-xl rounded-tr-xl"
+          x-large
           >블랙홀 무료체험
         </v-btn>
       </div>

@@ -67,7 +67,7 @@
                   <v-spacer></v-spacer>
                   <v-card
                     color="#FFFFFF5A"
-                    class="rounded-lg d-flex align-center pa-3 mr-5"
+                    class="rounded-lg d-flex align-center pa-3 "
                     tile
                   >
                     <v-menu
@@ -79,7 +79,7 @@
                       min-width="100%"
                     >
                       <template v-slot:activator="{ on: menu }">
-                        <v-icon v-on="menu" x-large>menu</v-icon>
+                        <v-icon v-on="menu" large>menu</v-icon>
                       </template>
                       <v-card color="blue" width="100%" min-width="100%">
                         <v-list>
