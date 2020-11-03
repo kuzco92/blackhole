@@ -8,7 +8,11 @@
           :height="isMobile ? 'auto' : '100vh'"
         >
           <v-card height="100%" style="background:#00000000">
-            <v-container class="d-flex flex-column" style="height:100%">
+            <v-container
+              class="d-flex flex-column"
+              :class="isMobile ? 'px-0 py-0 ' : ''"
+              style="height:100%"
+            >
               <v-card
                 v-if="!isMobile"
                 color="#FFFFFF5A"
@@ -16,7 +20,7 @@
                 class="mx-auto rounded-tr-xl rounded-br-xl my-5"
                 tile
               >
-                <v-container>
+                <v-container class="px-0 py-0">
                   <v-row>
                     <v-col cols="2">
                       <v-img
