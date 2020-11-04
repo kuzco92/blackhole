@@ -10,7 +10,7 @@
           <v-card height="100%" style="background:#00000000">
             <v-container
               class="d-flex flex-column"
-              :class="isMobile ? 'px-0 py-0 ' : ''"
+              :class="isMobile ? 'px-0 py-0 ' : 'px-5'"
               style="height:100%"
             >
               <v-card
@@ -197,15 +197,15 @@
       </div>
       <v-container class="pt-10">
         <v-row justify="center">
-          <v-col cols="12" sm="4" class="d-flex flex-column align-center">
+          <v-col cols="12" sm="3" class="d-flex flex-column align-center">
             <v-img src="../assets/sticky-note.svg" width="250"></v-img>
             <div class="mt-5 ">확실한 단어암기</div>
           </v-col>
-          <v-col cols="12" sm="4" class="d-flex flex-column align-center">
+          <v-col cols="12" sm="3" class="d-flex flex-column align-center">
             <v-img src="../assets/computer.svg" width="250"></v-img>
             <div class="mt-5 ">수업 피드백 전송</div>
           </v-col>
-          <v-col cols="12" sm="4" class="d-flex flex-column align-center">
+          <v-col cols="12" sm="3" class="d-flex flex-column align-center">
             <v-img src="../assets/school.svg" width="250"></v-img>
             <div class="mt-5 ">효율적인 시간계산</div>
           </v-col>
@@ -282,10 +282,13 @@
         1회 수업 : 회당 40분 이상 소요 / 한 과정당 3개월~6개월 소요
       </div>
     </v-container>
-    <v-container class="px-0 py-0 mt-10">
+    <v-container class="mt-10" :class="isMobile ? 'px-0 py-0 ' : 'px-5'">
       <v-img src="../assets/level_bar.png"></v-img>
     </v-container>
-    <v-container class="px-0 py-0 d-flex flex-column">
+    <v-container
+      class="d-flex flex-column"
+      :class="isMobile ? 'px-0 py-0 ' : 'px-5'"
+    >
       <v-row justify="space-around" class="d-flex">
         <v-col cols="7" md="2">
           <div>
@@ -399,7 +402,7 @@
           <span style="background-color:#c16ec2"> 단어암기 끝장 솔루션!</span>
           블랙홀과 함께해요~
         </div>
-        <v-container>
+        <v-container :class="isMobile ? 'px-0 py-0 ' : 'px-5'">
           <v-row>
             <v-col cols="12" md="4">
               <v-card
