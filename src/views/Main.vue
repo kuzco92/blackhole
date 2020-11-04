@@ -282,12 +282,12 @@
         1회 수업 : 회당 40분 이상 소요 / 한 과정당 3개월~6개월 소요
       </div>
     </v-container>
-    <v-container class="mt-10" :class="isMobile ? 'px-0 py-0 ' : 'px-10'">
+    <v-container class="mt-10" :class="isMobile ? 'px-0 py-0 ' : 'px-16'">
       <v-img src="../assets/level_bar.png"></v-img>
     </v-container>
     <v-container
       class="d-flex flex-column"
-      :class="isMobile ? 'px-0 py-0 ' : 'px-10'"
+      :class="isMobile ? 'px-0 py-0 ' : 'px-16'"
     >
       <v-row justify="space-around" class="d-flex">
         <v-col cols="7" md="2">
