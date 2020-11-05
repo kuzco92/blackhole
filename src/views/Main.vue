@@ -39,16 +39,24 @@
                       </div>
                     </v-col>
                     <v-col cols="2" class="d-flex align-center">
-                      <div class="white--text">무료수업체험</div>
+                      <div class="white--text" :class="isMobile ? '' : 'h6'">
+                        무료수업체험
+                      </div>
                     </v-col>
                     <v-col cols="2" class="d-flex align-center">
-                      <div class="white--text">게시판</div>
+                      <div class="white--text" :class="isMobile ? '' : 'h6'">
+                        게시판
+                      </div>
                     </v-col>
                     <v-col cols="2" class="d-flex align-center">
-                      <div class="white--text">마이페이지</div>
+                      <div class="white--text" :class="isMobile ? '' : 'h6'">
+                        마이페이지
+                      </div>
                     </v-col>
                     <v-col cols="2" class="d-flex align-center">
-                      <v-icon color="white">search</v-icon>
+                      <v-icon color="white" :class="isMobile ? '' : 'h6'"
+                        >search</v-icon
+                      >
                     </v-col>
                   </v-row>
                 </v-container>
@@ -135,7 +143,8 @@
                   class="text-center text-md-left mt-5 mt-md-0"
                 >
                   <div
-                    class="h2 brb white--text"
+                    class="brb white--text"
+                    :class="isMobile ? 'h1' : 'h2'"
                     style="word-break:keep-all;line-break:strict"
                   >
                     초중등 영어는 <br />
@@ -143,7 +152,7 @@
                   </div>
                   <div class="white--text">
                     실시간 외국인 수업,
-                    <span class="font-weight-black">블랙홀 영어</span>
+                    <span class="font-weight-black h6">블랙홀 영어</span>
                   </div>
                 </v-col>
                 <v-col cols="12" md="6" align-self="start">
@@ -161,7 +170,10 @@
                   <div class="d-flex flex-row align-center ml-auto">
                     <div class="mr-3">
                       <div class="caption-text white--text">NEXT PAGE</div>
-                      <div class="white--text h6">
+                      <div
+                        class="white--text nanum"
+                        :class="isMobile ? 'h6' : 'h5'"
+                      >
                         무료수업<br />
                         신청하기
                       </div>
@@ -189,8 +201,9 @@
     </v-container>
     <v-container class="px-0 py-0" fluid>
       <div
-        class="text-center brb h3 mt-15"
+        class="text-center brb mt-15"
         style="word-break:keep-all;line-break:strict"
+        :class="isMobile ? 'h3' : 'h2'"
       >
         초중등 관리형 온라인 영단어 <br />
         블랙홀 영단어가 단어습관을 잡는다.
@@ -199,42 +212,51 @@
         <v-row justify="center">
           <v-col cols="12" sm="3" class="d-flex flex-column align-center">
             <v-img src="../assets/sticky-note.svg" width="250"></v-img>
-            <div class="mt-5 ">확실한 단어암기</div>
+            <div class="mt-5 h6">확실한 단어암기</div>
           </v-col>
           <v-col cols="12" sm="3" class="d-flex flex-column align-center">
             <v-img src="../assets/computer.svg" width="250"></v-img>
-            <div class="mt-5 ">수업 피드백 전송</div>
+            <div class="mt-5 h6">수업 피드백 전송</div>
           </v-col>
           <v-col cols="12" sm="3" class="d-flex flex-column align-center">
             <v-img src="../assets/school.svg" width="250"></v-img>
-            <div class="mt-5 ">효율적인 시간계산</div>
+            <div class="mt-5 h6">효율적인 시간계산</div>
           </v-col>
         </v-row>
       </v-container>
       <div class="text-center mt-16">
-        <div class="h3 gmarket text-purple mb-5 korean-text">
+        <div
+          class="gmarket text-purple mb-5 korean-text"
+          :class="isMobile ? 'h3' : 'h2'"
+        >
           블랙홀 완전학습 비결
         </div>
-        <div class="h5 nanum">
+        <div class="nanum" :class="isMobile ? 'h5' : 'h4'">
           2명의 외국인 강사가 영어로만 하는 국제학교식 수업,
         </div>
-        <div class="h5 nanum mb-10">블랙홀 영단어에서만 만날 수 있습니다.</div>
+        <div class="nanum mb-10" :class="isMobile ? 'h5' : 'h4'">
+          블랙홀 영단어에서만 만날 수 있습니다.
+        </div>
       </div>
     </v-container>
     <v-divider></v-divider>
     <v-container class="py-0 px-3 px-md-0">
       <div class="text-center">
-        <div class="h3 brb text-purple my-5">커리큘럼</div>
-        <div class="h5 nanum">영단어 암기 블랙홀이 답인 이유!</div>
-        <div class="h5 nanum">
+        <div class="brb text-purple my-5" :class="isMobile ? 'h3' : 'h2'">
+          커리큘럼
+        </div>
+        <div class="nanum" :class="isMobile ? 'h5' : 'h4'">
+          영단어 암기 블랙홀이 답인 이유!
+        </div>
+        <div class="nanum" :class="isMobile ? 'h5' : 'h4'">
           기존 원어민 화상영어 또는 인강과는 전혀 다른
           <span class="font-weight-black"> 새로운 수업방식 </span>
         </div>
       </div>
       <div class="d-flex flex-column flex-md-row  justify-center mt-10">
         <v-card
-          style="border: 1px solid blue"
-          class="rounded-circle d-flex align-center justify-center text-center mx-auto mx-md-3 my-5 my-md-0"
+          style="border: 2px solid #34163e"
+          class="rounded-circle d-flex align-center justify-center text-center mx-auto mx-md-3 my-5 my-md-0 h6"
           width="200"
           height="200"
         >
@@ -242,8 +264,8 @@
           인터별 반복
         </v-card>
         <v-card
-          style="border: 1px solid blue"
-          class="rounded-circle d-flex align-center justify-center text-center mx-auto mx-md-3 my-5 my-md-0"
+          style="border: 2px solid #34163e"
+          class="rounded-circle d-flex align-center justify-center text-center mx-auto mx-md-3 my-5 my-md-0 h6"
           width="200"
           height="200"
         >
@@ -251,8 +273,8 @@
           완벽점검!
         </v-card>
         <v-card
-          style="border: 1px solid blue"
-          class="rounded-circle d-flex align-center justify-center text-center mx-auto mx-md-3 my-5 my-md-0"
+          style="border: 2px solid #34163e"
+          class="rounded-circle d-flex align-center justify-center text-center mx-auto mx-md-3 my-5 my-md-0 h6"
           width="200"
           height="200"
         >
@@ -260,8 +282,8 @@
           발음교정
         </v-card>
         <v-card
-          style="border: 1px solid blue"
-          class="rounded-circle d-flex align-center justify-center text-center mx-auto mx-md-3 my-5 my-md-0"
+          style="border: 2px solid #34163e"
+          class="rounded-circle d-flex align-center justify-center text-center mx-auto mx-md-3 my-5 my-md-0 h6"
           width="200"
           height="200"
         >
@@ -269,8 +291,8 @@
           수업진행
         </v-card>
         <v-card
-          style="border: 1px solid blue"
-          class="rounded-circle d-flex align-center justify-center text-center mx-auto mx-md-3 my-5 my-md-0"
+          style="border: 2px solid #34163e"
+          class="rounded-circle d-flex align-center justify-center text-center mx-auto mx-md-3 my-5 my-md-0 h6"
           width="200"
           height="200"
         >
@@ -278,7 +300,7 @@
           매일 푸쉬
         </v-card>
       </div>
-      <div class="text-center mt-10 h5 nanum">
+      <div class="text-center mt-10 nanum" :class="isMobile ? 'h5' : 'h4'">
         1회 수업 : 회당 40분 이상 소요 / 한 과정당 3개월~6개월 소요
       </div>
     </v-container>
@@ -293,11 +315,17 @@
         <v-col cols="7" md="2">
           <div>
             <div style="color:#7de314" class="font-weight-black">1 LEVEL</div>
-            <div class="mt-5 font-weight-black grey--text">
+            <div
+              class="mt-5 font-weight-black grey--text"
+              :class="isMobile ? '' : 'h6'"
+            >
               미취학, 초등저학년 <br />
               /이미지 연상법
             </div>
-            <div class="caption-text mt-5 grey--text">
+            <div
+              class="mt-5 grey--text"
+              :class="isMobile ? 'caption-text' : ''"
+            >
               * 주요 기본단어 10개씩 암기 <br />
               * 듣기. 말하기 수업
             </div>
@@ -305,29 +333,40 @@
         </v-col>
         <v-col cols="7" md="2">
           <div style="color:#01cc9b" class="font-weight-black">2 LEVEL</div>
-          <div class="mt-5 font-weight-black grey--text">초등 1~2학년</div>
-          <div class="caption-text mt-5 grey--text">
+          <div
+            class="mt-5 font-weight-black grey--text"
+            :class="isMobile ? '' : 'h6'"
+          >
+            초등 1~2학년
+          </div>
+          <div class="mt-5 grey--text" :class="isMobile ? 'caption-text' : ''">
             * 주요 기본단어 20개씩 암기 * 듣기. 말하기 수업
           </div>
         </v-col>
         <v-col cols="7" md="2">
           <div style="color:#14a0c0" class="font-weight-black">3 LEVEL</div>
-          <div class="mt-5 font-weight-black grey--text">
+          <div
+            class="mt-5 font-weight-black grey--text"
+            :class="isMobile ? '' : 'h6'"
+          >
             초등 5~ 중등 2학년 <br />
             /영어로 습득하는 배경지식
           </div>
-          <div class="caption-text mt-5 grey--text">
+          <div class="mt-5 grey--text" :class="isMobile ? 'caption-text' : ''">
             * 주요 기본단어 30개씩 암기 <br />
             * 논리적인 사고를 유도하는 독해훈련
           </div>
         </v-col>
         <v-col cols="7" md="2">
           <div style="color: #5059ab" class="font-weight-black">4 LEVEL</div>
-          <div class="mt-5 font-weight-black grey--text">
+          <div
+            class="mt-5 font-weight-black grey--text"
+            :class="isMobile ? '' : 'h6'"
+          >
             중등 1~ 고등 1학년 <br />
             /영어교과서 기반
           </div>
-          <div class="caption-text mt-5 grey--text">
+          <div class=" mt-5 grey--text" :class="isMobile ? 'caption-text' : ''">
             * 하루 단어 40개씩 <br />
             * 발음교정과 독해훈련 <br />
             * 문장구조 이해력 강화
@@ -335,10 +374,13 @@
         </v-col>
         <v-col cols="7" md="2">
           <div style="color:#9052a9" class="font-weight-black">5 LEVEL</div>
-          <div class="mt-5 font-weight-black grey--text">
+          <div
+            class="mt-5 font-weight-black grey--text"
+            :class="isMobile ? '' : 'h6'"
+          >
             고등 1~3학년 /수능독해를 위한 문제
           </div>
-          <div class="caption-text mt-5 grey--text">
+          <div class=" mt-5 grey--text" :class="isMobile ? 'caption-text' : ''">
             * 하루 단어 50개씩 <br />
             * 암기 발음교정과 듣기연습 <br />
             * 영어로 습득하는 최신시사 <br />
@@ -365,9 +407,14 @@
     <v-container class="pb-16">
       <v-row justify="center" style="height:100%">
         <v-col cols="12" md="5" class="d-flex flex-column grey--text">
-          <div class="h4 brb text-center text-purple">영자신문 활용</div>
+          <div
+            class="brb text-center text-purple"
+            :class="isMobile ? 'h4' : 'h3'"
+          >
+            영자신문 활용
+          </div>
           <v-img src="../assets/img-news.png"></v-img>
-          <div class="mt-10">
+          <div class="mt-10 h6">
             * 문장을 통해 중요단어 파악 <br />
             * 문장속에서 의미 파악 <br />
             * 외국인 강사 액센트 지도
@@ -377,12 +424,17 @@
         <v-divider vertical v-if="!isMobile"></v-divider>
 
         <v-col cols="12" md="5" class="d-flex flex-column grey--text">
-          <div class="h4 brb text-center text-purple">효과적인 암기법</div>
-          <div class="text-center mt-5">
+          <div
+            class="brb text-center text-purple"
+            :class="isMobile ? 'h4' : 'h3'"
+          >
+            효과적인 암기법
+          </div>
+          <div class="text-center mt-5 h6">
             영어학습에서 가장 중요한건? 단어암기!
           </div>
           <v-img src="../assets/img-graph.png" class="mt-15 mb-10"></v-img>
-          <div class="mt-10">
+          <div class="mt-10 h6">
             <span class="text-purple font-weight-black"> 암기 3단계 :</span>
             암기 – 기억인출 – 철자확인 <br />
             <span class="text-purple font-weight-black">확인 2단계 :</span>
@@ -395,10 +447,18 @@
     </v-container>
     <v-container fluid class="px-0 py-0">
       <v-card tile color="#e6ddf8" class="pa-10">
-        <div class="text-center h3 brb" style="color:#3e3b44">
+        <div
+          class="text-center brb"
+          :class="isMobile ? 'h3' : 'h2'"
+          style="color:#3e3b44"
+        >
           많은 학부모님들이 인정한
         </div>
-        <div class="text-center h3 brb" style="color:#3e3b44">
+        <div
+          class="text-center brb"
+          :class="isMobile ? 'h3' : 'h2'"
+          style="color:#3e3b44"
+        >
           <span style="background-color:#c16ec2"> 단어암기 끝장 솔루션!</span>
           블랙홀과 함께해요~
         </div>
