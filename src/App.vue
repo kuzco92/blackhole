@@ -4,23 +4,23 @@
 
     <v-container>
       <v-row>
-        <v-col cols="12" md="3">
+        <v-col cols="12" md="2">
           <v-img
             src="../src/assets/logo.png"
             class="mx-auto"
             width="200"
           ></v-img>
         </v-col>
-        <v-col cols="12" md="6">
+        <v-col cols="12" md="7">
           <v-container fluid>
-            <v-row>
+            <v-row :class="isMobile ? '' : 'h6'">
               <v-col cols="6" md="3">
                 회사소개
               </v-col>
-              <v-col cols="6" md="3">
+              <v-col cols="6" md="4">
                 개인정보처리방침
               </v-col>
-              <v-col cols="6" md="3">
+              <v-col cols="6" md="2">
                 제휴문의
               </v-col>
               <v-col cols="6" md="3">
@@ -37,7 +37,7 @@
         </v-col>
         <v-col cols="12" md="3">
           <v-container fluid>
-            <v-row>
+            <v-row :class="isMobile ? '' : 'h6'">
               <v-col class="text-purple">
                 고객센터
               </v-col>

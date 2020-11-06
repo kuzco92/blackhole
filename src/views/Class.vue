@@ -35,7 +35,12 @@
                     </div>
                   </v-col>
                   <v-col cols="2" class="d-flex align-center">
-                    <div class="white--text">무료수업체험</div>
+                    <div
+                      class="white--text"
+                      @click="$router.push('/free-class')"
+                    >
+                      무료수업체험
+                    </div>
                   </v-col>
                   <v-col cols="2" class="d-flex align-center">
                     <div class="white--text">게시판</div>

@@ -10,7 +10,7 @@
           <v-card height="100%" style="background:#00000000">
             <v-container
               class="d-flex flex-column"
-              :class="isMobile ? 'px-0 py-0 ' : 'px-10'"
+              :class="isMobile ? 'px-0 py-0 ' : 'px-8'"
               style="height:100%"
             >
               <v-card
@@ -39,7 +39,11 @@
                       </div>
                     </v-col>
                     <v-col cols="2" class="d-flex align-center">
-                      <div class="white--text" :class="isMobile ? '' : 'h6'">
+                      <div
+                        class="white--text"
+                        :class="isMobile ? '' : 'h6'"
+                        @click="$router.push('/free-class')"
+                      >
                         무료수업체험
                       </div>
                     </v-col>
@@ -178,7 +182,10 @@
                         신청하기
                       </div>
                     </div>
-                    <v-icon color="yellow" x-large @click="$router.push('/')"
+                    <v-icon
+                      color="yellow"
+                      x-large
+                      @click="$router.push('/free-class')"
                       >fas fa-arrow-circle-right
                     </v-icon>
                   </div>

@@ -5,7 +5,7 @@ import VueRouter from "vue-router";
 Vue.use(VueRouter);
 
 const routes = [{
-    path: "/",
+    path: "/free-class",
     name: "Index",
     component: require("../views/Index.vue").default
   },
