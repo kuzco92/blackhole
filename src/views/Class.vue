@@ -1,6 +1,6 @@
 
 <template>
-  <v-app style="background-color:#00000000">
+  <v-app style="background-color: #00000000">
     <v-container fluid class="py-0 px-0">
       <v-img
         src="../assets/blackhole_class-page_header.jpg"
@@ -8,52 +8,64 @@
         :height="isMobile ? 'auto' : '100vh'"
       >
         <v-card height="100%" class="d-flex flex-column" color="#ffffff00">
-          <div class="mt-5">
-            <v-card
-              color="#FFFFFF5A"
-              width="80%"
-              class="mx-auto rounded-tr-xl rounded-br-xl"
-              tile
+          <div>
+            <v-container
+              :class="isMobile ? 'px-0 py-0 ' : 'px-8'"
               v-if="!isMobile"
             >
-              <v-container class="px-0 py-0">
-                <v-row>
-                  <v-col cols="2">
-                    <v-img
-                      class="nav-link"
-                      width="150"
-                      @click="$router.push('/main')"
-                      src="../assets/logo.png"
-                    ></v-img>
-                  </v-col>
-                  <v-col cols="2" class="d-flex align-center">
-                    <div
-                      class="white--text nav-link"
-                      @click="$router.push('/class')"
-                    >
-                      수업안내
-                    </div>
-                  </v-col>
-                  <v-col cols="2" class="d-flex align-center">
-                    <div
-                      class="white--text"
-                      @click="$router.push('/free-class')"
-                    >
-                      무료수업체험
-                    </div>
-                  </v-col>
-                  <v-col cols="2" class="d-flex align-center">
-                    <div class="white--text">게시판</div>
-                  </v-col>
-                  <v-col cols="2" class="d-flex align-center">
-                    <div class="white--text">마이페이지</div>
-                  </v-col>
-                  <v-col cols="2" class="d-flex align-center">
-                    <v-icon color="white">search</v-icon>
-                  </v-col>
-                </v-row>
-              </v-container>
-            </v-card>
+              <v-card
+                color="#FFFFFF5A"
+                width="80%"
+                class="mx-auto rounded-tr-xl rounded-br-xl my-5"
+                tile
+              >
+                <v-container class="px-0 py-0">
+                  <v-row>
+                    <v-col cols="2">
+                      <v-img
+                        class="nav-link"
+                        width="150"
+                        @click="$router.push('/main')"
+                        src="../assets/logo.png"
+                      ></v-img>
+                    </v-col>
+                    <v-col cols="2" class="d-flex align-center">
+                      <div
+                        class="white--text nav-link"
+                        :class="isMobile ? '' : 'h6'"
+                        @click="$router.push('/class')"
+                      >
+                        수업안내
+                      </div>
+                    </v-col>
+                    <v-col cols="2" class="d-flex align-center">
+                      <div
+                        class="white--text"
+                        :class="isMobile ? '' : 'h6'"
+                        @click="$router.push('/free-class')"
+                      >
+                        무료수업체험
+                      </div>
+                    </v-col>
+                    <v-col cols="2" class="d-flex align-center">
+                      <div class="white--text" :class="isMobile ? '' : 'h6'">
+                        게시판
+                      </div>
+                    </v-col>
+                    <v-col cols="2" class="d-flex align-center">
+                      <div class="white--text" :class="isMobile ? '' : 'h6'">
+                        마이페이지
+                      </div>
+                    </v-col>
+                    <v-col cols="2" class="d-flex align-center">
+                      <v-icon color="white" :class="isMobile ? '' : 'h6'"
+                        >search</v-icon
+                      >
+                    </v-col>
+                  </v-row>
+                </v-container>
+              </v-card>
+            </v-container>
 
             <v-container v-else class="pt-0">
               <div class="d-flex">
@@ -105,7 +117,7 @@
             <v-card
               tile
               style="background: linear-gradient(to right, #8a1f7d, #9a63d8)"
-              class="d-flex align-center justify-center pa-10 "
+              class="d-flex align-center justify-center pa-10"
             >
               <v-container>
                 <v-row>
@@ -116,7 +128,7 @@
                     :class="isMobile ? 'h6' : 'h4'"
                   >
                     <div
-                      style="color:#9b63d8"
+                      style="color: #9b63d8"
                       class="nanum text-right"
                       :class="isMobile ? 'h6' : 'h4'"
                     >
@@ -156,7 +168,7 @@
                   class="mb-5"
                 ></v-img>
                 <div class="h4 text-purple gmarket">카카오채널</div>
-                <div class="h5 grey--text  text-center nanum">
+                <div class="h5 grey--text text-center nanum">
                   브랙홀 채널에서 <br />
                   스케줄을 받습니다.
                 </div>
@@ -210,8 +222,8 @@
           수업에 <span class="font-weight-bold">방해가 되는</span> 행동을 가급적
           삼가해 주세요.
         </div>
-        <div class="text-center mt-5 grey--text ">
-          <span style="color:#f2a142">그룹수업</span> 이므로 강사의 안내에
+        <div class="text-center mt-5 grey--text">
+          <span style="color: #f2a142">그룹수업</span> 이므로 강사의 안내에
           따르지 않는 경우는
           <br />
           <span class="font-weight-black">
@@ -228,7 +240,7 @@
                 class="rounded-circle d-flex align-center justify-center"
                 height="200"
                 width="200"
-                style="border: 1px solid #34163e"
+                style="border: 15px solid #34163e"
               >
                 <div class="text-center">
                   Zoom 수업 <br />
@@ -255,16 +267,14 @@
             <v-col cols="12" sm="6" md="4" class="d-flex justify-center">
               <v-card
                 flat
-                class="rounded-circle d-flex align-center justify-center "
+                class="rounded-circle d-flex align-center justify-center"
                 height="200"
                 width="200"
                 style="border: 1px solid #34163e"
               >
                 <div class="text-center">
                   출석 부를때 <br />
-                  <span class="font-weight-black">
-                    손 흔들기
-                  </span>
+                  <span class="font-weight-black"> 손 흔들기 </span>
                 </div>
               </v-card>
             </v-col>
@@ -327,7 +337,7 @@
 
         <div class="d-flex">
           <div class="mx-auto">
-            <div class="mb-2 text-left h5 nanum mt-5 ">
+            <div class="mb-2 text-left h5 nanum mt-5">
               <span class="font-weight-black">주 5회</span> 3개월과정(60회)
               <span class="font-weight-black">462,000원</span> (154,000원/월)
             </div>
@@ -358,7 +368,10 @@
       >
         <v-tab
           class="pa-5"
-          style="background: linear-gradient(to right, #b37acf, #e7c2d8); color: #34163e !important;"
+          style="
+            background: linear-gradient(to right, #b37acf, #e7c2d8);
+            color: #34163e !important;
+          "
         >
           <span class="nanum font-weight-black" :class="isMobile ? 'h6' : 'h5'"
             >홀딩 및 보강 규정</span
@@ -366,9 +379,12 @@
         </v-tab>
         <v-tab
           class="pa-5"
-          style="background: linear-gradient(to right, #b37acf, #e7c2d8);  color: #34163e !important;"
+          style="
+            background: linear-gradient(to right, #b37acf, #e7c2d8);
+            color: #34163e !important;
+          "
         >
-          <span class="nanum font-weight-black " :class="isMobile ? 'h6' : 'h5'"
+          <span class="nanum font-weight-black" :class="isMobile ? 'h6' : 'h5'"
             >환불규정안내</span
           >
         </v-tab>
@@ -378,7 +394,7 @@
               [ 홀딩 및 보강 규정 ]
             </div>
 
-            <div class="grey--text mt-10 pa-3" style="line-height:220%">
+            <div class="grey--text mt-10 pa-3" style="line-height: 220%">
               1. 회사의 사정에 의한 홀딩은 단톡으로 날짜를 따로 지정하여 100%
               보강진행을 하고 보강이 어려운 경우 수강 기간을 연장해드립니다.<br />
               2. 고객의 사정에 의한 홀딩은 단톡으로 날짜를 따로 지정하여 연4회
@@ -401,7 +417,7 @@
             [ 환불규정안내 ]
           </div>
 
-          <div class="grey--text mt-10 pa-3" style="line-height:220%">
+          <div class="grey--text mt-10 pa-3" style="line-height: 220%">
             블랙홀 영단어의 모든 수업에 대한 취소와 환불의 규정은
             평생교육-평생교육일반, 학원의 설립ㆍ운영 및 과외교습에 관한 법률과
             공정거래위원회의 소비자분쟁해결 기준을 준수 하며 다음의 환불 규정을
@@ -457,7 +473,7 @@ export default {
     return {
       rating: 4.8,
       screenWidth: "",
-      isMobile: false
+      isMobile: false,
     };
   },
 
@@ -477,7 +493,7 @@ export default {
     onWindowResize() {
       this.screenWidth = screen.width;
       this.isMobile = this.screenWidth <= 960 ? true : false;
-    }
-  }
+    },
+  },
 };
 </script>

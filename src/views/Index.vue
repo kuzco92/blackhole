@@ -55,7 +55,7 @@
       </v-img>
     </v-container>
     <v-container class="px-0 py-5">
-      <div class="text-center text-purple h3 mt-5 mb-10 brb korean-text">
+      <div class="text-center text-purple  mt-5 mb-10 brb korean-text" :class="isMobile ? 'h3': 'h2'">
         국내최초! 쌍방향 온라인 화상강의
       </div>
       <v-row class="px-3">

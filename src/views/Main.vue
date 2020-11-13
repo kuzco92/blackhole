@@ -1,17 +1,17 @@
 
 <template>
-  <v-app style="background-color:#00000000">
-    <v-container fluid class=" px-0 py-0">
+  <v-app style="background-color: #00000000">
+    <v-container fluid class="px-0 py-0">
       <v-card tile>
         <v-img
           src="../assets/main_header_img.jpg"
           :height="isMobile ? 'auto' : '100vh'"
         >
-          <v-card height="100%" style="background:#00000000">
+          <v-card height="100%" style="background: #00000000">
             <v-container
               class="d-flex flex-column"
               :class="isMobile ? 'px-0 py-0 ' : 'px-8'"
-              style="height:100%"
+              style="height: 100%"
             >
               <v-card
                 v-if="!isMobile"
@@ -33,6 +33,7 @@
                     <v-col cols="2" class="d-flex align-center">
                       <div
                         class="white--text nav-link"
+                        :class="isMobile ? '' : 'h6'"
                         @click="$router.push('/class')"
                       >
                         수업안내
@@ -79,7 +80,7 @@
                   <v-spacer></v-spacer>
                   <v-card
                     color="#FFFFFF5A"
-                    class="rounded-lg d-flex align-center pa-3 "
+                    class="rounded-lg d-flex align-center pa-3"
                     tile
                   >
                     <v-menu
@@ -113,28 +114,28 @@
                 <span
                   class="mx-auto nanum"
                   :class="isMobile ? 'h6' : 'h5'"
-                  style="letter-spacing:15px;text-shadow:0 0 20px white"
+                  style="letter-spacing: 15px; text-shadow: 0 0 20px white"
                 >
                   국 내 최 초 !
                 </span>
                 <span
                   class="mx-auto nanum"
                   :class="isMobile ? 'h6' : 'h5'"
-                  style="letter-spacing:15px;text-shadow:0 0 20px white"
+                  style="letter-spacing: 15px; text-shadow: 0 0 20px white"
                 >
                   초 중 등
                 </span>
                 <span
                   class="mx-auto nanum"
                   :class="isMobile ? 'h6' : 'h5'"
-                  style="letter-spacing:15px;text-shadow:0 0 20px white"
+                  style="letter-spacing: 15px; text-shadow: 0 0 20px white"
                 >
                   쌍 방 향 온 라 인
                 </span>
                 <span
                   class="mx-auto nanum"
                   :class="isMobile ? 'h6' : 'h5'"
-                  style="letter-spacing:15px;text-shadow:0 0 20px white"
+                  style="letter-spacing: 15px; text-shadow: 0 0 20px white"
                   >영 단 어 프 로 그 램
                 </span>
               </div>
@@ -149,7 +150,7 @@
                   <div
                     class="brb white--text"
                     :class="isMobile ? 'h1' : 'h2'"
-                    style="word-break:keep-all;line-break:strict"
+                    style="word-break: keep-all; line-break: strict"
                   >
                     초중등 영어는 <br />
                     단어부터
@@ -209,7 +210,7 @@
     <v-container class="px-0 py-0" fluid>
       <div
         class="text-center brb mt-15"
-        style="word-break:keep-all;line-break:strict"
+        style="word-break: keep-all; line-break: strict"
         :class="isMobile ? 'h3' : 'h2'"
       >
         초중등 관리형 온라인 영단어 <br />
@@ -260,7 +261,7 @@
           <span class="font-weight-black"> 새로운 수업방식 </span>
         </div>
       </div>
-      <div class="d-flex flex-column flex-md-row  justify-center mt-10">
+      <div class="d-flex flex-column flex-md-row justify-center mt-10">
         <v-card
           style="border: 2px solid #34163e"
           class="rounded-circle d-flex align-center justify-center text-center mx-auto mx-md-3 my-5 my-md-0 h6"
@@ -321,7 +322,7 @@
       <v-row justify="space-around" class="d-flex">
         <v-col cols="7" md="2">
           <div>
-            <div style="color:#7de314" class="font-weight-black">1 LEVEL</div>
+            <div style="color: #7de314" class="font-weight-black">1 LEVEL</div>
             <div
               class="mt-5 font-weight-black grey--text"
               :class="isMobile ? '' : 'h6'"
@@ -339,7 +340,7 @@
           </div>
         </v-col>
         <v-col cols="7" md="2">
-          <div style="color:#01cc9b" class="font-weight-black">2 LEVEL</div>
+          <div style="color: #01cc9b" class="font-weight-black">2 LEVEL</div>
           <div
             class="mt-5 font-weight-black grey--text"
             :class="isMobile ? '' : 'h6'"
@@ -351,7 +352,7 @@
           </div>
         </v-col>
         <v-col cols="7" md="2">
-          <div style="color:#14a0c0" class="font-weight-black">3 LEVEL</div>
+          <div style="color: #14a0c0" class="font-weight-black">3 LEVEL</div>
           <div
             class="mt-5 font-weight-black grey--text"
             :class="isMobile ? '' : 'h6'"
@@ -373,21 +374,21 @@
             중등 1~ 고등 1학년 <br />
             /영어교과서 기반
           </div>
-          <div class=" mt-5 grey--text" :class="isMobile ? 'caption-text' : ''">
+          <div class="mt-5 grey--text" :class="isMobile ? 'caption-text' : ''">
             * 하루 단어 40개씩 <br />
             * 발음교정과 독해훈련 <br />
             * 문장구조 이해력 강화
           </div>
         </v-col>
         <v-col cols="7" md="2">
-          <div style="color:#9052a9" class="font-weight-black">5 LEVEL</div>
+          <div style="color: #9052a9" class="font-weight-black">5 LEVEL</div>
           <div
             class="mt-5 font-weight-black grey--text"
             :class="isMobile ? '' : 'h6'"
           >
             고등 1~3학년 /수능독해를 위한 문제
           </div>
-          <div class=" mt-5 grey--text" :class="isMobile ? 'caption-text' : ''">
+          <div class="mt-5 grey--text" :class="isMobile ? 'caption-text' : ''">
             * 하루 단어 50개씩 <br />
             * 암기 발음교정과 듣기연습 <br />
             * 영어로 습득하는 최신시사 <br />
@@ -412,7 +413,7 @@
     <v-divider></v-divider>
 
     <v-container class="pb-16">
-      <v-row justify="center" style="height:100%">
+      <v-row justify="center" style="height: 100%">
         <v-col cols="12" md="5" class="d-flex flex-column grey--text">
           <div
             class="brb text-center text-purple"
@@ -420,7 +421,7 @@
           >
             영자신문 활용
           </div>
-          <v-img src="../assets/img-news.png"></v-img>
+          <v-img src="../assets/img-news.jpg"></v-img>
           <div class="mt-10 h6">
             * 문장을 통해 중요단어 파악 <br />
             * 문장속에서 의미 파악 <br />
@@ -457,16 +458,16 @@
         <div
           class="text-center brb"
           :class="isMobile ? 'h3' : 'h2'"
-          style="color:#3e3b44"
+          style="color: #3e3b44"
         >
           많은 학부모님들이 인정한
         </div>
         <div
           class="text-center brb"
           :class="isMobile ? 'h3' : 'h2'"
-          style="color:#3e3b44"
+          style="color: #3e3b44"
         >
-          <span style="background-color:#c16ec2"> 단어암기 끝장 솔루션!</span>
+          <span style="background-color: #c16ec2"> 단어암기 끝장 솔루션!</span>
           블랙홀과 함께해요~
         </div>
         <v-container :class="isMobile ? 'px-0 py-0 ' : 'px-10'">
@@ -486,7 +487,7 @@
                 </v-card>
                 <div
                   class="text-center"
-                  style="line-break:strict; word-break:keep-all"
+                  style="line-break: strict; word-break: keep-all"
                 >
                   처음엔 뭐 다 비슷비슷하겠지.... 했었는데 아이 눈높이에 맞춰
                   수업하시는 선생님의 질문에 적극적으로 대답하는 아이의 모습이
@@ -506,7 +507,7 @@
             <v-col cols="12" md="4">
               <v-card
                 flat
-                style="border: 1px solid #34163e; position:relative"
+                style="border: 1px solid #34163e; position: relative"
                 width="100%"
                 height="100%"
                 class="pa-5 rounded-xl"
@@ -520,8 +521,8 @@
                 </v-card>
 
                 <div
-                  class="text-center "
-                  style="line-break:strict; word-break:keep-all"
+                  class="text-center"
+                  style="line-break: strict; word-break: keep-all"
                 >
                   처음엔 단어량이 적었는데 점차 양이 늘어가면서 단어 실력이
                   확실히 좋아진 것을 느낀다.
@@ -555,7 +556,7 @@
                 </v-card>
                 <div
                   class="text-center"
-                  style="line-break:strict; word-break:keep-all"
+                  style="line-break: strict; word-break: keep-all"
                 >
                   전시간에 배운 단어들을 복습하며 암기하다 보니 내 단어 실력이
                   증가했음을 알 수 있었다. 또한 원어민 선생님과의 대화를 통해서
@@ -579,13 +580,13 @@
         tile
         color="rgba(202,206,209, 0.5)"
         class="text-center pa-10"
-        style="position:relative"
+        style="position: relative"
       >
         <div class="d-flex flex-column flex-md-row">
           <v-card class="mx-auto ml-md-auto mr-5 mb-5 mb-md-0" flat>
             <v-img src="../assets/img-copyright.png" width="250" contain>
               <v-card
-                style="background-color:#caced10a"
+                style="background-color: #caced10a"
                 width="100%"
                 height="100%"
               >
@@ -595,7 +596,7 @@
           <v-card class="mx-auto mr-md-auto ml-5" flat>
             <v-img src="../assets/img-patent.png" width="250" contain>
               <v-card
-                style="background-color:#caced1A1"
+                style="background-color: #caced1A1"
                 width="100%"
                 height="100%"
               >
@@ -607,7 +608,12 @@
           width="70%"
           class="mx-auto nanum pa-10 rounded-xl"
           :class="isMobile ? 'h6' : 'h5'"
-          style="position:absolute;bottom:20px;transform:translateX(-50%);left:50%"
+          style="
+            position: absolute;
+            bottom: 20px;
+            transform: translateX(-50%);
+            left: 50%;
+          "
           color="#FFFFFF2a"
         >
           블랙홀영어의 컨텐츠 및 도구들을 이용한 <br />
@@ -626,7 +632,7 @@ export default {
     return {
       rating: 4.8,
       screenWidth: "",
-      isMobile: false
+      isMobile: false,
     };
   },
 
@@ -648,7 +654,7 @@ export default {
     onWindowResize() {
       this.screenWidth = screen.width;
       this.isMobile = this.screenWidth <= 960 ? true : false;
-    }
-  }
+    },
+  },
 };
 </script>
