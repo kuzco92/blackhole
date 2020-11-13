@@ -240,9 +240,9 @@
                 class="rounded-circle d-flex align-center justify-center"
                 height="200"
                 width="200"
-                style="border: 15px solid #34163e"
+                style="border: 10px solid #34163e"
               >
-                <div class="text-center">
+                <div class="text-center" :class="isMobile ? '' : 'h6'">
                   Zoom 수업 <br />
                   <span class="font-weight-black">5분 전까지 접속</span>
                 </div>
@@ -255,9 +255,12 @@
                 class="rounded-circle d-flex align-center justify-center"
                 height="200"
                 width="200"
-                style="border: 1px solid #34163e"
+                style="border: 10px solid #34163e"
               >
-                <div class="text-center font-weight-black">
+                <div
+                  class="text-center font-weight-black"
+                  :class="isMobile ? '' : 'h6'"
+                >
                   스피커 ON <br />
                   비디오 ON <br />
                   마이크 OFF!
@@ -270,9 +273,9 @@
                 class="rounded-circle d-flex align-center justify-center"
                 height="200"
                 width="200"
-                style="border: 1px solid #34163e"
+                style="border: 10px solid #34163e"
               >
-                <div class="text-center">
+                <div class="text-center" :class="isMobile ? '' : 'h6'">
                   출석 부를때 <br />
                   <span class="font-weight-black"> 손 흔들기 </span>
                 </div>
@@ -284,10 +287,13 @@
                 class="rounded-circle d-flex align-center justify-center"
                 height="200"
                 width="200"
-                style="border: 1px solid #34163e"
+                style="border: 10px solid #34163e"
               >
                 <div class="text-center">
-                  <span class="font-weight-black">임의로 퇴실 시,</span> <br />
+                  <span class="font-weight-black" :class="isMobile ? '' : 'h6'"
+                    >임의로 퇴실 시,</span
+                  >
+                  <br />
                   보호자에게<br />
                   메시지 전송
                 </div>
@@ -299,9 +305,12 @@
                 class="rounded-circle d-flex align-center justify-center"
                 height="200"
                 width="200"
-                style="border: 1px solid #34163e"
+                style="border: 10px solid #34163e"
               >
-                <div class="text-center font-weight-black">
+                <div
+                  class="text-center font-weight-black"
+                  :class="isMobile ? '' : 'h6'"
+                >
                   당일미션 완료 시, <br />
                   손들기로 <br />
                   확인받고 <br />
@@ -309,18 +318,29 @@
                 </div>
               </v-card>
             </v-col>
-            <v-col cols="12" sm="6" md="4" class="d-flex justify-center">
+            <v-col
+              cols="12"
+              sm="6"
+              md="4"
+              class="d-flex justify-center"
+              :class="isMobile ? '' : 'h6'"
+            >
               <v-card
                 flat
                 class="rounded-circle d-flex align-center justify-center"
                 height="200"
                 width="200"
-                style="border: 1px solid #34163e"
+                style="border: 10px solid #34163e"
               >
                 <div class="text-center">
-                  <span class="font-weight-black">학습관리는 카톡!</span> <br />
+                  <span class="font-weight-black" :class="isMobile ? '' : 'h6'"
+                    >학습관리는 카톡!</span
+                  >
+                  <br />
                   알람이 신경쓰이면 <br />
-                  <span class="font-weight-black">무음모드 설정</span>
+                  <span class="font-weight-black" :class="isMobile ? '' : 'h6'"
+                    >무음모드 설정</span
+                  >
                 </div>
               </v-card>
             </v-col>
