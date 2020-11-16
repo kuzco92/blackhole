@@ -59,9 +59,7 @@
                       </div>
                     </v-col>
                     <v-col cols="2" class="d-flex align-center">
-                      <v-icon color="white" :class="isMobile ? '' : 'h6'"
-                        >search</v-icon
-                      >
+                      <v-icon color="white" large>fas fa-gift </v-icon>
                     </v-col>
                   </v-row>
                 </v-container>
@@ -114,33 +112,49 @@
                 <span
                   class="mx-auto nanum"
                   :class="isMobile ? 'h6' : 'h5'"
-                  style="letter-spacing: 15px; text-shadow: 0 0 20px white"
+                  :style="
+                    isMobile
+                      ? ''
+                      : 'letter-spacing: 15px; text-shadow: 0 0 20px white'
+                  "
                 >
                   국 내 최 초 !
                 </span>
                 <span
                   class="mx-auto nanum"
                   :class="isMobile ? 'h6' : 'h5'"
-                  style="letter-spacing: 15px; text-shadow: 0 0 20px white"
+                  :style="
+                    isMobile
+                      ? ''
+                      : 'letter-spacing: 15px; text-shadow: 0 0 20px white'
+                  "
                 >
                   초 중 등
                 </span>
                 <span
                   class="mx-auto nanum"
                   :class="isMobile ? 'h6' : 'h5'"
-                  style="letter-spacing: 15px; text-shadow: 0 0 20px white"
+                  :style="
+                    isMobile
+                      ? ''
+                      : 'letter-spacing: 15px; text-shadow: 0 0 20px white'
+                  "
                 >
                   쌍 방 향 온 라 인
                 </span>
                 <span
                   class="mx-auto nanum"
                   :class="isMobile ? 'h6' : 'h5'"
-                  style="letter-spacing: 15px; text-shadow: 0 0 20px white"
+                  :style="
+                    isMobile
+                      ? ''
+                      : 'letter-spacing: 15px; text-shadow: 0 0 20px white'
+                  "
                   >영 단 어 프 로 그 램
                 </span>
               </div>
 
-              <v-row class="mx-5" id="scroll">
+              <v-row class="mx-5">
                 <v-col
                   cols="12"
                   md="4"
@@ -149,7 +163,7 @@
                 >
                   <div
                     class="brb white--text"
-                    :class="isMobile ? 'h1' : 'h2'"
+                    :class="isMobile ? 'h3' : 'h2'"
                     style="word-break: keep-all; line-break: strict"
                   >
                     초중등 영어는 <br />

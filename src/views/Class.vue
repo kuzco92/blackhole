@@ -8,7 +8,7 @@
         :height="isMobile ? 'auto' : '100vh'"
       >
         <v-card height="100%" class="d-flex flex-column" color="#ffffff00">
-          <div>
+          <div class="mt-3 mt-md-0">
             <v-container
               :class="isMobile ? 'px-0 py-0 ' : 'px-8'"
               v-if="!isMobile"
@@ -58,9 +58,7 @@
                       </div>
                     </v-col>
                     <v-col cols="2" class="d-flex align-center">
-                      <v-icon color="white" :class="isMobile ? '' : 'h6'"
-                        >search</v-icon
-                      >
+                      <v-icon color="white" large>fas fa-gift</v-icon>
                     </v-col>
                   </v-row>
                 </v-container>
