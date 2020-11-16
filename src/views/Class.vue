@@ -40,7 +40,7 @@
                     </v-col>
                     <v-col cols="2" class="d-flex align-center">
                       <div
-                        class="white--text"
+                        class="white--text nav-link"
                         :class="isMobile ? '' : 'h6'"
                         @click="$router.push('/free-class')"
                       >
@@ -58,7 +58,9 @@
                       </div>
                     </v-col>
                     <v-col cols="2" class="d-flex align-center">
-                      <v-icon color="white" large>fas fa-gift</v-icon>
+                      <a href="http://bhen.co.kr/gift/" target="_blank">
+                        <v-icon color="white" large>fas fa-gift</v-icon>
+                      </a>
                     </v-col>
                   </v-row>
                 </v-container>
