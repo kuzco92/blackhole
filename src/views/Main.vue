@@ -49,12 +49,19 @@
                       </div>
                     </v-col>
                     <v-col cols="2" class="d-flex align-center">
-                      <div class="white--text" :class="isMobile ? '' : 'h6'">
+                      <div
+                        class="white--text nav-link"
+                        :class="isMobile ? '' : 'h6'"
+                        @click="$router.push('/board')"
+                      >
                         게시판
                       </div>
                     </v-col>
                     <v-col cols="2" class="d-flex align-center">
-                      <div class="white--text" :class="isMobile ? '' : 'h6'">
+                      <div
+                        class="white--text nav-link"
+                        :class="isMobile ? '' : 'h6'"
+                      >
                         마이페이지
                       </div>
                     </v-col>
@@ -99,7 +106,9 @@
                           <v-list-item @click="$router.push('/class')"
                             >무료수업체험</v-list-item
                           >
-                          <v-list-item> 게시판</v-list-item>
+                          <v-list-item @click="$router.push('/free-class')">
+                            게시판</v-list-item
+                          >
                           <v-list-item>마이페이지</v-list-item>
                         </v-list>
                       </v-card>
@@ -279,7 +288,7 @@
       </div>
       <div class="d-flex flex-column flex-md-row justify-center mt-10">
         <v-card
-          style="border: 2px solid #34163e"
+          style="border: 10px solid #34163e"
           class="rounded-circle d-flex align-center justify-center text-center mx-auto mx-md-3 my-5 my-md-0 h6"
           width="200"
           height="200"
@@ -288,7 +297,7 @@
           인터별 반복
         </v-card>
         <v-card
-          style="border: 2px solid #34163e"
+          style="border: 10px solid #34163e"
           class="rounded-circle d-flex align-center justify-center text-center mx-auto mx-md-3 my-5 my-md-0 h6"
           width="200"
           height="200"
@@ -297,7 +306,7 @@
           완벽점검!
         </v-card>
         <v-card
-          style="border: 2px solid #34163e"
+          style="border: 10px solid #34163e"
           class="rounded-circle d-flex align-center justify-center text-center mx-auto mx-md-3 my-5 my-md-0 h6"
           width="200"
           height="200"
@@ -306,7 +315,7 @@
           발음교정
         </v-card>
         <v-card
-          style="border: 2px solid #34163e"
+          style="border: 10px solid #34163e"
           class="rounded-circle d-flex align-center justify-center text-center mx-auto mx-md-3 my-5 my-md-0 h6"
           width="200"
           height="200"
@@ -315,7 +324,7 @@
           수업진행
         </v-card>
         <v-card
-          style="border: 2px solid #34163e"
+          style="border: 10px solid #34163e"
           class="rounded-circle d-flex align-center justify-center text-center mx-auto mx-md-3 my-5 my-md-0 h6"
           width="200"
           height="200"

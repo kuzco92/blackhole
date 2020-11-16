@@ -48,12 +48,19 @@
                       </div>
                     </v-col>
                     <v-col cols="2" class="d-flex align-center">
-                      <div class="white--text" :class="isMobile ? '' : 'h6'">
+                      <div
+                        class="white--text nav-link"
+                        :class="isMobile ? '' : 'h6'"
+                        @click="$router.push('/board')"
+                      >
                         게시판
                       </div>
                     </v-col>
                     <v-col cols="2" class="d-flex align-center">
-                      <div class="white--text" :class="isMobile ? '' : 'h6'">
+                      <div
+                        class="white--text nav-link"
+                        :class="isMobile ? '' : 'h6'"
+                      >
                         마이페이지
                       </div>
                     </v-col>
@@ -94,12 +101,14 @@
                     <template v-slot:activator="{ on: menu }">
                       <v-icon v-on="menu" large>menu</v-icon>
                     </template>
-                    <v-card color="blue" width="100%" min-width="100%">
+                    <v-card width="100%" min-width="100%">
                       <v-list>
                         <v-list-item @click="$router.push('/class')"
                           >무료수업체험</v-list-item
                         >
-                        <v-list-item> 게시판</v-list-item>
+                        <v-list-item @click="$router.push('/free-class')">
+                          게시판</v-list-item
+                        >
                         <v-list-item>마이페이지</v-list-item>
                       </v-list>
                     </v-card>

@@ -19,6 +19,11 @@ const routes = [{
     name: "Class",
     component: require("../views/Class.vue").default
   },
+   {
+    path: "/board",
+    name: "Board",
+    component: require("../views/Board.vue").default
+  },
 
 ];
 

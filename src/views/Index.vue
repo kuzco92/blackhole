@@ -47,12 +47,19 @@
                   </div>
                 </v-col>
                 <v-col cols="2" class="d-flex align-center">
-                  <div class="white--text" :class="isMobile ? '' : 'h6'">
+                  <div
+                    class="white--text nav-link"
+                    :class="isMobile ? '' : 'h6'"
+                    @click="$router.push('/board')"
+                  >
                     게시판
                   </div>
                 </v-col>
                 <v-col cols="2" class="d-flex align-center">
-                  <div class="white--text" :class="isMobile ? '' : 'h6'">
+                  <div
+                    class="white--text nav-link"
+                    :class="isMobile ? '' : 'h6'"
+                  >
                     마이페이지
                   </div>
                 </v-col>
@@ -65,7 +72,7 @@
             </v-container>
           </v-card>
 
-          <v-container v-else>
+          <v-container v-else class="pt-0 mt-3">
             <div class="d-flex">
               <v-card color="#00000000" flat>
                 <v-img
@@ -92,14 +99,16 @@
                   <template v-slot:activator="{ on: menu }">
                     <v-icon v-on="menu" large>menu</v-icon>
                   </template>
-                  <v-card color="blue" width="100%" min-width="100%">
-                    <v-list-item>
+                  <v-card width="100%" min-width="100%">
+                    <v-list>
                       <v-list-item @click="$router.push('/class')"
                         >무료수업체험</v-list-item
                       >
-                      <v-list-item> 게시판</v-list-item>
+                      <v-list-item @click="$router.push('/free-class')">
+                        게시판</v-list-item
+                      >
                       <v-list-item>마이페이지</v-list-item>
-                    </v-list-item>
+                    </v-list>
                   </v-card>
                 </v-menu>
               </v-card>
@@ -173,7 +182,7 @@
         </v-container>
       </v-img>
     </v-container>
-    <v-container class="px-0 py-5">
+    <v-container :class="isMobile ? 'px-0 py-5' : 'px-10 py-5'">
       <div
         class="text-center text-purple mt-5 mb-10 brb korean-text"
         :class="isMobile ? 'h3' : 'h2'"
@@ -340,8 +349,8 @@
     <v-container class="px-0 py-0" fluid>
       <v-card
         flat
-        width="95%"
         class="ml-auto mb-3"
+        :class="isMobile ? 'px-2' : 'px-15'"
         style="background: linear-gradient(to bottom right, #edf1fb, #f7eff5)"
       >
         <v-container>
@@ -370,6 +379,7 @@
       <v-card
         flat
         class="mb-3"
+        :class="isMobile ? 'px-2' : 'px-15'"
         style="background: linear-gradient(to bottom right, #e8f7f8, #f9f2f7)"
       >
         <v-container>
@@ -398,7 +408,7 @@
 
       <v-card
         flat
-        width="95%"
+        :class="isMobile ? 'px-2' : 'px-15'"
         style="background: linear-gradient(to bottom right, #f2f0fc, #ecf3f9)"
       >
         <v-container>
@@ -437,7 +447,7 @@
         <v-img src="../assets/FREECLASS_IMG1.png"></v-img>
       </v-card>
     </v-container>
-    <v-container class="px-2 px-md-0 py-5">
+    <v-container :class="isMobile ? 'px-2 py-5' : 'px-15 py-5'">
       <div class="text-center text-purple h3 mt-5 mb-10 brb korrean-text">
         국내최초! 쌍방향 온라인 화상강의
       </div>
