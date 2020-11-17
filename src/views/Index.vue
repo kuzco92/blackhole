@@ -252,7 +252,7 @@
         </v-btn>
       </div>
     </v-container>
-    <v-container class="px-0 py-0" fluid>
+    <v-container class="px-0 py-0" fluid v-if="!isMobile">
       <v-card flat color="#ece2f3" tile class="py-5">
         <v-carousel
           hide-delimiter-background
@@ -323,6 +323,101 @@
                   class="pa-3 mx-3"
                   style="border: 1px solid #4d2794"
                   light
+                >
+                  <div class="d-flex flex-column justify-center">
+                    <div
+                      class="text-center text-purple font-weight-bold h5 mb-3"
+                    >
+                      {{ review.title }}
+                    </div>
+                    <div
+                      class="grey--text nanum h6 korean-text text-center mb-5"
+                    >
+                      {{ review.body }}
+                    </div>
+                    <div class="text-purple nanum h6 text-center">
+                      {{ review.footer }}
+                    </div>
+                  </div>
+                </v-card>
+              </div>
+            </div>
+          </v-carousel-item>
+        </v-carousel>
+      </v-card>
+    </v-container>
+    <v-container v-else>
+      <v-card flat color="#ece2f3" tile class="py-5">
+        <v-carousel
+          hide-delimiter-background
+          show-arrows-on-hover
+          hide-delimiters
+        >
+          <v-carousel-item v-for="(review, i) in review1" :key="i">
+            <div class="d-flex justify-center fill-height">
+              <div class="d-flex fill-height">
+                <v-card
+                  max-width="360"
+                  class="pa-3 mx-3"
+                  style="border: 1px solid #4d2794"
+                  light
+                >
+                  <div class="d-flex flex-column justify-center">
+                    <div
+                      class="text-center text-purple font-weight-bold h5 mb-3"
+                    >
+                      {{ review.title }}
+                    </div>
+                    <div
+                      class="grey--text nanum h6 korean-text text-center mb-5"
+                    >
+                      {{ review.body }}
+                    </div>
+                    <div class="text-purple nanum h6 text-center">
+                      {{ review.footer }}
+                    </div>
+                  </div>
+                </v-card>
+              </div>
+            </div>
+          </v-carousel-item>
+          <v-carousel-item v-for="(review, i) in review2" :key="i">
+            <div class="d-flex justify-center fill-height">
+              <div class="d-flex fill-height">
+                <v-card
+                  max-width="360"
+                  class="pa-3 mx-3"
+                  style="border: 1px solid #4d2794"
+                  light
+                >
+                  <div class="d-flex flex-column justify-center">
+                    <div
+                      class="text-center text-purple font-weight-bold h5 mb-3"
+                    >
+                      {{ review.title }}
+                    </div>
+                    <div
+                      class="grey--text nanum h6 korean-text text-center mb-5"
+                    >
+                      {{ review.body }}
+                    </div>
+                    <div class="text-purple nanum h6 text-center">
+                      {{ review.footer }}
+                    </div>
+                  </div>
+                </v-card>
+              </div>
+            </div>
+          </v-carousel-item>
+          <v-carousel-item v-for="(review, i) in review3" :key="i">
+            <div class="d-flex justify-center fill-height">
+              <div class="d-flex fill-height">
+                <v-card
+                  max-width="360"
+                  class="pa-3 mx-3"
+                  style="border: 1px solid #4d2794"
+                  light
+                  height="100%"
                 >
                   <div class="d-flex flex-column justify-center">
                     <div
