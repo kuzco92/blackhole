@@ -11,7 +11,7 @@
             <v-container
               class="d-flex flex-column"
               :class="isMobile ? 'px-0 py-0 ' : 'px-8'"
-              style="height: 100%"
+              style="height: 100%; max-width: 1000px"
             >
               <Header></Header>
               <div
@@ -23,7 +23,7 @@
                   :style="
                     isMobile
                       ? ''
-                      : 'letter-spacing: 15px; text-shadow: 0 0 20px white'
+                      : 'letter-spacing: 10px; text-shadow: 0 0 20px white'
                   "
                 >
                   국 내 최 초 !
@@ -34,7 +34,7 @@
                   :style="
                     isMobile
                       ? ''
-                      : 'letter-spacing: 15px; text-shadow: 0 0 20px white'
+                      : 'letter-spacing: 10px; text-shadow: 0 0 20px white'
                   "
                 >
                   초 중 등
@@ -45,7 +45,7 @@
                   :style="
                     isMobile
                       ? ''
-                      : 'letter-spacing: 15px; text-shadow: 0 0 20px white'
+                      : 'letter-spacing: 10px; text-shadow: 0 0 20px white'
                   "
                 >
                   쌍 방 향 온 라 인
@@ -56,7 +56,7 @@
                   :style="
                     isMobile
                       ? ''
-                      : 'letter-spacing: 15px; text-shadow: 0 0 20px white'
+                      : 'letter-spacing: 10px; text-shadow: 0 0 20px white'
                   "
                   >영 단 어 프 로 그 램
                 </span>
@@ -518,7 +518,7 @@
           <v-card class="mx-auto mr-md-auto ml-5" flat>
             <v-img src="../assets/img-patent.png" width="250" contain>
               <v-card
-                style="background-color: #caced1A1"
+                style="background-color: #caced1a1"
                 width="100%"
                 height="100%"
               >

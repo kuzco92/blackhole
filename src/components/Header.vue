@@ -2,7 +2,7 @@
   <v-card
     v-if="!isMobile"
     color="#FFFFFF5A"
-    width="80%"
+    width="100%"
     class="mx-auto rounded-tr-xl rounded-br-xl my-5"
     tile
   >

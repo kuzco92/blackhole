@@ -11,14 +11,15 @@
           <v-container
             class="d-flex flex-column"
             :class="isMobile ? 'px-0 py-0 ' : 'px-8'"
-            style="height: 100%"
+            style="height: 100%; max-width: 1000px"
           >
             <Header></Header>
+
+            <div class="my-auto mx-auto text-center">
+              <div class="white--text h3 gmarket">수업안내</div>
+              <div class="white--text mb-10 mb-md-0">HOME > 수업안내</div>
+            </div>
           </v-container>
-          <div class="my-auto mx-auto text-center">
-            <div class="white--text h3 gmarket">수업안내</div>
-            <div class="white--text mb-10 mb-md-0">HOME > 수업안내</div>
-          </div>
 
           <div>
             <v-card
