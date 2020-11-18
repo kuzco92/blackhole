@@ -12,27 +12,61 @@
         >
           <Header></Header>
 
-          <v-card :class="isMobile ? 'mx-2' : 'mx-10'" class="mb-10">
+          <v-card :class="isMobile ? 'mx-2' : 'mx-10'" class="rounded-xl mb-10">
+            <v-card flat color="#5b3690" class="white--text h4 nanum pa-3">
+              강의실
+              <div class="h5 nanum">
+                (수업전 단어장 먼저 확인후 강의실 입장)
+              </div>
+            </v-card>
             <v-container>
               <v-row>
-                <v-col cols="5" md="3">
-                  <v-select :items="items" outlined dense></v-select>
+                <v-col cols="6">
+                  <v-btn
+                    block
+                    height="20vh"
+                    color="#6c2e9d"
+                    class="white--text d-flex flex-column"
+                  >
+                    <div class="h6">
+                      <v-icon large class="mb-2">fas fa-book</v-icon>
+                      <br />
+                      <span>수업</span>
+
+                      <span>단어장</span>
+                    </div>
+                  </v-btn>
                 </v-col>
-                <v-spacer></v-spacer>
-                <v-col cols="5" md="3">
-                  <v-text-field label="제목+내용">
-                    <template v-slot:append>
-                      <v-icon color="orange">arrow_forward</v-icon>
-                    </template>
-                  </v-text-field>
+                <v-col cols="6">
+                  <v-btn
+                    block
+                    height="20vh"
+                    color="#6c2e9d"
+                    class="white--text"
+                  >
+                    <div class="h6">
+                      <v-icon large class="mb-2">fas fa-sign-in-alt</v-icon>
+                      <br />
+                      <span>강의실 </span>
+
+                      <span>입장</span>
+                    </div>
+                  </v-btn>
                 </v-col>
               </v-row>
               <v-row>
-                <v-data-table
-                  style="width: 100%"
-                  :headers="header"
-                  :items="content"
-                ></v-data-table>
+                <v-col cols="12">
+                  <v-btn block color="success" x-large>
+                    <v-icon>fas fa-search</v-icon>
+                    <span class="ma-3 h6">사용방법 알아보기</span></v-btn
+                  >
+                </v-col>
+                <v-col cols="12">
+                  <v-btn block color="yellow" x-large>
+                    <v-icon>far fa-comment-alt</v-icon>
+                    <span class="ma-3 h6">카톡 상담하기</span></v-btn
+                  >
+                </v-col>
               </v-row>
             </v-container>
           </v-card>

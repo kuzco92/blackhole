@@ -73,7 +73,13 @@
             @click="phoneDialog = false"
             >Cancel</v-btn
           >
-          <v-btn depressed color="#5b3690" class="white--text">OK</v-btn>
+          <v-btn
+            depressed
+            color="#5b3690"
+            class="white--text"
+            @click="$router.push('/mypage')"
+            >OK</v-btn
+          >
         </div>
       </v-card>
     </v-dialog>
@@ -109,11 +115,12 @@
           <v-card color="blue" width="100%" min-width="100%">
             <v-list>
               <v-list-item @click="$router.push('/class')"
+                >수업안내</v-list-item
+              >
+              <v-list-item @click="$router.push('/free-class')"
                 >무료수업체험</v-list-item
               >
-              <v-list-item @click="$router.push('/free-class')">
-                게시판</v-list-item
-              >
+              <v-list-item @click="$router.push('/board')"> 게시판</v-list-item>
               <v-list-item @click="phoneDialog = true">마이페이지</v-list-item>
             </v-list>
           </v-card>
@@ -134,7 +141,13 @@
             @click="phoneDialog = false"
             >Cancel</v-btn
           >
-          <v-btn depressed color="#5b3690" class="white--text">OK</v-btn>
+          <v-btn
+            depressed
+            color="#5b3690"
+            class="white--text"
+            @click="$router.push('/mypage')"
+            >OK</v-btn
+          >
         </div>
       </v-card>
     </v-dialog>

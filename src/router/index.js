@@ -6,8 +6,8 @@ Vue.use(VueRouter);
 
 const routes = [{
     path: "/free-class",
-    name: "Index",
-    component: require("../views/Index.vue").default
+    name: "FreeClass",
+    component: require("../views/FreeClass.vue").default
   },
    {
     path: "/main",
@@ -23,6 +23,11 @@ const routes = [{
     path: "/board",
     name: "Board",
     component: require("../views/Board.vue").default
+  },
+    {
+    path: "/mypage",
+    name: "Mypage",
+    component: require("../views/Mypage.vue").default
   },
 
 ];
