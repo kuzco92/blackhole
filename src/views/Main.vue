@@ -10,13 +10,12 @@
             <v-container
               class="d-flex flex-column"
               :class="isMobile ? 'px-0 py-0 ' : 'px-8'"
-              style="height: 100%; max-width: 1000px"
+              style="height: 100%;"
             >
               <Header></Header>
               <div
                 class="white--text d-flex flex-column flex-md-row justify-md-space-between"
               >
-
                 <v-row>
                   <v-col
                     md="6"
@@ -74,7 +73,6 @@
                     </span>
                   </v-col>
                 </v-row>
-
               </div>
 
               <v-row class="mx-5">
@@ -98,7 +96,7 @@
                 </v-col>
                 <v-col cols="12" md="6" align-self="start">
                   <v-img
-                    class="mx-auto mx-md-0"
+                    :class="[isMobile ? '' : 'mt-15', 'mx-auto', 'mx-md-0']"
                     src="../assets/tab.png"
                     width="70%"
                   ></v-img>
@@ -145,6 +143,20 @@
           </v-card>
         </v-img>
       </v-card>
+    </v-container>
+    <v-container fluid class="px-0 py-0">
+      <v-btn
+        elevation="3"
+        fab
+        icon
+        fixed
+        bottom
+        class="yellow black--text"
+        style="right:20px; bottom:20px"
+        href="http://pf.kakao.com/_RgxjSxb/chat"
+        target="_blank"
+        ><v-icon large>mdi-chat</v-icon></v-btn
+      >
     </v-container>
     <v-container fluid class="px-0 py-0">
       <v-img src="../assets/blackhole_main_img2.jpg"></v-img>
@@ -196,7 +208,7 @@
     <v-divider></v-divider>
     <v-container class="py-0 px-3 px-md-0">
       <div class="text-center">
-        <div class="brb text-purple mt-5" :class="isMobile ? 'h4' : 'h2'">
+        <div class="brb text-purple mt-10" :class="isMobile ? 'h4' : 'h2'">
           커리큘럼
         </div>
         <div class="nanum" :class="[isMobile ? 'h6' : 'h4', 'mx-10']">
@@ -208,12 +220,7 @@
         </div>
       </div>
       <div class="d-flex flex-column flex-md-row justify-center mt-10">
-        <v-row
-          justify="center"
-          align="center"
-          class="overflow-y-auto"
-          v-scroll.self="onScroll"
-        >
+        <v-row justify="center" align="center">
           <v-card
             style="border: 10px solid #34163e"
             class="rounded-circle d-flex align-center justify-center text-center mx-auto mx-md-3 my-5 my-md-0 h6"
@@ -307,11 +314,7 @@
       </div>
     </v-container>
     <v-container class="mt-10 " :class="isMobile ? 'px-0 py-0 ' : 'px-16'">
-      <v-img
-        src="../assets/level_bar.png"
-        :stlye="isMobile ? 'max-width:100%' : 'max-width:50%'"
-        class="mx-auto"
-      ></v-img>
+      <v-img src="../assets/level_bar.png" class="mx-auto"></v-img>
     </v-container>
     <v-container
       class="d-flex flex-column"
@@ -473,7 +476,7 @@
           :class="isMobile ? 'h4' : 'h2'"
           style="color: #3e3b44"
         >
-          많은 학부모님들이 <br />
+          많은 학부모님들이 <br v-if="isMobile" />
           <span class="text-purple">인정</span>한
         </div>
         <div
