@@ -158,22 +158,27 @@
           hide-delimiters
         >
           <v-carousel-item>
-            <div class="d-flex justify-center">
+            <div class="d-flex justify-center fill-height">
               <div class="d-flex" v-for="(review, i) in review1" :key="i">
                 <v-card
                   max-width="360"
-                  class="pa-3 mx-3"
+                  class="pa-3 mx-3 rounded-xl d-flex my-auto"
                   style="border: 1px solid #4d2794"
                   light
+                  height="400"
                 >
                   <div class="d-flex flex-column justify-center">
-                    <div
-                      class="text-center text-purple font-weight-bold h5 mb-3"
+                    <v-card
+                      class="rounded-pill white--text text-center pa-3 mx-auto"
+                      color="#4d2794"
+                      width="80%"
                     >
-                      {{ review.title }}
-                    </div>
+                      <div class="text-center white--text font-weight-bold h5">
+                        {{ review.title }}
+                      </div>
+                    </v-card>
                     <div
-                      class="grey--text nanum h6 korean-text text-center mb-5"
+                      class="grey--text nanum korean-text text-center korean-text subtitle-text-1 my-auto"
                     >
                       {{ review.body }}
                     </div>
@@ -186,22 +191,27 @@
             </div>
           </v-carousel-item>
           <v-carousel-item>
-            <div class="d-flex justify-center">
+            <div class="d-flex justify-center fill-height">
               <div class="d-flex" v-for="(review, i) in review2" :key="i">
                 <v-card
                   max-width="360"
-                  class="pa-3 mx-3"
+                  class="pa-3 mx-3 rounded-xl d-flex my-auto"
                   style="border: 1px solid #4d2794"
                   light
+                  height="400"
                 >
                   <div class="d-flex flex-column justify-center">
-                    <div
-                      class="text-center text-purple font-weight-bold h5 mb-3"
+                    <v-card
+                      class="rounded-pill white--text text-center pa-3 mx-auto"
+                      color="#4d2794"
+                      width="80%"
                     >
-                      {{ review.title }}
-                    </div>
+                      <div class="text-center white--text font-weight-bold h5">
+                        {{ review.title }}
+                      </div>
+                    </v-card>
                     <div
-                      class="grey--text nanum h6 korean-text text-center mb-5"
+                      class="grey--text nanum korean-text text-center korean-text subtitle-text-1 my-auto"
                     >
                       {{ review.body }}
                     </div>
@@ -214,22 +224,27 @@
             </div>
           </v-carousel-item>
           <v-carousel-item>
-            <div class="d-flex justify-center">
+            <div class="d-flex justify-center fill-height">
               <div class="d-flex" v-for="(review, i) in review3" :key="i">
                 <v-card
                   max-width="360"
-                  class="pa-3 mx-3"
+                  class="pa-3 mx-3 rounded-xl d-flex my-auto"
                   style="border: 1px solid #4d2794"
                   light
+                  height="400"
                 >
                   <div class="d-flex flex-column justify-center">
-                    <div
-                      class="text-center text-purple font-weight-bold h5 mb-3"
+                    <v-card
+                      class="rounded-pill white--text text-center pa-3 mx-auto"
+                      color="#4d2794"
+                      width="80%"
                     >
-                      {{ review.title }}
-                    </div>
+                      <div class="text-center white--text font-weight-bold h5">
+                        {{ review.title }}
+                      </div>
+                    </v-card>
                     <div
-                      class="grey--text nanum h6 korean-text text-center mb-5"
+                      class="grey--text nanum korean-text text-center korean-text subtitle-text-1 my-auto"
                     >
                       {{ review.body }}
                     </div>
@@ -246,28 +261,29 @@
     </v-container>
     <v-container v-else>
       <v-card flat color="#ece2f3" tile class="py-5">
-        <v-carousel
-          hide-delimiter-background
-          show-arrows-on-hover
-          hide-delimiters
-        >
+        <v-carousel hide-delimiter-background hide-delimiters>
           <v-carousel-item v-for="(review, i) in review1" :key="i">
             <div class="d-flex justify-center fill-height">
               <div class="d-flex fill-height">
                 <v-card
                   max-width="360"
-                  class="pa-3 mx-3"
+                  class="pa-3 mx-3 rounded-xl d-flex my-auto"
                   style="border: 1px solid #4d2794"
                   light
+                  height="400"
                 >
                   <div class="d-flex flex-column justify-center">
-                    <div
-                      class="text-center text-purple font-weight-bold h5 mb-3"
+                    <v-card
+                      class="rounded-pill white--text text-center pa-3 mx-auto"
+                      color="#4d2794"
+                      width="80%"
                     >
-                      {{ review.title }}
-                    </div>
+                      <div class="text-center white--text font-weight-bold h5">
+                        {{ review.title }}
+                      </div>
+                    </v-card>
                     <div
-                      class="grey--text nanum h6 korean-text text-center mb-5"
+                      class="grey--text nanum korean-text text-center korean-text subtitle-text-1 my-auto"
                     >
                       {{ review.body }}
                     </div>
@@ -284,18 +300,23 @@
               <div class="d-flex fill-height">
                 <v-card
                   max-width="360"
-                  class="pa-3 mx-3"
+                  class="pa-3 mx-3 rounded-xl d-flex my-auto"
                   style="border: 1px solid #4d2794"
                   light
+                  height="400"
                 >
                   <div class="d-flex flex-column justify-center">
-                    <div
-                      class="text-center text-purple font-weight-bold h5 mb-3"
+                    <v-card
+                      class="rounded-pill white--text text-center pa-3 mx-auto"
+                      color="#4d2794"
+                      width="80%"
                     >
-                      {{ review.title }}
-                    </div>
+                      <div class="text-center white--text font-weight-bold h5">
+                        {{ review.title }}
+                      </div>
+                    </v-card>
                     <div
-                      class="grey--text nanum h6 korean-text text-center mb-5"
+                      class="grey--text nanum korean-text text-center korean-text subtitle-text-1 my-auto"
                     >
                       {{ review.body }}
                     </div>
@@ -312,19 +333,23 @@
               <div class="d-flex fill-height">
                 <v-card
                   max-width="360"
-                  class="pa-3 mx-3"
+                  class="pa-3 mx-3 rounded-xl d-flex my-auto"
                   style="border: 1px solid #4d2794"
                   light
-                  height="100%"
+                  height="400"
                 >
                   <div class="d-flex flex-column justify-center">
-                    <div
-                      class="text-center text-purple font-weight-bold h5 mb-3"
+                    <v-card
+                      class="rounded-pill white--text text-center pa-3 mx-auto"
+                      color="#4d2794"
+                      width="80%"
                     >
-                      {{ review.title }}
-                    </div>
+                      <div class="text-center white--text font-weight-bold h5">
+                        {{ review.title }}
+                      </div>
+                    </v-card>
                     <div
-                      class="grey--text nanum h6 korean-text text-center mb-5"
+                      class="grey--text nanum korean-text text-center korean-text subtitle-text-1 my-auto"
                     >
                       {{ review.body }}
                     </div>
@@ -350,9 +375,12 @@
           <v-row>
             <v-col cols="12" md="6" class="d-flex flex-column justify-center">
               <div class="h4 nanum mb-10" style="color: #34163e">
-                독해단어 <span class="font-weight-bold">10회 인터벌 반복</span>
+                독해단어
+                <span class="font-weight-bold korean-text"
+                  >10회 인터벌 반복</span
+                >
               </div>
-              <div class="grey--text">
+              <div class="grey--text korean-text">
                 클래스카드를 활용하여 반복적으로 외우는 영단어 암기법을 통해
                 뺀질거리는 우리 아이도 제대로 학습할 수 있어요. 매일
                 어원단어장을 함께 전송하여 영어를 한층 깊게 학습합니다.
@@ -387,9 +415,9 @@
             <v-col cols="12" md="6" class="d-flex flex-column justify-center">
               <div class="h4 nanum mb-10" style="color: #34163e">
                 외국인 강사님과
-                <span class="font-weight-bold">100% 영어학습</span>
+                <span class="font-weight-bold korean-text">100% 영어학습</span>
               </div>
-              <div class="grey--text">
+              <div class="grey--text korean-text">
                 외국인 강사와 함께하는 100% 영어학습을 통해 발음교정부터 스펠링
                 교정까지 강사님과 체계적인 수업이 진행됩니다 . 비대면 그룹과외로
                 진행되며, 친구들과 함께 공부하여 학습 능률도 높아집니다.
@@ -409,9 +437,11 @@
             <v-col cols="12" md="6" class="d-flex flex-column justify-center">
               <div class="h4 nanum mb-10" style="color: #34163e">
                 카톡으로
-                <span class="font-weight-bold">관리하는 자녀 수업 스케줄</span>
+                <span class="font-weight-bold korean-text"
+                  >관리하는 자녀 수업 스케줄</span
+                >
               </div>
-              <div class="grey--text">
+              <div class="grey--text korean-text">
                 클래스카드를 활용하여 반복적으로 외우는 영단어 암기법을 통해
                 뺀질거리는 우리 아이도 제대로 학습할 수 있어요. 매일
                 어원단어장을 함께 전송하여 영어를 한층 깊게 학습합니다.
@@ -429,7 +459,9 @@
       </v-card>
     </v-container>
     <v-container>
-      <div class="mt-5 text-purple text-center h4 nanum">체험해보세요,</div>
+      <div class="mt-5 text-purple text-center h4 nanum korean-text">
+        체험해보세요,
+      </div>
       <div
         class="mt-5 text-purple text-center h3 brb font-weight-bold korean-text"
       >
@@ -441,7 +473,7 @@
       </v-card>
     </v-container>
     <v-container :class="isMobile ? 'px-2 py-5' : 'px-15 py-5'">
-      <div class="text-center text-purple h3 mt-5 mb-10 brb korrean-text">
+      <div class="text-center text-purple h3 mt-5 mb-10 brb korean-text">
         국내최초! 쌍방향 온라인 화상강의
       </div>
       <v-row>
