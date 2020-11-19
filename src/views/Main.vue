@@ -1,11 +1,10 @@
-
 <template>
   <v-app style="background-color: #00000000">
     <v-container fluid class="px-0 py-0">
       <v-card tile>
         <v-img
           src="../assets/main_header_img.jpg"
-          :height="isMobile ? 'auto' : '100vh'"
+          :height="isMobile ? '100vh' : '100vh'"
         >
           <v-card height="100%" style="background: #00000000">
             <v-container
@@ -15,59 +14,72 @@
             >
               <Header></Header>
               <div
-                class="white--text d-flex flex-column flex-md-row justify-space-between"
+                class="white--text d-flex flex-column flex-md-row justify-md-space-between"
               >
-                <span
-                  class="mx-auto nanum"
-                  :class="isMobile ? 'h6' : 'h5'"
-                  :style="
-                    isMobile
-                      ? ''
-                      : 'letter-spacing: 15px; text-shadow: 0 0 20px white'
-                  "
-                >
-                  국 내 최 초 !
-                </span>
-                <span
-                  class="mx-auto nanum"
-                  :class="isMobile ? 'h6' : 'h5'"
-                  :style="
-                    isMobile
-                      ? ''
-                      : 'letter-spacing: 15px; text-shadow: 0 0 20px white'
-                  "
-                >
-                  초 중 등
-                </span>
-                <span
-                  class="mx-auto nanum"
-                  :class="isMobile ? 'h6' : 'h5'"
-                  :style="
-                    isMobile
-                      ? ''
-                      : 'letter-spacing: 15px; text-shadow: 0 0 20px white'
-                  "
-                >
-                  쌍 방 향 온 라 인
-                </span>
-                <span
-                  class="mx-auto nanum"
-                  :class="isMobile ? 'h6' : 'h5'"
-                  :style="
-                    isMobile
-                      ? ''
-                      : 'letter-spacing: 15px; text-shadow: 0 0 20px white'
-                  "
-                  >영 단 어 프 로 그 램
-                </span>
+                <v-row>
+                  <v-col
+                    md="6"
+                    cols="12"
+                    class="d-md-inline-flex text-center py-0"
+                  >
+                    <span
+                      class="mx-auto nanum"
+                      :class="isMobile ? 'h6' : 'h5'"
+                      :style="
+                        isMobile
+                          ? ''
+                          : 'letter-spacing: 8px; text-shadow: 0 0 20px white'
+                      "
+                    >
+                      국내 최초!
+                    </span>
+                    <span
+                      class="mx-auto nanum"
+                      :class="isMobile ? 'h6' : 'h5'"
+                      :style="
+                        isMobile
+                          ? ''
+                          : 'letter-spacing: 8px; text-shadow: 0 0 20px white; right:0 '
+                      "
+                    >
+                      초중등
+                    </span>
+                  </v-col>
+                  <v-col
+                    md="6"
+                    cols="12"
+                    class="d-md-inline-flex text-center py-0"
+                  >
+                    <span
+                      class="mx-auto nanum "
+                      :class="isMobile ? 'h6' : 'h5'"
+                      :style="
+                        isMobile
+                          ? ''
+                          : 'letter-spacing: 8px; text-shadow: 0 0 20px white'
+                      "
+                    >
+                      쌍방향 온라인
+                    </span>
+                    <span
+                      class="mx-auto nanum "
+                      :class="isMobile ? 'h6' : 'h5'"
+                      :style="
+                        isMobile
+                          ? ''
+                          : 'letter-spacing: 8px; text-shadow: 0 0 20px white'
+                      "
+                      >영단어 프로그램
+                    </span>
+                  </v-col>
+                </v-row>
               </div>
 
               <v-row class="mx-5">
                 <v-col
                   cols="12"
                   md="4"
-                  align-self="end"
-                  class="text-center text-md-left mt-5 mt-md-0"
+                  class="text-center align-self-end text-md-left mt-3 mt-md-0"
                 >
                   <div
                     class="brb white--text"
@@ -92,14 +104,19 @@
                 <v-col
                   cols="12"
                   md="2"
-                  class="d-flex align-self-end justify-end"
+                  class="align-self-end d-flex  justify-md-end justify-center"
                 >
-                  <div class="d-flex flex-row align-center ml-auto">
-                    <div class="mr-3">
-                      <div class="caption-text white--text">NEXT PAGE</div>
+                  <!-- <div class="d-inline-flex flex-row align-center ml-auto"> -->
+                  <div class="d-inline-flex flex-row align-center">
+                    <div :class="isMobile ? '' : 'mr-3'">
+                      <div class="caption-text white--text text-center">
+                        NEXT PAGE
+                      </div>
                       <div
-                        class="white--text nanum"
-                        :class="isMobile ? 'h6' : 'h5'"
+                        class="nanum"
+                        :class="isMobile ? 'h6 yellow--text' : 'h5 white--text'"
+                        @click="$router.push('/free-class')"
+                        style="cursor: pointer"
                       >
                         무료수업<br />
                         신청하기
@@ -109,6 +126,7 @@
                       color="yellow"
                       x-large
                       @click="$router.push('/free-class')"
+                      class="d-none d-md-block"
                       >fas fa-arrow-circle-right
                     </v-icon>
                   </div>
@@ -133,38 +151,42 @@
       <div
         class="text-center brb mt-15"
         style="word-break: keep-all; line-break: strict"
-        :class="isMobile ? 'h3' : 'h2'"
+        :class="[isMobile ? 'h4 px-10' : 'h2', '']"
       >
         초중등 관리형 온라인 영단어 <br />
         블랙홀 영단어가 단어습관을 잡는다.
       </div>
-      <v-container class="pt-10">
+      <v-container class="pt-10" style="max-width:80%">
         <v-row justify="center">
-          <v-col cols="12" sm="3" class="d-flex flex-column align-center">
-            <v-img src="../assets/sticky-note.svg" width="250"></v-img>
-            <div class="mt-5 h6">확실한 단어암기</div>
+          <v-col cols="12" sm="3" class="d-flex flex-column align-center mb-10">
+            <v-img src="../assets/sticky-note.svg" width="220"></v-img>
+            <div class="mt-5 h5 nanum">확실한 단어암기</div>
           </v-col>
-          <v-col cols="12" sm="3" class="d-flex flex-column align-center">
-            <v-img src="../assets/computer.svg" width="250"></v-img>
-            <div class="mt-5 h6">수업 피드백 전송</div>
+          <v-col cols="12" sm="3" class="d-flex flex-column align-center mb-10">
+            <v-img src="../assets/computer.svg" width="220"></v-img>
+            <div class="mt-5 h5 nanum">수업 피드백 전송</div>
           </v-col>
-          <v-col cols="12" sm="3" class="d-flex flex-column align-center">
-            <v-img src="../assets/school.svg" width="250"></v-img>
-            <div class="mt-5 h6">효율적인 시간계산</div>
+          <v-col cols="12" sm="3" class="d-flex flex-column align-center mb-10">
+            <v-img src="../assets/school.svg" width="220"></v-img>
+            <div class="mt-5 h5 nanum">효율적인 시간계산</div>
           </v-col>
         </v-row>
       </v-container>
-      <div class="text-center mt-16">
+      <div class="text-center mt-10">
         <div
           class="gmarket text-purple mb-5 korean-text"
-          :class="isMobile ? 'h3' : 'h2'"
+          :class="[isMobile ? 'h4 px-10' : 'h2', '']"
         >
           블랙홀 완전학습 비결
         </div>
-        <div class="nanum" :class="isMobile ? 'h5' : 'h4'">
-          2명의 외국인 강사가 영어로만 하는 국제학교식 수업,
+        <div class="nanum" :class="[isMobile ? 'h6 ' : 'h4', 'mx-10']">
+          2명의 외국인 강사가 <br v-if="isMobile" />
+          영어로만 하는 국제학교식 수업,
         </div>
-        <div class="nanum mb-10" :class="isMobile ? 'h5' : 'h4'">
+        <div
+          class="nanum mb-10"
+          :class="[isMobile ? 'h6 px-10' : 'h4', 'mt-2']"
+        >
           블랙홀 영단어에서만 만날 수 있습니다.
         </div>
       </div>
@@ -172,77 +194,129 @@
     <v-divider></v-divider>
     <v-container class="py-0 px-3 px-md-0">
       <div class="text-center">
-        <div class="brb text-purple my-5" :class="isMobile ? 'h3' : 'h2'">
+        <div class="brb text-purple mt-5" :class="isMobile ? 'h4' : 'h2'">
           커리큘럼
         </div>
-        <div class="nanum" :class="isMobile ? 'h5' : 'h4'">
+        <div class="nanum" :class="[isMobile ? 'h6' : 'h4', 'mx-10']">
           영단어 암기 블랙홀이 답인 이유!
         </div>
-        <div class="nanum" :class="isMobile ? 'h5' : 'h4'">
+        <div class="nanum" :class="[isMobile ? 'h6' : 'h4', 'mx-10']">
           기존 원어민 화상영어 또는 인강과는 전혀 다른
           <span class="font-weight-black"> 새로운 수업방식 </span>
         </div>
       </div>
       <div class="d-flex flex-column flex-md-row justify-center mt-10">
-        <v-card
-          style="border: 10px solid #34163e"
-          class="rounded-circle d-flex align-center justify-center text-center mx-auto mx-md-3 my-5 my-md-0 h6"
-          width="200"
-          height="200"
+        <v-row
+          justify="center"
+          align="center"
+          class="overflow-y-auto"
+          v-scroll.self="onScroll"
         >
-          독해단어 10회 <br />
-          인터별 반복
-        </v-card>
-        <v-card
-          style="border: 10px solid #34163e"
-          class="rounded-circle d-flex align-center justify-center text-center mx-auto mx-md-3 my-5 my-md-0 h6"
-          width="200"
-          height="200"
-        >
-          스펠링까지 <br />
-          완벽점검!
-        </v-card>
-        <v-card
-          style="border: 10px solid #34163e"
-          class="rounded-circle d-flex align-center justify-center text-center mx-auto mx-md-3 my-5 my-md-0 h6"
-          width="200"
-          height="200"
-        >
-          외국인강사 <br />
-          발음교정
-        </v-card>
-        <v-card
-          style="border: 10px solid #34163e"
-          class="rounded-circle d-flex align-center justify-center text-center mx-auto mx-md-3 my-5 my-md-0 h6"
-          width="200"
-          height="200"
-        >
-          영어100% <br />
-          수업진행
-        </v-card>
-        <v-card
-          style="border: 10px solid #34163e"
-          class="rounded-circle d-flex align-center justify-center text-center mx-auto mx-md-3 my-5 my-md-0 h6"
-          width="200"
-          height="200"
-        >
-          어원단어장 <br />
-          매일 푸쉬
-        </v-card>
+          <v-card
+            style="border: 10px solid #34163e"
+            class="rounded-circle d-flex align-center justify-center text-center mx-auto mx-md-3 my-5 my-md-0 h6"
+            width="200"
+            height="200"
+          >
+            <v-progress-circular
+              :rotate="360"
+              :size="200"
+              :width="10"
+              value="100"
+              color="primary"
+            >
+              독해단어 10회 <br />
+              인터별 반복
+            </v-progress-circular>
+          </v-card>
+          <v-card
+            style="border: 10px solid #34163e"
+            class="rounded-circle d-flex align-center justify-center text-center mx-auto mx-md-3 my-5 my-md-0 h6"
+            width="200"
+            height="200"
+          >
+            <v-progress-circular
+              :rotate="360"
+              :size="200"
+              :width="10"
+              value="100"
+              color="red"
+            >
+              스펠링까지 <br />
+              완벽점검!
+            </v-progress-circular>
+          </v-card>
+          <v-card
+            style="border: 10px solid #34163e"
+            class="rounded-circle d-flex align-center justify-center text-center mx-auto mx-md-3 my-5 my-md-0 h6"
+            width="200"
+            height="200"
+          >
+            <v-progress-circular
+              :rotate="360"
+              :size="200"
+              :width="10"
+              value="100"
+              color="teal"
+            >
+              외국인강사 <br />
+              발음교정
+            </v-progress-circular>
+          </v-card>
+          <v-card
+            style="border: 10px solid #34163e"
+            class="rounded-circle d-flex align-center justify-center text-center mx-auto mx-md-3 my-5 my-md-0 h6"
+            width="200"
+            height="200"
+          >
+            <v-progress-circular
+              :rotate="360"
+              :size="200"
+              :width="10"
+              value="100"
+              color="pink"
+            >
+              영어100% <br />
+              수업진행
+            </v-progress-circular>
+          </v-card>
+          <v-card
+            style="border: 10px solid #34163e"
+            class="rounded-circle d-flex align-center justify-center text-center mx-auto mx-md-3 my-5 my-md-0 h6"
+            width="200"
+            height="200"
+          >
+            <v-progress-circular
+              :rotate="360"
+              :size="200"
+              :width="10"
+              value="100"
+              color="purple"
+            >
+              어원단어장 <br />
+              매일 푸쉬
+            </v-progress-circular>
+          </v-card>
+        </v-row>
       </div>
-      <div class="text-center mt-10 nanum" :class="isMobile ? 'h5' : 'h4'">
-        1회 수업 : 회당 40분 이상 소요 / 한 과정당 3개월~6개월 소요
+      <div class="text-center mt-10 nanum" :class="isMobile ? 'h6' : 'h4'">
+        1회 수업 : 회당 40분 이상 소요 <br v-if="isMobile" />
+        <span v-else>/</span> 한 과정당 3개월~6개월 소요
       </div>
     </v-container>
-    <v-container class="mt-10" :class="isMobile ? 'px-0 py-0 ' : 'px-16'">
-      <v-img src="../assets/level_bar.png"></v-img>
+    <v-container class="mt-10 " :class="isMobile ? 'px-0 py-0 ' : 'px-16'">
+      <v-img
+        src="../assets/level_bar.png"
+        :stlye="isMobile ? 'max-width:100%' : 'max-width:50%'"
+        class="mx-auto"
+      ></v-img>
     </v-container>
     <v-container
       class="d-flex flex-column"
       :class="isMobile ? 'px-0 py-0 ' : 'px-16'"
     >
       <v-row justify="space-around" class="d-flex">
-        <v-col cols="7" md="2">
+        <v-col cols="9" md="2">
           <div>
             <div style="color: #7de314" class="font-weight-black">1 LEVEL</div>
             <div
@@ -261,7 +335,7 @@
             </div>
           </div>
         </v-col>
-        <v-col cols="7" md="2">
+        <v-col cols="9" md="2">
           <div style="color: #01cc9b" class="font-weight-black">2 LEVEL</div>
           <div
             class="mt-5 font-weight-black grey--text"
@@ -273,7 +347,7 @@
             * 주요 기본단어 20개씩 암기 * 듣기. 말하기 수업
           </div>
         </v-col>
-        <v-col cols="7" md="2">
+        <v-col cols="9" md="2">
           <div style="color: #14a0c0" class="font-weight-black">3 LEVEL</div>
           <div
             class="mt-5 font-weight-black grey--text"
@@ -287,7 +361,7 @@
             * 논리적인 사고를 유도하는 독해훈련
           </div>
         </v-col>
-        <v-col cols="7" md="2">
+        <v-col cols="9" md="2">
           <div style="color: #5059ab" class="font-weight-black">4 LEVEL</div>
           <div
             class="mt-5 font-weight-black grey--text"
@@ -302,7 +376,7 @@
             * 문장구조 이해력 강화
           </div>
         </v-col>
-        <v-col cols="7" md="2">
+        <v-col cols="9" md="2">
           <div style="color: #9052a9" class="font-weight-black">5 LEVEL</div>
           <div
             class="mt-5 font-weight-black grey--text"
@@ -323,10 +397,11 @@
 
     <div class="d-flex mx-auto">
       <v-btn
-        class="mx-auto py-5 px-10 rounded-tl-xl rounded-tr-xl rounded-bl-xl white--text mb-10"
+        class="mx-auto mt-5 px-10 rounded-tl-xl rounded-tr-xl rounded-bl-xl white--text mb-10"
         x-large
         depressed
         color="#34163e"
+        @click="$router.push('/free-class')"
       >
         <span class="h5 nanum">블랙홀 무료체험</span>
       </v-btn>
@@ -334,7 +409,7 @@
 
     <v-divider></v-divider>
 
-    <v-container class="pb-16">
+    <v-container class="pb-16" style="max-width:75%">
       <v-row justify="center" style="height: 100%">
         <v-col cols="12" md="5" class="d-flex flex-column grey--text">
           <div
@@ -345,9 +420,17 @@
           </div>
           <v-img src="../assets/img-news.jpg"></v-img>
           <div class="mt-10 h6">
-            * 문장을 통해 중요단어 파악 <br />
-            * 문장속에서 의미 파악 <br />
-            * 외국인 강사 액센트 지도
+            * 문장을 통해
+            <span class="primary--text lighten-2 font-weight-bold"
+              >중요단어</span
+            >
+            파악 <br />
+            * 문장속에서
+            <span class="primary--text lighten-2 font-weight-bold">의미</span>
+            파악 <br />
+            * 외국인 강사
+            <span class="primary--text lighten-2 font-weight-bold">액센트</span>
+            지도
           </div>
         </v-col>
 
@@ -361,16 +444,22 @@
             효과적인 암기법
           </div>
           <div class="text-center mt-5 h6">
-            영어학습에서 가장 중요한건? 단어암기!
+            영어학습에서 가장 중요한건? <br v-if="isMobile" />
+            <span class="primary--text lighten-2 font-weight-bold"
+              >단어암기!</span
+            >
           </div>
           <v-img src="../assets/img-graph.png" class="mt-15 mb-10"></v-img>
           <div class="mt-10 h6">
             <span class="text-purple font-weight-black"> 암기 3단계 :</span>
-            암기 – 기억인출 – 철자확인 <br />
+            <br v-if="isMobile" />
+            <span class="subtitle-1">암기 – 기억인출 – 철자확인</span> <br />
             <span class="text-purple font-weight-black">확인 2단계 :</span>
-            테스트 , 스피드퀴즈 <br />
-            <span class="text-purple font-weight-black">복습 5단계 :</span> 3일,
-            4일, 5일, 7일, 30일 반복테스트
+            <br v-if="isMobile" />
+            <span class="subtitle-1">테스트 , 스피드퀴즈</span> <br />
+            <span class="text-purple font-weight-black">복습 5단계 :</span>
+            <br v-if="isMobile" />
+            <span class="subtitle-1">3일, 4일, 5일, 7일, 30일 반복테스트</span>
           </div>
         </v-col>
       </v-row>
@@ -379,20 +468,25 @@
       <v-card tile color="#e6ddf8" class="pa-10">
         <div
           class="text-center brb"
-          :class="isMobile ? 'h3' : 'h2'"
+          :class="isMobile ? 'h4' : 'h2'"
           style="color: #3e3b44"
         >
-          많은 학부모님들이 인정한
+          많은 학부모님들이 <br />
+          <span class="text-purple">인정</span>한
         </div>
         <div
           class="text-center brb"
-          :class="isMobile ? 'h3' : 'h2'"
+          :class="isMobile ? 'h4' : 'h2'"
           style="color: #3e3b44"
         >
-          <span style="background-color: #c16ec2"> 단어암기 끝장 솔루션!</span>
-          블랙홀과 함께해요~
+          <span style="background-color: #c16ec2"> 단어암기 끝장 솔루션!</span
+          ><br />
+          <span class="text-purple">"블랙홀"</span>과 함께해요~
         </div>
-        <v-container :class="isMobile ? 'px-0 py-0 ' : 'px-10'">
+        <v-container
+          :class="isMobile ? 'px-0 py-0 ' : 'px-10'"
+          :style="isMobile ? 'max-width:100%' : 'max-width:80%'"
+        >
           <v-row>
             <v-col cols="12" md="4">
               <v-card
@@ -472,12 +566,12 @@
                 <v-card
                   class="rounded-pill white--text text-center pa-3 mx-auto mb-5"
                   color="#4d2794"
-                  width="80%"
+                  width="100%"
                 >
                   탁월한 복습량
                 </v-card>
                 <div
-                  class="text-center"
+                  class="text-center nanum"
                   style="line-break: strict; word-break: keep-all"
                 >
                   전시간에 배운 단어들을 복습하며 암기하다 보니 내 단어 실력이
@@ -506,7 +600,11 @@
       >
         <div class="d-flex flex-column flex-md-row">
           <v-card class="mx-auto ml-md-auto mr-5 mb-5 mb-md-0" flat>
-            <v-img src="../assets/img-copyright.png" width="250" contain>
+            <v-img
+              src="../assets/img-copyright.png"
+              :width="isMobile ? '100%' : '250'"
+              contain
+            >
               <v-card
                 style="background-color: #caced10a"
                 width="100%"
@@ -515,8 +613,12 @@
               </v-card>
             </v-img>
           </v-card>
-          <v-card class="mx-auto mr-md-auto ml-5" flat>
-            <v-img src="../assets/img-patent.png" width="250" contain>
+          <v-card class="mx-auto mr-md-auto mx-auto" flat>
+            <v-img
+              src="../assets/img-patent.png"
+              :width="isMobile ? '100%' : '250'"
+              contain
+            >
               <v-card
                 style="background-color: #caced1A1"
                 width="100%"
@@ -552,14 +654,16 @@
 import Header from "@/components/Header.vue";
 export default {
   components: {
-    Header,
+    Header
   },
 
   data() {
     return {
       rating: 4.8,
       screenWidth: "",
+      screenHeight: "",
       isMobile: false,
+      offsetTop: false
     };
   },
 
@@ -578,10 +682,14 @@ export default {
   },
 
   methods: {
+    onScroll(e) {
+      this.offsetTop = e.target.scrollTop;
+      console.log(e.target.scrollTop);
+    },
     onWindowResize() {
       this.screenWidth = screen.width;
       this.isMobile = this.screenWidth <= 960 ? true : false;
-    },
-  },
+    }
+  }
 };
 </script>

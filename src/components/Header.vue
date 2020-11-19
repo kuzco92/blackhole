@@ -2,7 +2,7 @@
   <v-card
     v-if="!isMobile"
     color="#FFFFFF5A"
-    width="80%"
+    width="100%"
     class="mx-auto rounded-tr-xl rounded-br-xl my-5"
     tile
   >
@@ -54,7 +54,7 @@
         </v-col>
         <v-col cols="2" class="d-flex align-center">
           <a href="http://bhen.co.kr/gift/" target="_blank">
-            <v-icon color="white" large>fas fa-gift</v-icon>
+            <v-icon color="white" large>mdi-gift-outline</v-icon>
           </a>
         </v-col>
       </v-row>
@@ -122,6 +122,7 @@
               >
               <v-list-item @click="$router.push('/board')"> 게시판</v-list-item>
               <v-list-item @click="phoneDialog = true">마이페이지</v-list-item>
+              <v-list-item to="/class">스토어</v-list-item>
             </v-list>
           </v-card>
         </v-menu>
@@ -161,7 +162,7 @@ export default {
       rating: 4.8,
       screenWidth: "",
       isMobile: false,
-      phoneDialog: false,
+      phoneDialog: false
     };
   },
 
@@ -181,7 +182,7 @@ export default {
     onWindowResize() {
       this.screenWidth = screen.width;
       this.isMobile = this.screenWidth <= 960 ? true : false;
-    },
-  },
+    }
+  }
 };
 </script>
