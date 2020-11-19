@@ -1,56 +1,37 @@
 <template>
   <v-app>
     <router-view></router-view>
-
-    <v-container>
-      <v-row>
-        <v-col cols="12" md="2">
-          <v-img
-            src="../src/assets/logo.png"
-            class="mx-auto"
-            width="200"
-          ></v-img>
-        </v-col>
-        <v-col cols="12" md="7">
-          <v-container fluid>
-            <v-row :class="isMobile ? '' : 'h6'">
-              <v-col cols="6" md="3">
-                회사소개
-              </v-col>
-              <v-col cols="6" md="4">
-                개인정보처리방침
-              </v-col>
-              <v-col cols="6" md="2">
-                제휴문의
-              </v-col>
-              <v-col cols="6" md="3">
-                패밀리사이트
+    <v-container class="py-0">
+      <v-row class="my-0 py-0">
+        <v-col cols="12" md="12">
+          <v-container fluid class="py-0">
+            <v-row>
+              <v-col cols="12" md="12">
+                <v-img
+                  src="../src/assets/logo.png"
+                  class="mx-auto"
+                  width="150"
+                ></v-img>
               </v-col>
             </v-row>
-            <v-row class="caption-text korean-text mt-5">
-              (주)유에듀케이션 ㅣ 대표이사 : 정원석 ㅣ 경기도 수원시 권선구
-              세권로 219, 도일빌딩 3층 ㅣ Tel : 1661-3283 ㅣ Fax : 031-216-1157
-              ㅣ 사업자등록번호 : 124-87-33297 ㅣ 개인정보책임관리자 :
-              email@ueducation.co.kr
+            <v-row class="caption-text korean-text">
+              <v-col class="text-center" cols="12">
+                (주)유에듀케이션 | 대표이사 : 정원석<br />
+                경기도 수원시 권선구 세권로 219, 도일빌딩 3층 <br />
+                Tel : 1661-3283 ㅣ Fax : 031-216-1157<br />
+                사업자등록번호 : 124-87-33297<br />
+                개인정보책임관리자 : email@ueducation.co.kr
+              </v-col>
             </v-row>
-          </v-container>
-        </v-col>
-        <v-col cols="12" md="3">
-          <v-container fluid>
             <v-row :class="isMobile ? '' : 'h6'">
-              <v-col class="text-purple">
+              <v-col class="text-purple text-center caption">
                 고객센터
               </v-col>
-              <v-col class="text-purple">
+              <v-col class="text-purple text-center caption">
                 1661-3283
               </v-col>
             </v-row>
-            <v-row>
-              <v-col class="caption-text">
-                FOLLOW US
-              </v-col>
-            </v-row>
-            <v-row>
+            <v-row class="text-center">
               <v-col>
                 <v-icon>fab fa-instagram</v-icon>
               </v-col>
@@ -64,7 +45,7 @@
           </v-container>
         </v-col>
       </v-row>
-      <v-row>
+      <v-row class="my-0 py-0">
         <div style="font-size:9px" class="grey--text text-center mx-auto">
           Copyright ⓒ 2020 BlackHoleEnglish. All Rights Reserved
         </div>
@@ -77,12 +58,34 @@
 export default {
   name: "App",
 
-  data: () => ({
-    //
-  }),
+  data() {
+    return {
+      rating: 4.8,
+      screenWidth: "",
+      isMobile: false
+    };
+  },
+
+  created() {
+    window.addEventListener("resize", this.onWindowResize);
+  },
+  destroyed() {
+    window.removeEventListener("resize", this.onWindowResize);
+  },
 
   mounted() {
     this.$router.push("/main");
+    this.screenWidth = screen.width;
+    this.isMobile = this.screenWidth <= 960 ? true : false;
+
+    // document.getElementById("scroll").scrollIntoView();
+  },
+
+  methods: {
+    onWindowResize() {
+      this.screenWidth = screen.width;
+      this.isMobile = this.screenWidth <= 960 ? true : false;
+    }
   }
 };
 </script>
