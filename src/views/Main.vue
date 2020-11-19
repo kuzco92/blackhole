@@ -10,12 +10,13 @@
             <v-container
               class="d-flex flex-column"
               :class="isMobile ? 'px-0 py-0 ' : 'px-8'"
-              style="height: 100%"
+              style="height: 100%; max-width: 1000px"
             >
               <Header></Header>
               <div
                 class="white--text d-flex flex-column flex-md-row justify-md-space-between"
               >
+
                 <v-row>
                   <v-col
                     md="6"
@@ -73,6 +74,7 @@
                     </span>
                   </v-col>
                 </v-row>
+
               </div>
 
               <v-row class="mx-5">
@@ -620,7 +622,7 @@
               contain
             >
               <v-card
-                style="background-color: #caced1A1"
+                style="background-color: #caced1a1"
                 width="100%"
                 height="100%"
               >

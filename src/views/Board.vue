@@ -8,19 +8,24 @@
         <v-container
           class="d-flex flex-column"
           :class="isMobile ? 'px-0 py-0 ' : 'px-8'"
-          style="height: 100%"
+          style="height: 100%; max-width: 1000px"
         >
           <Header></Header>
 
-          <v-card :class="isMobile ? 'mx-2' : 'mx-10'" class="mb-10">
+          <v-card max-width="700" class="mx-auto">
             <v-container>
               <v-row>
                 <v-col cols="5" md="3">
-                  <v-select :items="items" outlined dense></v-select>
+                  <v-select
+                    :items="items"
+                    outlined
+                    dense
+                    color="purple"
+                  ></v-select>
                 </v-col>
                 <v-spacer></v-spacer>
                 <v-col cols="5" md="3">
-                  <v-text-field label="제목+내용">
+                  <v-text-field label="제목+내용" color="purple">
                     <template v-slot:append>
                       <v-icon color="orange">arrow_forward</v-icon>
                     </template>
@@ -58,26 +63,32 @@ export default {
         {
           text: "No.",
           value: "no",
+          class: "purple--text h5",
         },
         {
           text: "날짜",
           value: "date",
+          class: "purple--text h5",
         },
         {
           text: "수강종류",
           value: "course",
+          class: "purple--text h5",
         },
         {
           text: "제목",
           value: "title",
+          class: "purple--text h5",
         },
         {
           text: "회원명",
           value: "name",
+          class: "purple--text h5",
         },
         {
           text: "조회수",
           value: "views",
+          class: "purple--text h5",
         },
       ],
 

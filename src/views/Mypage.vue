@@ -8,11 +8,15 @@
         <v-container
           class="d-flex flex-column"
           :class="isMobile ? 'px-0 py-0 ' : 'px-8'"
-          style="height: 100%"
+          style="height: 100%; max-width: 1000px"
         >
           <Header></Header>
 
-          <v-card :class="isMobile ? 'mx-2' : 'mx-10'" class="rounded-xl mb-10">
+          <v-card
+            :class="isMobile ? 'mx-2' : 'mx-10'"
+            class="rounded-xl mb-10 mx-auto"
+            max-width="700"
+          >
             <v-card flat color="#5b3690" class="white--text h4 nanum pa-3">
               강의실
               <div class="h5 nanum">
