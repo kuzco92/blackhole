@@ -16,63 +16,65 @@
               <div
                 class="white--text d-flex flex-column flex-md-row justify-md-space-between"
               >
-                <v-row>
-                  <v-col
-                    md="6"
-                    cols="12"
-                    class="d-md-inline-flex text-center py-0"
-                  >
-                    <span
-                      class="mx-auto nanum"
-                      :class="isMobile ? 'h6' : 'h5'"
-                      :style="
-                        isMobile
-                          ? ''
-                          : 'letter-spacing: 8px; text-shadow: 0 0 20px white'
-                      "
+                <v-container class="py-0" style="max-width: 900px">
+                  <v-row>
+                    <v-col
+                      md="6"
+                      cols="12"
+                      class="d-md-inline-flex text-center py-0"
                     >
-                      국내 최초!
-                    </span>
-                    <span
-                      class="mx-auto nanum"
-                      :class="isMobile ? 'h6' : 'h5'"
-                      :style="
-                        isMobile
-                          ? ''
-                          : 'letter-spacing: 8px; text-shadow: 0 0 20px white; right:0 '
-                      "
+                      <span
+                        class="mx-auto nanum"
+                        :class="isMobile ? 'h6' : 'h5'"
+                        :style="
+                          isMobile
+                            ? ''
+                            : 'letter-spacing: 8px; text-shadow: 0 0 20px white'
+                        "
+                      >
+                        국내 최초!
+                      </span>
+                      <span
+                        class="mx-auto nanum"
+                        :class="isMobile ? 'h6' : 'h5'"
+                        :style="
+                          isMobile
+                            ? ''
+                            : 'letter-spacing: 8px; text-shadow: 0 0 20px white; right:0 '
+                        "
+                      >
+                        초중등
+                      </span>
+                    </v-col>
+                    <v-col
+                      md="6"
+                      cols="12"
+                      class="d-md-inline-flex text-center py-0"
                     >
-                      초중등
-                    </span>
-                  </v-col>
-                  <v-col
-                    md="6"
-                    cols="12"
-                    class="d-md-inline-flex text-center py-0"
-                  >
-                    <span
-                      class="mx-auto nanum"
-                      :class="isMobile ? 'h6' : 'h5'"
-                      :style="
-                        isMobile
-                          ? ''
-                          : 'letter-spacing: 8px; text-shadow: 0 0 20px white'
-                      "
-                    >
-                      쌍방향 온라인
-                    </span>
-                    <span
-                      class="mx-auto nanum"
-                      :class="isMobile ? 'h6' : 'h5'"
-                      :style="
-                        isMobile
-                          ? ''
-                          : 'letter-spacing: 8px; text-shadow: 0 0 20px white'
-                      "
-                      >영단어 프로그램
-                    </span>
-                  </v-col>
-                </v-row>
+                      <span
+                        class="mx-auto nanum"
+                        :class="isMobile ? 'h6' : 'h5'"
+                        :style="
+                          isMobile
+                            ? ''
+                            : 'letter-spacing: 8px; text-shadow: 0 0 20px white'
+                        "
+                      >
+                        쌍방향 온라인
+                      </span>
+                      <span
+                        class="mx-auto nanum"
+                        :class="isMobile ? 'h6' : 'h5'"
+                        :style="
+                          isMobile
+                            ? ''
+                            : 'letter-spacing: 8px; text-shadow: 0 0 20px white'
+                        "
+                        >영단어 프로그램
+                      </span>
+                    </v-col>
+                  </v-row>
+                </v-container>
               </div>
 
               <v-row class="mx-5">
@@ -336,7 +338,7 @@
           <div>
             <div style="color: #7de314" class="font-weight-black">1 LEVEL</div>
             <div
-              class="mt-5 font-weight-black grey--text"
+              class="mt-5 font-weight-black grey--text korean-text"
               :class="isMobile ? '' : 'h6'"
             >
               미취학, 초등저학년 <br />
@@ -354,25 +356,31 @@
         <v-col cols="9" md="2">
           <div style="color: #01cc9b" class="font-weight-black">2 LEVEL</div>
           <div
-            class="mt-5 font-weight-black grey--text"
+            class="mt-5 font-weight-black grey--text korean-text"
             :class="isMobile ? '' : 'h6'"
           >
             초등 1~2학년
           </div>
-          <div class="mt-5 grey--text" :class="isMobile ? 'caption-text' : ''">
+          <div
+            class="mt-5 grey--text korean-text"
+            :class="isMobile ? 'caption-text' : ''"
+          >
             * 주요 기본단어 20개씩 암기 * 듣기. 말하기 수업
           </div>
         </v-col>
         <v-col cols="9" md="2">
           <div style="color: #14a0c0" class="font-weight-black">3 LEVEL</div>
           <div
-            class="mt-5 font-weight-black grey--text"
+            class="mt-5 font-weight-black grey--text korean-text"
             :class="isMobile ? '' : 'h6'"
           >
             초등 5~ 중등 2학년 <br />
             /영어로 습득하는 배경지식
           </div>
-          <div class="mt-5 grey--text" :class="isMobile ? 'caption-text' : ''">
+          <div
+            class="mt-5 grey--text korean-text"
+            :class="isMobile ? 'caption-text' : ''"
+          >
             * 주요 기본단어 30개씩 암기 <br />
             * 논리적인 사고를 유도하는 독해훈련
           </div>
@@ -380,13 +388,16 @@
         <v-col cols="9" md="2">
           <div style="color: #5059ab" class="font-weight-black">4 LEVEL</div>
           <div
-            class="mt-5 font-weight-black grey--text"
+            class="mt-5 font-weight-black grey--text korean-text"
             :class="isMobile ? '' : 'h6'"
           >
             중등 1~ 고등 1학년 <br />
             /영어교과서 기반
           </div>
-          <div class="mt-5 grey--text" :class="isMobile ? 'caption-text' : ''">
+          <div
+            class="mt-5 grey--text korean-text"
+            :class="isMobile ? 'caption-text' : ''"
+          >
             * 하루 단어 40개씩 <br />
             * 발음교정과 독해훈련 <br />
             * 문장구조 이해력 강화
@@ -395,12 +406,15 @@
         <v-col cols="9" md="2">
           <div style="color: #9052a9" class="font-weight-black">5 LEVEL</div>
           <div
-            class="mt-5 font-weight-black grey--text"
+            class="mt-5 font-weight-black grey--text korean-text"
             :class="isMobile ? '' : 'h6'"
           >
             고등 1~3학년 /수능독해를 위한 문제
           </div>
-          <div class="mt-5 grey--text" :class="isMobile ? 'caption-text' : ''">
+          <div
+            class="mt-5 grey--text korean-text"
+            :class="isMobile ? 'caption-text' : ''"
+          >
             * 하루 단어 50개씩 <br />
             * 암기 발음교정과 듣기연습 <br />
             * 영어로 습득하는 최신시사 <br />
