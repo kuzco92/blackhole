@@ -152,7 +152,7 @@
         fixed
         bottom
         class="yellow black--text"
-        style="right:20px; bottom:20px"
+        style="right: 20px; bottom: 20px"
         href="http://pf.kakao.com/_RgxjSxb/chat"
         target="_blank"
         ><v-icon large>mdi-chat</v-icon></v-btn
@@ -193,9 +193,15 @@
         >
           블랙홀 완전학습 비결
         </div>
-        <div class="nanum" :class="[isMobile ? 'h6 ' : 'h4', 'mx-10']">
-          2명의 외국인 강사가 <br v-if="isMobile" />
-          영어로만 하는 국제학교식 수업,
+        <div
+          class="nanum korean-text"
+          :class="[isMobile ? 'h6 ' : 'h4', 'mx-10']"
+        >
+          외국인 선생님의 국제학교식 영어수업
+          <br />
+          +
+          <br />
+          한국인 선생님의 구문해설 !!
         </div>
         <div
           class="nanum mb-10"
@@ -320,7 +326,6 @@
         :stlye="isMobile ? 'max-width:100%' : 'max-width:50%'"
         class="mx-auto"
       ></v-img>
-
     </v-container>
     <v-container
       class="d-flex flex-column"
@@ -476,7 +481,6 @@
       </v-row>
     </v-container>
     <v-container fluid class="px-0 py-0">
-
       <v-card tile color="#e6ddf8" class="pt-10">
         <div>
           <div
@@ -498,112 +502,125 @@
           </div>
         </div>
 
-        <v-carousel
-          hide-delimiter-background
-          show-arrows-on-hover
-          hide-delimiters
+        <v-card
           v-if="!isMobile"
+          color="#e6ddf8"
+          max-width="1000"
+          flat
+          class="mx-auto"
         >
-          <v-carousel-item>
-            <div class="d-flex justify-center fill-height">
-              <div class="d-flex" v-for="(review, i) in review1" :key="i">
-                <v-card
-                  max-width="360"
-                  class="pa-3 mx-3 rounded-xl d-flex my-auto"
-                  style="border: 1px solid #4d2794"
-                  light
-                  height="400"
-                >
-                  <div class="d-flex flex-column justify-center">
-                    <v-card
-                      class="rounded-pill white--text text-center pa-3 mx-auto"
-                      color="#4d2794"
-                      width="80%"
-                    >
-                      <div class="text-center white--text font-weight-bold h5">
-                        {{ review.title }}
+          <v-carousel
+            hide-delimiter-background
+            show-arrows-on-hover
+            hide-delimiters
+          >
+            <v-carousel-item>
+              <div class="d-flex justify-center fill-height">
+                <div class="d-flex" v-for="(review, i) in review1" :key="i">
+                  <v-card
+                    max-width="360"
+                    class="pa-3 mx-3 rounded-xl d-flex my-auto"
+                    style="border: 1px solid #4d2794"
+                    light
+                    height="400"
+                  >
+                    <div class="d-flex flex-column justify-center">
+                      <v-card
+                        class="rounded-pill white--text text-center pa-3 mx-auto"
+                        color="#4d2794"
+                        width="80%"
+                      >
+                        <div
+                          class="text-center white--text font-weight-bold h5"
+                        >
+                          {{ review.title }}
+                        </div>
+                      </v-card>
+                      <div
+                        class="grey--text nanum korean-text text-center korean-text subtitle-text-1 my-auto"
+                      >
+                        {{ review.body }}
                       </div>
-                    </v-card>
-                    <div
-                      class="grey--text nanum korean-text text-center korean-text subtitle-text-1 my-auto"
-                    >
-                      {{ review.body }}
-                    </div>
-                    <div class="text-purple nanum h6 text-center">
-                      {{ review.footer }}
-                    </div>
-                  </div>
-                </v-card>
-              </div>
-            </div>
-          </v-carousel-item>
-          <v-carousel-item>
-            <div class="d-flex justify-center fill-height">
-              <div class="d-flex" v-for="(review, i) in review2" :key="i">
-                <v-card
-                  max-width="360"
-                  class="pa-3 mx-3 rounded-xl d-flex my-auto"
-                  style="border: 1px solid #4d2794"
-                  light
-                  height="400"
-                >
-                  <div class="d-flex flex-column justify-center">
-                    <v-card
-                      class="rounded-pill white--text text-center pa-3 mx-auto"
-                      color="#4d2794"
-                      width="80%"
-                    >
-                      <div class="text-center white--text font-weight-bold h5">
-                        {{ review.title }}
+                      <div class="text-purple nanum h6 text-center">
+                        {{ review.footer }}
                       </div>
-                    </v-card>
-                    <div
-                      class="grey--text nanum korean-text text-center korean-text subtitle-text-1 my-auto"
-                    >
-                      {{ review.body }}
                     </div>
-                    <div class="text-purple nanum h6 text-center">
-                      {{ review.footer }}
-                    </div>
-                  </div>
-                </v-card>
+                  </v-card>
+                </div>
               </div>
-            </div>
-          </v-carousel-item>
-          <v-carousel-item>
-            <div class="d-flex justify-center fill-height">
-              <div class="d-flex" v-for="(review, i) in review3" :key="i">
-                <v-card
-                  max-width="360"
-                  class="pa-3 mx-3 rounded-xl d-flex my-auto"
-                  style="border: 1px solid #4d2794"
-                  light
-                  height="400"
-                >
-                  <div class="d-flex flex-column justify-center">
-                    <v-card
-                      class="rounded-pill white--text text-center pa-3 mx-auto"
-                      color="#4d2794"
-                      width="80%"
-                    >
-                      <div class="text-center white--text font-weight-bold h5">
-                        {{ review.title }}
+            </v-carousel-item>
+            <v-carousel-item>
+              <div class="d-flex justify-center fill-height">
+                <div class="d-flex" v-for="(review, i) in review2" :key="i">
+                  <v-card
+                    max-width="360"
+                    class="pa-3 mx-3 rounded-xl d-flex my-auto"
+                    style="border: 1px solid #4d2794"
+                    light
+                    height="400"
+                  >
+                    <div class="d-flex flex-column justify-center">
+                      <v-card
+                        class="rounded-pill white--text text-center pa-3 mx-auto"
+                        color="#4d2794"
+                        width="80%"
+                      >
+                        <div
+                          class="text-center white--text font-weight-bold h5"
+                        >
+                          {{ review.title }}
+                        </div>
+                      </v-card>
+                      <div
+                        class="grey--text nanum korean-text text-center korean-text subtitle-text-1 my-auto"
+                      >
+                        {{ review.body }}
                       </div>
-                    </v-card>
-                    <div
-                      class="grey--text nanum korean-text text-center korean-text subtitle-text-1 my-auto"
-                    >
-                      {{ review.body }}
+                      <div class="text-purple nanum h6 text-center">
+                        {{ review.footer }}
+                      </div>
                     </div>
-                    <div class="text-purple nanum h6 text-center">
-                      {{ review.footer }}
-                    </div>
-                  </div>
-                </v-card>
+                  </v-card>
+                </div>
               </div>
-            </div>
-          </v-carousel-item>
-        </v-carousel>
+            </v-carousel-item>
+            <v-carousel-item>
+              <div class="d-flex justify-center fill-height">
+                <div class="d-flex" v-for="(review, i) in review3" :key="i">
+                  <v-card
+                    max-width="360"
+                    class="pa-3 mx-3 rounded-xl d-flex my-auto"
+                    style="border: 1px solid #4d2794"
+                    light
+                    height="400"
+                  >
+                    <div class="d-flex flex-column justify-center">
+                      <v-card
+                        class="rounded-pill white--text text-center pa-3 mx-auto"
+                        color="#4d2794"
+                        width="80%"
+                      >
+                        <div
+                          class="text-center white--text font-weight-bold h5"
+                        >
+                          {{ review.title }}
+                        </div>
+                      </v-card>
+                      <div
+                        class="grey--text nanum korean-text text-center korean-text subtitle-text-1 my-auto"
+                      >
+                        {{ review.body }}
+                      </div>
+                      <div class="text-purple nanum h6 text-center">
+                        {{ review.footer }}
+                      </div>
+                    </div>
+                  </v-card>
+                </div>
+              </div>
+            </v-carousel-item>
+          </v-carousel>
+        </v-card>
 
         <v-carousel hide-delimiter-background hide-delimiters v-else>
           <v-carousel-item v-for="(review, i) in review1" :key="i">
