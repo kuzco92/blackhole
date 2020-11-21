@@ -1,4 +1,3 @@
-
 <template>
   <v-app style="background-color: #00000000">
     <v-container fluid class="py-0 px-0">
@@ -11,7 +10,7 @@
           <v-container
             class="d-flex flex-column"
             :class="isMobile ? 'px-0 py-0 ' : 'px-8'"
-            style="height: 100%; max-width: 1000px"
+            style="height: 100%;"
           >
             <Header></Header>
 
@@ -377,7 +376,7 @@
   </v-app>
 </template>
 
-<style  scoped>
+<style scoped>
 .bordered-text {
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #5b3690;
@@ -407,7 +406,7 @@ export default {
     return {
       rating: 4.8,
       screenWidth: "",
-      isMobile: false,
+      isMobile: false
     };
   },
 
@@ -427,7 +426,7 @@ export default {
     onWindowResize() {
       this.screenWidth = screen.width;
       this.isMobile = this.screenWidth <= 960 ? true : false;
-    },
-  },
+    }
+  }
 };
 </script>

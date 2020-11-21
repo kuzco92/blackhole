@@ -16,7 +16,7 @@
             src="../assets/logo.png"
           ></v-img>
         </v-col>
-        <v-col cols="2" class="d-flex align-center">
+        <v-col cols="2" class="d-flex align-center offset-2">
           <div
             class="white--text nav-link"
             :class="isMobile ? '' : 'h6'"
@@ -34,7 +34,7 @@
             무료수업체험
           </div>
         </v-col>
-        <v-col cols="2" class="d-flex align-center">
+        <!-- <v-col cols="2" class="d-flex align-center">
           <div
             class="white--text nav-link"
             :class="isMobile ? '' : 'h6'"
@@ -42,7 +42,7 @@
           >
             게시판
           </div>
-        </v-col>
+        </v-col> -->
         <v-col cols="2" class="d-flex align-center">
           <div
             class="white--text nav-link"
@@ -120,7 +120,7 @@
               <v-list-item @click="$router.push('/free-class')"
                 >무료수업체험</v-list-item
               >
-              <v-list-item @click="$router.push('/board')"> 게시판</v-list-item>
+              <!-- <v-list-item @click="$router.push('/board')"> 게시판</v-list-item> -->
               <v-list-item @click="phoneDialog = true">마이페이지</v-list-item>
               <v-list-item to="/class">스토어</v-list-item>
             </v-list>
