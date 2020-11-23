@@ -16,63 +16,65 @@
               <div
                 class="white--text d-flex flex-column flex-md-row justify-md-space-between"
               >
-                <v-row>
-                  <v-col
-                    md="6"
-                    cols="12"
-                    class="d-md-inline-flex text-center py-0"
-                  >
-                    <span
-                      class="mx-auto nanum"
-                      :class="isMobile ? 'h6' : 'h5'"
-                      :style="
-                        isMobile
-                          ? ''
-                          : 'letter-spacing: 8px; text-shadow: 0 0 20px white'
-                      "
+                <v-container class="py-0" style="max-width: 900px">
+                  <v-row>
+                    <v-col
+                      md="6"
+                      cols="12"
+                      class="d-md-inline-flex text-center py-0"
                     >
-                      국내 최초!
-                    </span>
-                    <span
-                      class="mx-auto nanum"
-                      :class="isMobile ? 'h6' : 'h5'"
-                      :style="
-                        isMobile
-                          ? ''
-                          : 'letter-spacing: 8px; text-shadow: 0 0 20px white; right:0 '
-                      "
+                      <span
+                        class="mx-auto nanum"
+                        :class="isMobile ? 'h6' : 'h5'"
+                        :style="
+                          isMobile
+                            ? ''
+                            : 'letter-spacing: 8px; text-shadow: 0 0 20px white'
+                        "
+                      >
+                        국내 최초!
+                      </span>
+                      <span
+                        class="mx-auto nanum"
+                        :class="isMobile ? 'h6' : 'h5'"
+                        :style="
+                          isMobile
+                            ? ''
+                            : 'letter-spacing: 8px; text-shadow: 0 0 20px white; right:0 '
+                        "
+                      >
+                        초중등
+                      </span>
+                    </v-col>
+                    <v-col
+                      md="6"
+                      cols="12"
+                      class="d-md-inline-flex text-center py-0"
                     >
-                      초중등
-                    </span>
-                  </v-col>
-                  <v-col
-                    md="6"
-                    cols="12"
-                    class="d-md-inline-flex text-center py-0"
-                  >
-                    <span
-                      class="mx-auto nanum"
-                      :class="isMobile ? 'h6' : 'h5'"
-                      :style="
-                        isMobile
-                          ? ''
-                          : 'letter-spacing: 8px; text-shadow: 0 0 20px white'
-                      "
-                    >
-                      쌍방향 온라인
-                    </span>
-                    <span
-                      class="mx-auto nanum"
-                      :class="isMobile ? 'h6' : 'h5'"
-                      :style="
-                        isMobile
-                          ? ''
-                          : 'letter-spacing: 8px; text-shadow: 0 0 20px white'
-                      "
-                      >영단어 프로그램
-                    </span>
-                  </v-col>
-                </v-row>
+                      <span
+                        class="mx-auto nanum"
+                        :class="isMobile ? 'h6' : 'h5'"
+                        :style="
+                          isMobile
+                            ? ''
+                            : 'letter-spacing: 8px; text-shadow: 0 0 20px white'
+                        "
+                      >
+                        쌍방향 온라인
+                      </span>
+                      <span
+                        class="mx-auto nanum"
+                        :class="isMobile ? 'h6' : 'h5'"
+                        :style="
+                          isMobile
+                            ? ''
+                            : 'letter-spacing: 8px; text-shadow: 0 0 20px white'
+                        "
+                        >영단어 프로그램
+                      </span>
+                    </v-col>
+                  </v-row>
+                </v-container>
               </div>
 
               <v-row class="mx-5">
@@ -145,6 +147,7 @@
       </v-card>
     </v-container>
     <v-container fluid class="px-0 py-0">
+
       <v-img src="../assets/blackhole_main_img2.jpg"></v-img>
     </v-container>
     <v-container class="px-0 py-0" fluid>
@@ -179,9 +182,15 @@
         >
           블랙홀 완전학습 비결
         </div>
-        <div class="nanum" :class="[isMobile ? 'h6 ' : 'h4', 'mx-10']">
-          2명의 외국인 강사가 <br v-if="isMobile" />
-          영어로만 하는 국제학교식 수업,
+        <div
+          class="nanum korean-text"
+          :class="[isMobile ? 'h6 ' : 'h4', 'mx-10']"
+        >
+          외국인 선생님의 국제학교식 영어수업
+          <br />
+          +
+          <br />
+          한국인 선생님의 구문해설 !!
         </div>
         <div
           class="nanum mb-10"
@@ -316,7 +325,7 @@
           <div>
             <div style="color: #7de314" class="font-weight-black">1 LEVEL</div>
             <div
-              class="mt-5 font-weight-black grey--text"
+              class="mt-5 font-weight-black grey--text korean-text"
               :class="isMobile ? '' : 'h6'"
             >
               미취학, 초등저학년 <br />
@@ -334,25 +343,31 @@
         <v-col cols="9" md="2">
           <div style="color: #01cc9b" class="font-weight-black">2 LEVEL</div>
           <div
-            class="mt-5 font-weight-black grey--text"
+            class="mt-5 font-weight-black grey--text korean-text"
             :class="isMobile ? '' : 'h6'"
           >
             초등 1~2학년
           </div>
-          <div class="mt-5 grey--text" :class="isMobile ? 'caption-text' : ''">
+          <div
+            class="mt-5 grey--text korean-text"
+            :class="isMobile ? 'caption-text' : ''"
+          >
             * 주요 기본단어 20개씩 암기 * 듣기. 말하기 수업
           </div>
         </v-col>
         <v-col cols="9" md="2">
           <div style="color: #14a0c0" class="font-weight-black">3 LEVEL</div>
           <div
-            class="mt-5 font-weight-black grey--text"
+            class="mt-5 font-weight-black grey--text korean-text"
             :class="isMobile ? '' : 'h6'"
           >
             초등 5~ 중등 2학년 <br />
             /영어로 습득하는 배경지식
           </div>
-          <div class="mt-5 grey--text" :class="isMobile ? 'caption-text' : ''">
+          <div
+            class="mt-5 grey--text korean-text"
+            :class="isMobile ? 'caption-text' : ''"
+          >
             * 주요 기본단어 30개씩 암기 <br />
             * 논리적인 사고를 유도하는 독해훈련
           </div>
@@ -360,13 +375,16 @@
         <v-col cols="9" md="2">
           <div style="color: #5059ab" class="font-weight-black">4 LEVEL</div>
           <div
-            class="mt-5 font-weight-black grey--text"
+            class="mt-5 font-weight-black grey--text korean-text"
             :class="isMobile ? '' : 'h6'"
           >
             중등 1~ 고등 1학년 <br />
             /영어교과서 기반
           </div>
-          <div class="mt-5 grey--text" :class="isMobile ? 'caption-text' : ''">
+          <div
+            class="mt-5 grey--text korean-text"
+            :class="isMobile ? 'caption-text' : ''"
+          >
             * 하루 단어 40개씩 <br />
             * 발음교정과 독해훈련 <br />
             * 문장구조 이해력 강화
@@ -375,12 +393,15 @@
         <v-col cols="9" md="2">
           <div style="color: #9052a9" class="font-weight-black">5 LEVEL</div>
           <div
-            class="mt-5 font-weight-black grey--text"
+            class="mt-5 font-weight-black grey--text korean-text"
             :class="isMobile ? '' : 'h6'"
           >
             고등 1~3학년 /수능독해를 위한 문제
           </div>
-          <div class="mt-5 grey--text" :class="isMobile ? 'caption-text' : ''">
+          <div
+            class="mt-5 grey--text korean-text"
+            :class="isMobile ? 'caption-text' : ''"
+          >
             * 하루 단어 50개씩 <br />
             * 암기 발음교정과 듣기연습 <br />
             * 영어로 습득하는 최신시사 <br />
@@ -482,112 +503,125 @@
           </div>
         </div>
 
-        <v-carousel
-          hide-delimiter-background
-          show-arrows-on-hover
-          hide-delimiters
+        <v-card
           v-if="!isMobile"
+          color="#e6ddf8"
+          max-width="1000"
+          flat
+          class="mx-auto"
         >
-          <v-carousel-item>
-            <div class="d-flex justify-center fill-height">
-              <div class="d-flex" v-for="(review, i) in review1" :key="i">
-                <v-card
-                  max-width="360"
-                  class="pa-3 mx-3 rounded-xl d-flex my-auto"
-                  style="border: 1px solid #4d2794"
-                  light
-                  height="400"
-                >
-                  <div class="d-flex flex-column justify-center">
-                    <v-card
-                      class="rounded-pill white--text text-center pa-3 mx-auto"
-                      color="#4d2794"
-                      width="80%"
-                    >
-                      <div class="text-center white--text font-weight-bold h5">
-                        {{ review.title }}
+          <v-carousel
+            hide-delimiter-background
+            show-arrows-on-hover
+            hide-delimiters
+          >
+            <v-carousel-item>
+              <div class="d-flex justify-center fill-height">
+                <div class="d-flex" v-for="(review, i) in review1" :key="i">
+                  <v-card
+                    max-width="360"
+                    class="pa-3 mx-3 rounded-xl d-flex my-auto"
+                    style="border: 1px solid #4d2794"
+                    light
+                    height="400"
+                  >
+                    <div class="d-flex flex-column justify-center">
+                      <v-card
+                        class="rounded-pill white--text text-center pa-3 mx-auto"
+                        color="#4d2794"
+                        width="80%"
+                      >
+                        <div
+                          class="text-center white--text font-weight-bold h5"
+                        >
+                          {{ review.title }}
+                        </div>
+                      </v-card>
+                      <div
+                        class="grey--text nanum korean-text text-center korean-text subtitle-text-1 my-auto"
+                      >
+                        {{ review.body }}
                       </div>
-                    </v-card>
-                    <div
-                      class="grey--text nanum korean-text text-center korean-text subtitle-text-1 my-auto"
-                    >
-                      {{ review.body }}
-                    </div>
-                    <div class="text-purple nanum h6 text-center">
-                      {{ review.footer }}
-                    </div>
-                  </div>
-                </v-card>
-              </div>
-            </div>
-          </v-carousel-item>
-          <v-carousel-item>
-            <div class="d-flex justify-center fill-height">
-              <div class="d-flex" v-for="(review, i) in review2" :key="i">
-                <v-card
-                  max-width="360"
-                  class="pa-3 mx-3 rounded-xl d-flex my-auto"
-                  style="border: 1px solid #4d2794"
-                  light
-                  height="400"
-                >
-                  <div class="d-flex flex-column justify-center">
-                    <v-card
-                      class="rounded-pill white--text text-center pa-3 mx-auto"
-                      color="#4d2794"
-                      width="80%"
-                    >
-                      <div class="text-center white--text font-weight-bold h5">
-                        {{ review.title }}
+                      <div class="text-purple nanum h6 text-center">
+                        {{ review.footer }}
                       </div>
-                    </v-card>
-                    <div
-                      class="grey--text nanum korean-text text-center korean-text subtitle-text-1 my-auto"
-                    >
-                      {{ review.body }}
                     </div>
-                    <div class="text-purple nanum h6 text-center">
-                      {{ review.footer }}
-                    </div>
-                  </div>
-                </v-card>
+                  </v-card>
+                </div>
               </div>
-            </div>
-          </v-carousel-item>
-          <v-carousel-item>
-            <div class="d-flex justify-center fill-height">
-              <div class="d-flex" v-for="(review, i) in review3" :key="i">
-                <v-card
-                  max-width="360"
-                  class="pa-3 mx-3 rounded-xl d-flex my-auto"
-                  style="border: 1px solid #4d2794"
-                  light
-                  height="400"
-                >
-                  <div class="d-flex flex-column justify-center">
-                    <v-card
-                      class="rounded-pill white--text text-center pa-3 mx-auto"
-                      color="#4d2794"
-                      width="80%"
-                    >
-                      <div class="text-center white--text font-weight-bold h5">
-                        {{ review.title }}
+            </v-carousel-item>
+            <v-carousel-item>
+              <div class="d-flex justify-center fill-height">
+                <div class="d-flex" v-for="(review, i) in review2" :key="i">
+                  <v-card
+                    max-width="360"
+                    class="pa-3 mx-3 rounded-xl d-flex my-auto"
+                    style="border: 1px solid #4d2794"
+                    light
+                    height="400"
+                  >
+                    <div class="d-flex flex-column justify-center">
+                      <v-card
+                        class="rounded-pill white--text text-center pa-3 mx-auto"
+                        color="#4d2794"
+                        width="80%"
+                      >
+                        <div
+                          class="text-center white--text font-weight-bold h5"
+                        >
+                          {{ review.title }}
+                        </div>
+                      </v-card>
+                      <div
+                        class="grey--text nanum korean-text text-center korean-text subtitle-text-1 my-auto"
+                      >
+                        {{ review.body }}
                       </div>
-                    </v-card>
-                    <div
-                      class="grey--text nanum korean-text text-center korean-text subtitle-text-1 my-auto"
-                    >
-                      {{ review.body }}
+                      <div class="text-purple nanum h6 text-center">
+                        {{ review.footer }}
+                      </div>
                     </div>
-                    <div class="text-purple nanum h6 text-center">
-                      {{ review.footer }}
-                    </div>
-                  </div>
-                </v-card>
+                  </v-card>
+                </div>
               </div>
-            </div>
-          </v-carousel-item>
-        </v-carousel>
+            </v-carousel-item>
+            <v-carousel-item>
+              <div class="d-flex justify-center fill-height">
+                <div class="d-flex" v-for="(review, i) in review3" :key="i">
+                  <v-card
+                    max-width="360"
+                    class="pa-3 mx-3 rounded-xl d-flex my-auto"
+                    style="border: 1px solid #4d2794"
+                    light
+                    height="400"
+                  >
+                    <div class="d-flex flex-column justify-center">
+                      <v-card
+                        class="rounded-pill white--text text-center pa-3 mx-auto"
+                        color="#4d2794"
+                        width="80%"
+                      >
+                        <div
+                          class="text-center white--text font-weight-bold h5"
+                        >
+                          {{ review.title }}
+                        </div>
+                      </v-card>
+                      <div
+                        class="grey--text nanum korean-text text-center korean-text subtitle-text-1 my-auto"
+                      >
+                        {{ review.body }}
+                      </div>
+                      <div class="text-purple nanum h6 text-center">
+                        {{ review.footer }}
+                      </div>
+                    </div>
+                  </v-card>
+                </div>
+              </div>
+            </v-carousel-item>
+          </v-carousel>
+        </v-card>
 
         <v-carousel hide-delimiter-background hide-delimiters v-else>
           <v-carousel-item v-for="(review, i) in review1" :key="i">

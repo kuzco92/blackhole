@@ -7,7 +7,7 @@
       >
         <v-container
           class="d-flex flex-column"
-          :class="isMobile ? 'px-0 py-0 ' : 'px-8'"
+          :class="isMobile ? 'px-3 py-3 ' : 'px-8'"
           style="height: 100%; max-width: 1000px"
         >
           <Header></Header>
@@ -46,6 +46,12 @@
     </v-container>
   </v-app>
 </template>
+
+<style>
+tbody tr:nth-of-type(odd) {
+  background-color: rgba(109, 45, 157, 0.1);
+}
+</style>
 
 <script>
 import Header from "@/components/Header.vue";
