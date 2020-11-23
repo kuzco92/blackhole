@@ -1,17 +1,16 @@
-
 <template>
   <v-app style="background-color: #00000000">
     <v-container fluid class="py-0 px-0">
       <v-img
         src="../assets/blackhole_class-page_header.jpg"
         width="100%"
-        :height="isMobile ? 'auto' : '100vh'"
+        :height="isMobile ? '100vh' : '100vh'"
       >
         <v-card height="100%" class="d-flex flex-column" color="#ffffff00">
           <v-container
             class="d-flex flex-column"
             :class="isMobile ? 'px-0 py-0 ' : 'px-8'"
-            style="height: 100%; max-width: 1000px"
+            style="height: 100%;"
           >
             <Header></Header>
 
@@ -62,13 +61,16 @@
       </v-img>
     </v-container>
     <v-container fluid class="py-0 px-0">
-      <div class="mt-2 text-center gmarket h3 white--text bordered-text">
+      <div
+        class="mt-15 text-center gmarket white--text bordered-text"
+        :class="isMobile ? 'h4' : 'h3'"
+      >
         블랙홀 학습방법
       </div>
       <v-card flat>
         <v-container>
           <v-row justify="center">
-            <v-col cols="12" md="4">
+            <v-col cols="12" md="4" lg="3">
               <v-card flat class="d-flex flex-column align-center">
                 <v-img
                   src="../assets/forum.png"
@@ -82,7 +84,12 @@
                 </div>
               </v-card>
             </v-col>
-            <v-col cols="12" md="4" class="d-flex flex-column align-center">
+            <v-col
+              cols="12"
+              md="4"
+              lg="3"
+              class="d-flex flex-column align-center"
+            >
               <v-card flat>
                 <v-img
                   src="../assets/classcard.png"
@@ -96,7 +103,12 @@
                 </div>
               </v-card>
             </v-col>
-            <v-col cols="12" md="4" class="d-flex flex-column align-center">
+            <v-col
+              cols="12"
+              md="4"
+              lg="3"
+              class="d-flex flex-column align-center"
+            >
               <v-card flat>
                 <v-img
                   src="../assets/email.png"
@@ -117,8 +129,10 @@
     <v-container>
       <div class="mt-5 h3 text-purple text-center gmarket">수업규칙</div>
       <div class="text-center">
-        기존에 있던 1,2교시를 통합하여
-        <span class="font-weight-black">새로운 수업규칙이 탄생했습니다.</span>
+        기존에 있던 1,2교시를 통합하여<br :class="isMobile ? '' : 'd-none'" />
+        <span class="font-weight-black"
+          >&nbsp;새로운 수업규칙이 탄생했습니다.</span
+        >
       </div>
       <v-card
         flat
@@ -139,7 +153,7 @@
           </span>
         </div>
       </v-card>
-      <v-card flat class="mt-10 mx-auto" max-width="700">
+      <v-card flat class="mt-10 mb-5 mx-auto" max-width="700">
         <v-container>
           <v-row>
             <v-col cols="12" sm="6" md="4" class="d-flex justify-center">
@@ -259,11 +273,14 @@
 
     <v-container fluid class="px-0 py-0">
       <v-img src="../assets/img-bg-pink.png" height="auto" class="pa-5 pa-md-0">
-        <div class="mt-2 text-center gmarket h3 white--text bordered-text">
-          수강료
-        </div>
+        <div
+          class="d-flex flex-column justify-center align-self-center"
+          style="height:100%"
+        >
+          <div class="text-center gmarket h3 white--text bordered-text">
+            수강료
+          </div>
 
-        <div class="d-flex">
           <div class="mx-auto">
             <div class="mb-2 text-left h5 nanum mt-5">
               <span class="font-weight-black">주 5회</span> 3개월과정(60회)
@@ -278,8 +295,20 @@
               <span class="font-weight-black">207,000원</span> (69,000원/월)
             </div>
             <div class="mt-10 text-left mb-10 mb-md-0">
-              1회 수업 : 회당 40분 이상 소요 / 한 과정당 3개월~6개월 소요
+              *1회 수업 : 회당 40분 이상 소요 <br v-if="isMobile" />
+              <span v-else>/</span> 한 과정당 3개월~6개월 소요
             </div>
+          </div>
+          <div class="d-flex d-inline justify-center py-8">
+            <v-btn
+              x-large
+              class="purple nanum rounded-lg"
+              dark
+              elevation="5"
+              href="http://pf.kakao.com/_RgxjSxb/chat"
+              target="_blank"
+              >카카오톡 상담 받기</v-btn
+            >
           </div>
         </div>
       </v-img>
@@ -288,7 +317,6 @@
     <v-container fluid class="px-0 py-0">
       <v-tabs
         grow
-        background-color="white"
         slider-color="#79439f"
         active-class="active-tab"
         height="100"
@@ -302,7 +330,7 @@
           "
         >
           <span class="nanum font-weight-black" :class="isMobile ? 'h6' : 'h5'"
-            >홀딩 및 보강 규정</span
+            >홀딩 및 보강</span
           >
         </v-tab>
         <v-tab
@@ -313,63 +341,87 @@
           "
         >
           <span class="nanum font-weight-black" :class="isMobile ? 'h6' : 'h5'"
-            >환불규정안내</span
+            >환불 규정</span
           >
         </v-tab>
         <v-tab-item>
           <v-container>
-            <div class="mt-5 font-weight-black text-center text-purple h6">
-              [ 홀딩 및 보강 규정 ]
-            </div>
+            <v-row>
+              <v-col cols="12" md="10" offset-md="1">
+                <div class="mt-5 font-weight-black text-center text-purple h6">
+                  [ 홀딩 및 보강 규정 ]
+                </div>
 
-            <div class="grey--text mt-10 pa-3" style="line-height: 220%">
-              1. 회사의 사정에 의한 홀딩은 단톡으로 날짜를 따로 지정하여 100%
-              보강진행을 하고 보강이 어려운 경우 수강 기간을 연장해드립니다.<br />
-              2. 고객의 사정에 의한 홀딩은 단톡으로 날짜를 따로 지정하여 연4회
-              회당1주일에 한하여 보강이 가능(방학이나 주말 보너스 수업으로
-              keep)하며 보강수업을 참석하지 않은 경우의 다시 보강은 따로
-              진행하지 않고 수업일수에서 보강한 것으로 간주하고 차감됩니다.<br />
-              3. 전쟁, 천재지변, 전염병등에 의해 수업이 결손이 되는 경우
-              해당수업이 시간표나 강사가 변경될 수 있으며 보강도 장기로 연장될
-              수 있습니다.<br />
-              4. 수업은 3개월 과정으로 진행하고 할인이나 이벤트 상품에 대해서는
-              홀딩 시 보강을 따로 하지 않습니다.<br />
-              5. 환불은 교육청에서 제시한 학원비 환불규정을 사용합니다.<br />
-              6. 홀딩, 보강, 라운드2 추가훈련 등 문의는 모두 다 단톡으로 신청을
-              해주시면 한국직원이 2일내에 연락을 드립니다.
-            </div>
+                <div class="grey--text mt-10 pa-3" style="line-height: 220%">
+                  <ol>
+                    <li>
+                      회사의 사정에 의한 홀딩은 단톡으로 날짜를 따로 지정하여
+                      100% 보강진행을 하고 보강이 어려운 경우 수강 기간을
+                      연장해드립니다.
+                    </li>
+                    <li>
+                      고객의 사정에 의한 홀딩은 단톡으로 날짜를 따로 지정하여
+                      연4회 회당1주일에 한하여 보강이 가능(방학이나 주말 보너스
+                      수업으로 keep)하며 보강수업을 참석하지 않은 경우의 다시
+                      보강은 따로 진행하지 않고 수업일수에서 보강한 것으로
+                      간주하고 차감됩니다.
+                    </li>
+                    <li>
+                      전쟁, 천재지변, 전염병등에 의해 수업이 결손이 되는 경우
+                      해당수업이 시간표나 강사가 변경될 수 있으며 보강도 장기로
+                      연장될 수 있습니다.
+                    </li>
+                    <li>
+                      수업은 3개월 과정으로 진행하고 할인이나 이벤트 상품에
+                      대해서는 홀딩 시 보강을 따로 하지 않습니다.
+                    </li>
+                    <li>
+                      환불은 교육청에서 제시한 학원비 환불규정을 사용합니다.
+                    </li>
+                    <li>
+                      홀딩, 보강, 라운드2 추가훈련 등 문의는 모두 다 단톡으로
+                      신청을 해주시면 한국직원이 2일내에 연락을 드립니다.
+                    </li>
+                  </ol>
+                </div>
+              </v-col>
+            </v-row>
           </v-container>
         </v-tab-item>
         <v-tab-item>
           <v-container>
-            <div class="mt-5 font-weight-black text-center text-purple h6">
-              [ 환불규정안내 ]
-            </div>
+            <v-row>
+              <v-col cols="12" md="10" offset-md="1">
+                <div class="mt-5 font-weight-black text-center text-purple h6">
+                  [ 환불규정안내 ]
+                </div>
 
-            <div class="grey--text mt-10 pa-3" style="line-height: 220%">
-              블랙홀 영단어의 모든 수업에 대한 취소와 환불의 규정은
-              평생교육-평생교육일반, 학원의 설립ㆍ운영 및 과외교습에 관한 법률과
-              공정거래위원회의 소비자분쟁해결 기준을 준수 하며 다음의 환불
-              규정을 운영하고 있습니다.
-              <br /><br />
-              교습 시작 전 : 이미 납부한 교습비등의 전액<br />
-              총 교습시간의 1/3 경과전 : 이미 납부한 교습비등의 2/3에 해당하는
-              금액<br />
-              총 교습시간의 1/2 경과전 : 이미 납부한 교습비등의 1/2에 해당하는
-              금액<br />
-              총 교습시간 1/2 경과 후 : 반환하지 않음<br />
-              <br /><br />
-              총 교습시간은 교습기간 중의 총 교습시간을 말하며, 반환금액의
-              산정은 반환사유가 발생한 날까지 경과된 교습시간을 기준으로
-              한다.<br />
-              원격교습의 경우 반환금액은 교습내용을 실제 수강한 부분(인터넷으로
-              수강하거나 학습기기로 저장한 것을 말한다)에 해당하는 금액을 뺀
-              금액으로 한다.<br />
-              회원이 온라인수업 이용을 중도에 해지하거나 서비스 이용계약이
-              해지되는 경우에는 수강료 환불금액에서 할인된금액, 교재비, 배송비,
-              사은품비, 신용카드수수료등 제비용을 차감한 후 환불하여
-              드립니다.<br />
-            </div>
+                <div class="grey--text mt-10 pa-3" style="line-height: 220%">
+                  블랙홀 영단어의 모든 수업에 대한 취소와 환불의 규정은
+                  평생교육-평생교육일반, 학원의 설립ㆍ운영 및 과외교습에 관한
+                  법률과 공정거래위원회의 소비자분쟁해결 기준을 준수 하며 다음의
+                  환불 규정을 운영하고 있습니다.
+                  <br /><br />
+                  교습 시작 전 : 이미 납부한 교습비등의 전액<br />
+                  총 교습시간의 1/3 경과전 : 이미 납부한 교습비등의 2/3에
+                  해당하는 금액<br />
+                  총 교습시간의 1/2 경과전 : 이미 납부한 교습비등의 1/2에
+                  해당하는 금액<br />
+                  총 교습시간 1/2 경과 후 : 반환하지 않음<br />
+                  <br />
+                  총 교습시간은 교습기간 중의 총 교습시간을 말하며, 반환금액의
+                  산정은 반환사유가 발생한 날까지 경과된 교습시간을 기준으로
+                  한다.<br />
+                  원격교습의 경우 반환금액은 교습내용을 실제 수강한
+                  부분(인터넷으로 수강하거나 학습기기로 저장한 것을 말한다)에
+                  해당하는 금액을 뺀 금액으로 한다.<br />
+                  회원이 온라인수업 이용을 중도에 해지하거나 서비스 이용계약이
+                  해지되는 경우에는 수강료 환불금액에서 할인된금액, 교재비,
+                  배송비, 사은품비, 신용카드수수료등 제비용을 차감한 후 환불하여
+                  드립니다.<br />
+                </div>
+              </v-col>
+            </v-row>
           </v-container>
         </v-tab-item>
       </v-tabs>
@@ -377,7 +429,7 @@
   </v-app>
 </template>
 
-<style  scoped>
+<style scoped>
 .bordered-text {
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #5b3690;
@@ -407,7 +459,7 @@ export default {
     return {
       rating: 4.8,
       screenWidth: "",
-      isMobile: false,
+      isMobile: false
     };
   },
 
@@ -427,7 +479,7 @@ export default {
     onWindowResize() {
       this.screenWidth = screen.width;
       this.isMobile = this.screenWidth <= 960 ? true : false;
-    },
-  },
+    }
+  }
 };
 </script>

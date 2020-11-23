@@ -111,69 +111,10 @@
       >
         국내최초! 쌍방향 온라인 화상강의
       </div>
-      <v-row class="px-3">
-        <v-col cols="12" md="6" offset-md="3" class="py-0">
-          <v-text-field
-            outlined
-            label="이름"
-            class="rounded-xl"
-            x-large
-          ></v-text-field>
-        </v-col>
-        <v-col cols="12" md="6" offset-md="3" class="py-0">
-          <v-text-field
-            outlined
-            label="전화번호"
-            class="rounded-xl"
-            x-large
-          ></v-text-field>
-        </v-col>
-        <v-col cols="12" md="4" offset-md="3" sm="6" class="py-0">
-          <v-text-field
-            outlined
-            label="수업일시"
-            class="rounded-xl"
-            x-large
-            readonly
-          ></v-text-field>
-        </v-col>
-        <v-col cols="12" md="2" sm="6" class="py-0">
-          <v-btn class="rounded-xl" color="#5b3690" x-large block>
-            <v-icon class="white--text" large> mdi-calendar-clock </v-icon>
-          </v-btn>
-        </v-col>
-      </v-row>
-      <v-row>
-        <v-col cols="12" md="6" offset-md="3">
-          <v-card flat color="#fafafa">
-            <v-container fluid>
-              <v-row>
-                <v-col cols="12" sm="6" class="py-0">
-                  <v-checkbox
-                    label="개인정보수집 및 이용동의"
-                    x-large
-                  ></v-checkbox>
-                </v-col>
-                <v-col cols="12" sm="6" class="py-0">
-                  <v-checkbox
-                    label="할인/ 이벤트안내 동의(선택)"
-                    x-large
-                  ></v-checkbox>
-                </v-col>
-              </v-row>
-            </v-container>
-          </v-card>
-        </v-col>
-      </v-row>
-      <div class="d-flex mt-10">
-        <v-btn
-          color="#4d2794"
-          depressed
-          class="white--text mx-auto px-10 rounded-tl-xl rounded-bl-xl rounded-tr-xl"
-          x-large
-          >블랙홀 무료체험
-        </v-btn>
-      </div>
+
+      <ApplyFreeClassForm @setSnackbar="setSnackbar"></ApplyFreeClassForm>
+
+    
     </v-container>
     <v-container
       class="px-0 py-0"
@@ -545,8 +486,121 @@
 
       <v-card flat>
         <v-row>
-          <v-col cols="12" md="8" offset-md="2">
-            <v-img src="../assets/FREECLASS_IMG1.png"></v-img>
+          <v-col cols="12" lg="9" md="10" class="mx-auto">
+            <!-- <v-img src="../assets/FREECLASS_IMG1.png"></v-img> -->
+            <v-card
+              tile
+              outlined
+              round
+              class="rounded-xl"
+              style="border: 2px solid #f2edfe;"
+            >
+              <v-container fluid>
+                <v-row class="px-10 py-6">
+                  <v-col cols="12" lg="3" md="6" class="d-flex flex-column ">
+                    <v-img
+                      src="@/assets/schedule_icon.png"
+                      contain
+                      width="60%"
+                      class="mx-auto"
+                    >
+                    </v-img>
+
+                    <div class="pl-5">
+                      <p class="h4 mt-5 mb-0" style="color:#b0a0c9">01.</p>
+                      <v-row dense>
+                        <v-col cols="10">
+                          <span class="mt-0 nanum grey--text body-1">
+                            스케줄 선택후.<br />
+                            상담원과 연결
+                          </span>
+                        </v-col>
+                        <v-col cols="1" class="d-none d-lg-flex">
+                          <v-icon height="100%" size="50" color="grey"
+                            >mdi-chevron-right</v-icon
+                          >
+                        </v-col>
+                      </v-row>
+                    </div>
+                  </v-col>
+                  <v-col cols="12" lg="3" md="6" class="d-flex flex-column">
+                    <v-img
+                      src="@/assets/message_icon.png"
+                      contain
+                      width="50%"
+                      class="mx-auto"
+                    >
+                    </v-img>
+                    <div class="pl-5">
+                      <p class="h4 mt-5 mb-0" style="color:#b0a0c9">02.</p>
+                      <v-row dense>
+                        <v-col cols="10">
+                          <span class="mt-0 nanum grey--text body-1">
+                            ZOOM 링크 전송<br />
+                            <span class="primary--text font-weight-bold"
+                              >비대면 화상 강의</span
+                            >
+                          </span>
+                        </v-col>
+                        <v-col cols="1" class="d-none d-lg-flex">
+                          <v-icon height="100%" size="50" color="grey" class=""
+                            >mdi-chevron-right</v-icon
+                          >
+                        </v-col>
+                      </v-row>
+                    </div>
+                  </v-col>
+                  <v-col cols="12" lg="3" md="6" class="d-flex flex-column">
+                    <v-img
+                      src="@/assets/card_icon.png"
+                      contain
+                      width="40%"
+                      class="mx-auto"
+                    >
+                    </v-img>
+                    <div class="pl-5">
+                      <p class="h4 mt-5 mb-0" style="color:#b0a0c9">03.</p>
+                      <v-row dense>
+                        <v-col cols="10">
+                          <span class="mt-0 nanum grey--text body-1">
+                            학습결과 리포트<br />
+                            <span class="primary--text font-weight-bold"
+                              >카카오톡 전송</span
+                            >
+                          </span>
+                        </v-col>
+                        <v-col cols="1" class="d-none d-lg-flex">
+                          <v-icon height="100%" size="50" color="grey"
+                            >mdi-chevron-right</v-icon
+                          >
+                        </v-col>
+                      </v-row>
+                    </div>
+                  </v-col>
+                  <v-col cols="12" lg="3" md="6" class="d-flex flex-column">
+                    <v-img
+                      src="@/assets/uniform_icon.png"
+                      contain
+                      width="60%"
+                      class="mx-auto"
+                    >
+                    </v-img>
+                    <div class="pl-5">
+                      <p class="h4 mt-5 mb-0 " style="color:#b0a0c9">04.</p>
+                      <v-row dense>
+                        <v-col cols="10">
+                          <span class="mt-0 nanum grey--text body-1">
+                            1:1 학습 컨설팅<br />
+                            &nbsp;<br />
+                          </span>
+                        </v-col>
+                        <v-col cols="1" style=""> </v-col>
+                      </v-row>
+                    </div>
+                  </v-col>
+                </v-row>
+              </v-container>
+            </v-card>
           </v-col>
         </v-row>
       </v-card>
@@ -556,70 +610,31 @@
       <div class="text-center text-purple h3 mt-5 mb-10 brb korean-text">
         국내최초! 쌍방향 온라인 화상강의
       </div>
-      <v-row class="px-3">
-        <v-col cols="12" md="6" offset-md="3" class="py-0">
-          <v-text-field
-            outlined
-            label="이름"
-            class="rounded-xl"
-            x-large
-          ></v-text-field>
-        </v-col>
-        <v-col cols="12" md="6" offset-md="3" class="py-0">
-          <v-text-field
-            outlined
-            label="전화번호"
-            class="rounded-xl"
-            x-large
-          ></v-text-field>
-        </v-col>
-        <v-col cols="12" md="4" offset-md="3" sm="6" class="py-0">
-          <v-text-field
-            outlined
-            label="수업일시"
-            class="rounded-xl"
-            x-large
-            readonly
-          ></v-text-field>
-        </v-col>
-        <v-col cols="12" md="2" sm="6" class="py-0">
-          <v-btn class="rounded-xl" color="#5b3690" x-large block>
-            <v-icon class="white--text" large> mdi-calendar-clock </v-icon>
-          </v-btn>
-        </v-col>
-      </v-row>
-      <v-row>
-        <v-col cols="12" md="6" offset-md="3">
-          <v-card flat color="#fafafa">
-            <v-container fluid>
-              <v-row>
-                <v-col cols="12" sm="6" class="py-0">
-                  <v-checkbox
-                    label="개인정보수집 및 이용동의"
-                    x-large
-                  ></v-checkbox>
-                </v-col>
-                <v-col cols="12" sm="6" class="py-0">
-                  <v-checkbox
-                    label="할인/ 이벤트안내 동의(선택)"
-                    x-large
-                  ></v-checkbox>
-                </v-col>
-              </v-row>
-            </v-container>
-          </v-card>
-        </v-col>
-      </v-row>
-      <div class="d-flex mt-10">
-        <v-btn
-          color="#4d2794"
-          depressed
-          class="white--text mx-auto px-10 rounded-tl-xl rounded-bl-xl rounded-tr-xl"
-          x-large
-          >블랙홀 무료체험
-        </v-btn>
-      </div>
+
+      <ApplyFreeClassForm @setSnackbar="setSnackbar"></ApplyFreeClassForm>
+
     </v-container>
+
+    <v-snackbar
+      :timeout="3000"
+      :value="true"
+      top
+      block
+      rounded="pill"
+      color="blue-grey"
+      elevation="24"
+      multiLine
+      v-model="snackbar"
+    >
+      <span class="nanum font-weight-black "
+        >블랙홀 무료체험 신청이 완료되었습니다.</span
+      >
+      <template v-slot:action="{ attrs }">
+        <v-btn color="white" text v-bind="attrs" @click="snackbar = false">
+          Close
+        </v-btn>
+      </template>
+    </v-snackbar>
   </v-app>
 </template>
 
@@ -678,15 +693,18 @@
 
 <script>
 import Header from "@/components/Header.vue";
+import ApplyFreeClassForm from "@/components/ApplyFreeClassForm";
 export default {
   components: {
     Header,
+    ApplyFreeClassForm
   },
   data() {
     return {
       rating: 4.8,
       screenWidth: "",
       isMobile: false,
+      snackbar: false,
       review1: [
         {
           title: "영어발음에 큰 도움",
@@ -751,6 +769,10 @@ export default {
       this.screenWidth = screen.width;
       this.isMobile = this.screenWidth <= 960 ? true : false;
     },
+    setSnackbar(data) {
+      this.snackbar = data;
+    }
   },
+  computed: {}
 };
 </script>
