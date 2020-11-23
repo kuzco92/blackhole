@@ -1,6 +1,22 @@
 <template>
   <v-app>
     <router-view></router-view>
+    <v-container fluid class="px-0 py-0">
+      <v-btn
+        elevation="3"
+        fab
+        icon
+        fixed
+        bottom
+        class="yellow black--text"
+        :style="
+          isMobile ? 'right:20px; bottom:20px' : 'right:50px; bottom:50px'
+        "
+        href="http://pf.kakao.com/_RgxjSxb/chat"
+        target="_blank"
+        ><v-icon large>mdi-chat</v-icon></v-btn
+      >
+    </v-container>
     <v-container class="py-0">
       <v-row class="my-0 py-0">
         <v-col cols="12" md="12">
