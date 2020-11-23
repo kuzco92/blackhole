@@ -7,32 +7,39 @@ const routes = [
   {
     path: "/free-class",
     name: "FreeClass",
-    component: require("../views/FreeClass.vue").default
+    component: () =>
+      import(/* webpackChunkName: "home" */ "@/views/FreeClass.vue")
+  },
+  {
+    path: "/",
+    name: "Index",
+    component: () => import(/* webpackChunkName: "home" */ "@/views/Main.vue")
   },
   {
     path: "/main",
     name: "Main",
-    component: require("../views/Main.vue").default
+    component: () => import(/* webpackChunkName: "home" */ "@/views/Main.vue")
   },
   {
     path: "/class",
     name: "Class",
-    component: require("../views/Class.vue").default
+    component: () => import(/* webpackChunkName: "home" */ "@/views/Class.vue")
   },
   {
     path: "/board",
     name: "Board",
-    component: require("../views/Board.vue").default
+    component: () => import(/* webpackChunkName: "home" */ "@/views/Board.vue")
   },
   {
     path: "/mypage",
     name: "Mypage",
-    component: require("../views/Mypage.vue").default
+    component: () => import(/* webpackChunkName: "home" */ "@/views/Mypage.vue")
   }
 ];
 
 const router = new VueRouter({
   mode: "history",
+  // base: "new_bhen",
   routes
   // scrollBehavior () {
   //     return { x: 0, y: 0 }
