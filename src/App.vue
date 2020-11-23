@@ -24,12 +24,8 @@
               </v-col>
             </v-row>
             <v-row :class="isMobile ? '' : 'h6'">
-              <v-col class="text-purple text-center caption">
-                고객센터
-              </v-col>
-              <v-col class="text-purple text-center caption">
-                1661-3283
-              </v-col>
+              <v-col class="text-purple text-center caption"> 고객센터 </v-col>
+              <v-col class="text-purple text-center caption"> 1661-3283 </v-col>
             </v-row>
             <v-row class="text-center">
               <v-col>
@@ -46,7 +42,7 @@
         </v-col>
       </v-row>
       <v-row class="my-0 py-0">
-        <div style="font-size:9px" class="grey--text text-center mx-auto">
+        <div style="font-size: 9px" class="grey--text text-center mx-auto">
           Copyright ⓒ 2020 BlackHoleEnglish. All Rights Reserved
         </div>
       </v-row>
@@ -62,7 +58,7 @@ export default {
     return {
       rating: 4.8,
       screenWidth: "",
-      isMobile: false
+      isMobile: false,
     };
   },
 
@@ -85,8 +81,8 @@ export default {
     onWindowResize() {
       this.screenWidth = screen.width;
       this.isMobile = this.screenWidth <= 960 ? true : false;
-    }
-  }
+    },
+  },
 };
 </script>
 
