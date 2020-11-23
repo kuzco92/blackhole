@@ -571,7 +571,9 @@
       multiLine
       v-model="snackbar"
     >
-      <span class="nanum h6 pa-10">블랙홀 무료체험 신청이 완료되었습니다.</span>
+      <span class="nanum font-weight-black "
+        >블랙홀 무료체험 신청이 완료되었습니다.</span
+      >
       <template v-slot:action="{ attrs }">
         <v-btn color="white" text v-bind="attrs" @click="snackbar = false">
           Close

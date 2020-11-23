@@ -24,6 +24,18 @@
           :rules="numberRules"
         ></v-text-field>
       </v-col>
+      <v-col cols="12" md="6" offset-md="3" class="py-0">
+        <v-select
+          outlined
+          label="학년"
+          class="rounded-xl"
+          x-large
+          :items="grades"
+          v-model="grade"
+          required
+          :rules="gradeRules"
+        ></v-select>
+      </v-col>
       <v-col cols="12" md="4" offset-md="3" sm="6" class="py-0">
         <!-- <v-text-field
         outlined
@@ -115,6 +127,7 @@ export default {
       startDay: "",
       startTime: "",
       agreement: "",
+      grade: "",
       nameRules: [
         v => !!v || "이름을 입력해주세요.",
         v => (v && v.length <= 10) || "이름은 10글자 이내여야 합니다."
@@ -124,6 +137,7 @@ export default {
         v => (v && v.length <= 13) || "번호는 13글자 이내여야 합니다.",
         v => !isNaN(parseInt(v.replace(/-/gi, ""))) || "번호는 숫자여야 합니다."
       ],
+      gradeRules: [v => !!v || "학년을 선택해주세요."],
       dateRules: [v => !!v || "수업일을 선택해주세요."],
       timeRules: [v => !!v || "수업시간을 입력해주세요."],
       agreementRules: [v => !!v || "개인정보수집 및 이용동의 체크해 주세요."]
@@ -164,12 +178,12 @@ export default {
         form.append("day", ymdArr[2]);
         form.append("hour", hmArr[0]);
         form.append("min", hmArr[2]);
-        form.append("grade", "1");
-        form.append("history", "2");
+        form.append("grade", this.grade);
+        form.append("history", "New Website");
         form.append("levelAdd", "1");
 
         axios
-          .post("http://bhen.co.kr/post_leveltest_apply_json.php", form)
+          .post("http://bhen.co.kr/api/post_leveltest_apply.php", form)
           .then(res => {
             console.log(res);
             this.$refs.form.reset();
@@ -177,6 +191,9 @@ export default {
           })
           .catch(err => {
             console.log(err);
+            alert(
+              "무료 체험 수업이 신청되지 않았습니다. 고객센터에 문의하세요."
+            );
           });
       }
     },
@@ -219,6 +236,19 @@ export default {
       let year = currentDate.getFullYear();
       let ymd = `${year}-${month}-${day}`;
       return ymd;
+    },
+    grades() {
+      let grades = [];
+      grades.push({ text: "초1", value: 8 });
+      grades.push({ text: "초2", value: 9 });
+      grades.push({ text: "초3", value: 10 });
+      grades.push({ text: "초4", value: 11 });
+      grades.push({ text: "초5", value: 12 });
+      grades.push({ text: "초6", value: 13 });
+      grades.push({ text: "중1", value: 15 });
+      grades.push({ text: "중2", value: 16 });
+      grades.push({ text: "중3", value: 17 });
+      return grades;
     },
     dates() {
       var i = 0;

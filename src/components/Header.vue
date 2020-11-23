@@ -53,7 +53,12 @@
           </div>
         </v-col>
         <v-col cols="2" class="d-flex align-center">
-          <a href="http://bhen.co.kr/gift/" target="_blank">
+          <!-- <a href="http://bhen.co.kr/gift/" target="_blank"> -->
+          <a
+            href="#"
+            target="_blank"
+            onclick="alert('준비중 입니다.'); return false;"
+          >
             <v-icon color="white" large>mdi-gift-outline</v-icon>
           </a>
         </v-col>
@@ -63,24 +68,35 @@
     <v-dialog v-model="phoneDialog" max-width="500">
       <v-card class="pa-5">
         <div class="mb-5 h5">휴대번호 뒷 4자리를 입력해주세요.</div>
-        <v-text-field outlined dense></v-text-field>
-        <div class="d-flex justify-end">
-          <v-btn
-            class="mr-3"
-            depressed
-            color="#5b3690"
-            text
-            @click="phoneDialog = false"
-            >Cancel</v-btn
-          >
-          <v-btn
-            depressed
-            color="#5b3690"
-            class="white--text"
-            @click="$router.push('/mypage')"
-            >OK</v-btn
-          >
-        </div>
+        <v-form ref="form1">
+          <v-text-field
+            outlined
+            dense
+            required
+            :rules="numRules"
+            v-model="num"
+            @keypress.enter.prevent
+          ></v-text-field>
+
+          <div class="d-flex justify-end">
+            <v-btn
+              class="mr-3"
+              depressed
+              color="#5b3690"
+              text
+              @click="phoneDialog = false"
+              >Cancel</v-btn
+            >
+            <v-btn
+              depressed
+              color="#5b3690"
+              class="white--text"
+              @click="isMem('pc')"
+              :loading="btnLoding"
+              >OK</v-btn
+            >
+          </div>
+        </v-form>
       </v-card>
     </v-dialog>
   </v-card>
@@ -122,7 +138,8 @@
               >
               <!-- <v-list-item @click="$router.push('/board')"> 게시판</v-list-item> -->
               <v-list-item @click="phoneDialog = true">마이페이지</v-list-item>
-              <v-list-item to="/class">스토어</v-list-item>
+              <!-- <v-list-item to="/class">스토어</v-list-item> -->
+              <v-list-item @click="alert('준비중 입니다.')">스토어</v-list-item>
             </v-list>
           </v-card>
         </v-menu>
@@ -132,37 +149,53 @@
     <v-dialog v-model="phoneDialog" max-width="500">
       <v-card class="pa-5">
         <div class="mb-5 h5">휴대번호 뒷 4자리를 입력해주세요.</div>
-        <v-text-field outlined dense></v-text-field>
-        <div class="d-flex justify-end">
-          <v-btn
-            class="mr-3"
-            depressed
-            color="#5b3690"
-            text
-            @click="phoneDialog = false"
-            >Cancel</v-btn
-          >
-          <v-btn
-            depressed
-            color="#5b3690"
-            class="white--text"
-            @click="$router.push('/mypage')"
-            >OK</v-btn
-          >
-        </div>
+        <v-form ref="form2">
+          <v-text-field
+            outlined
+            dense
+            required
+            :rules="numRules"
+            v-model="num"
+            @keypress.enter.prevent
+          ></v-text-field>
+
+          <div class="d-flex justify-end">
+            <v-btn
+              class="mr-3"
+              depressed
+              color="#5b3690"
+              text
+              @click="phoneDialog = false"
+              >Cancel</v-btn
+            >
+            <v-btn
+              depressed
+              color="#5b3690"
+              class="white--text"
+              @click="isMem('mobile')"
+              :loading="loading"
+              >OK</v-btn
+            >
+          </div>
+        </v-form>
       </v-card>
     </v-dialog>
   </v-container>
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
   data() {
     return {
       rating: 4.8,
       screenWidth: "",
       isMobile: false,
-      phoneDialog: false
+      phoneDialog: false,
+      num: "",
+      btnLoding: false,
+      numRules: [v => !!v || "번호를 입력하세요."]
     };
   },
 
@@ -182,6 +215,55 @@ export default {
     onWindowResize() {
       this.screenWidth = screen.width;
       this.isMobile = this.screenWidth <= 960 ? true : false;
+    },
+    isMem(agent) {
+      if (agent == "pc") {
+        if (this.$refs.form1.validate()) {
+          this.btnLoding = true;
+          axios
+            .get("http://bhen.co.kr/api/get_is_mem.php", {
+              params: {
+                num: this.num
+              }
+            })
+            .then(res => {
+              if (res.data.result !== 0) {
+                this.$router.push("/mypage");
+              } else {
+                this.btnLoding = false;
+                alert("회원으로 등록되어있지 않습니다.");
+              }
+            })
+            .catch(err => {
+              this.btnLoding = false;
+              alert("접속이 되지않습니다 고객센터에 문의하세요/");
+              console.log(err);
+            });
+        }
+      } else if (agent == "mobile") {
+        if (this.$refs.form2.validate()) {
+          this.btnLoding = true;
+          axios
+            .get("http://bhen.co.kr/api/get_is_mem.php", {
+              params: {
+                num: this.num
+              }
+            })
+            .then(res => {
+              if (res.data.result !== 0) {
+                this.$router.push("/mypage");
+              } else {
+                this.btnLoding = false;
+                alert("회원으로 등록되어있지 않습니다.");
+              }
+            })
+            .catch(err => {
+              this.btnLoding = false;
+              alert("접속이 되지않습니다 고객센터에 문의하세요.");
+              console.log(err);
+            });
+        }
+      }
     }
   }
 };
