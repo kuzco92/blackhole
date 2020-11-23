@@ -43,14 +43,14 @@
               <v-col class="text-purple text-center caption"> 고객센터 </v-col>
               <v-col class="text-purple text-center caption"> 1661-3283 </v-col>
             </v-row>
-            <v-row class="text-center">
-              <v-col>
+            <v-row class="text-center" justify="center">
+              <v-col cols="2">
                 <v-icon>fab fa-instagram</v-icon>
               </v-col>
-              <v-col>
+              <v-col cols="2">
                 <v-icon>fab fa-youtube</v-icon>
               </v-col>
-              <v-col>
+              <v-col cols="2">
                 <v-icon>fab fa-facebook</v-icon>
               </v-col>
             </v-row>
