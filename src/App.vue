@@ -40,21 +40,17 @@
               </v-col>
             </v-row>
             <v-row :class="isMobile ? '' : 'h6'">
-              <v-col class="text-purple text-center caption">
-                고객센터
-              </v-col>
-              <v-col class="text-purple text-center caption">
-                1661-3283
-              </v-col>
+              <v-col class="text-purple text-center caption"> 고객센터 </v-col>
+              <v-col class="text-purple text-center caption"> 1661-3283 </v-col>
             </v-row>
-            <v-row class="text-center">
-              <v-col>
+            <v-row class="text-center" justify="center">
+              <v-col cols="2">
                 <v-icon>fab fa-instagram</v-icon>
               </v-col>
-              <v-col>
+              <v-col cols="2">
                 <v-icon>fab fa-youtube</v-icon>
               </v-col>
-              <v-col>
+              <v-col cols="2">
                 <v-icon>fab fa-facebook</v-icon>
               </v-col>
             </v-row>
@@ -62,7 +58,7 @@
         </v-col>
       </v-row>
       <v-row class="my-0 py-0">
-        <div style="font-size:9px" class="grey--text text-center mx-auto">
+        <div style="font-size: 9px" class="grey--text text-center mx-auto">
           Copyright ⓒ 2020 BlackHoleEnglish. All Rights Reserved
         </div>
       </v-row>
@@ -71,6 +67,7 @@
 </template>
 
 <script>
+import AOS from "aos";
 export default {
   name: "App",
 
@@ -78,12 +75,13 @@ export default {
     return {
       rating: 4.8,
       screenWidth: "",
-      isMobile: false
+      isMobile: false,
     };
   },
 
   created() {
     window.addEventListener("resize", this.onWindowResize);
+    AOS.init();
   },
   destroyed() {
     window.removeEventListener("resize", this.onWindowResize);
@@ -101,8 +99,8 @@ export default {
     onWindowResize() {
       this.screenWidth = screen.width;
       this.isMobile = this.screenWidth <= 960 ? true : false;
-    }
-  }
+    },
+  },
 };
 </script>
 
