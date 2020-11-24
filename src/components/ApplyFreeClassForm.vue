@@ -183,7 +183,7 @@ export default {
         form.append("levelAdd", "1");
 
         axios
-          .post("http://bhen.co.kr/api/post_leveltest_apply.php", form)
+          .post("//bhen.co.kr/api/post_leveltest_apply.php", form)
           .then(res => {
             console.log(res);
             this.$refs.form.reset();

@@ -13,7 +13,7 @@
         >
           <v-card height="100%" style="background: #00000000">
             <v-container
-              class="d-flex flex-column"
+              class="d-flex flex-column animate__animated animate__fadeInDown"
               :class="isMobile ? 'px-0 py-0 ' : 'px-8'"
               style="height: 100%"
             >
@@ -151,13 +151,9 @@
         </v-img>
       </v-card>
     </v-container>
-    <v-container
-      fluid
-      class="px-0 py-0"
-      data-aos="fade-up"
-      data-aos-duration="1000"
-      data-aos-anchor-placement="top-bottom"
-    >
+
+    <v-container fluid class="px-0 py-0">
+
       <v-img src="../assets/blackhole_main_img2.jpg"></v-img>
     </v-container>
     <v-container class="px-0 py-0" fluid>

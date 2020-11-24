@@ -14,7 +14,7 @@
 
           <v-card
             :class="isMobile ? 'mx-2' : 'mx-10'"
-            class="rounded-xl mb-10 mx-auto my-10"
+            class="rounded-xl mb-10 mx-auto my-10 animate__animated animate__fadeInDown"
             max-width="700"
             elevation="10"
           >

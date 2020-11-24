@@ -88,7 +88,7 @@ export default {
   },
 
   mounted() {
-    this.$router.push("/main");
+    // this.$router.push("/main");
     this.screenWidth = screen.width;
     this.isMobile = this.screenWidth <= 960 ? true : false;
 

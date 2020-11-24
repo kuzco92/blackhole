@@ -221,7 +221,7 @@ export default {
         if (this.$refs.form1.validate()) {
           this.btnLoding = true;
           axios
-            .get("http://bhen.co.kr/api/get_is_mem.php", {
+            .get("//bhen.co.kr/api/get_is_mem.php", {
               params: {
                 num: this.num,
               },
@@ -236,7 +236,7 @@ export default {
             })
             .catch((err) => {
               this.btnLoding = false;
-              alert("접속이 되지않습니다 고객센터에 문의하세요/");
+              alert("접속이 되지않습니다 고객센터에 문의하세요.");
               console.log(err);
             });
         }
@@ -244,7 +244,7 @@ export default {
         if (this.$refs.form2.validate()) {
           this.btnLoding = true;
           axios
-            .get("http://bhen.co.kr/api/get_is_mem.php", {
+            .get("//bhen.co.kr/api/get_is_mem.php", {
               params: {
                 num: this.num,
               },
