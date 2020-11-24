@@ -67,6 +67,7 @@
 </template>
 
 <script>
+import AOS from "aos";
 export default {
   name: "App",
 
@@ -80,6 +81,7 @@ export default {
 
   created() {
     window.addEventListener("resize", this.onWindowResize);
+    AOS.init();
   },
   destroyed() {
     window.removeEventListener("resize", this.onWindowResize);
