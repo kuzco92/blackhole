@@ -156,7 +156,7 @@
       class="px-0 py-0"
       data-aos="fade-up"
       data-aos-duration="1000"
-      data-aos-anchor-placement="center-bottom"
+      data-aos-anchor-placement="top-bottom"
     >
       <v-img src="../assets/blackhole_main_img2.jpg"></v-img>
     </v-container>
@@ -475,7 +475,7 @@
           cols="12"
           md="5"
           class="d-flex flex-column grey--text"
-          data-aos="fade-left"
+          data-aos="fade-right"
           data-aos-duration="1000"
           data-aos-anchor-placement="center-bottom"
         >
@@ -507,7 +507,7 @@
           cols="12"
           md="5"
           class="d-flex flex-column grey--text"
-          data-aos="fade-right"
+          data-aos="fade-left"
           data-aos-duration="1000"
           data-aos-anchor-placement="center-bottom"
         >
