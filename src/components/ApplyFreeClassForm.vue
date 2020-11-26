@@ -245,9 +245,12 @@ export default {
       grades.push({ text: "초4", value: 11 });
       grades.push({ text: "초5", value: 12 });
       grades.push({ text: "초6", value: 13 });
-      grades.push({ text: "중1", value: 15 });
-      grades.push({ text: "중2", value: 16 });
-      grades.push({ text: "중3", value: 17 });
+      grades.push({ text: "중1", value: 14 });
+      grades.push({ text: "중2", value: 15 });
+      grades.push({ text: "중3", value: 16 });
+      grades.push({ text: "고1", value: 17 });
+      grades.push({ text: "고2", value: 18 });
+      grades.push({ text: "고3", value: 19 });
       return grades;
     },
     dates() {
