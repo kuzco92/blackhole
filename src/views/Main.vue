@@ -14,7 +14,7 @@
         >
           <v-card height="100%" style="background: #00000000">
             <v-container
-              class="d-flex flex-column animate__animated animate__fadeInDown"
+              class="d-flex flex-column"
               :class="isMobile ? 'px-0 py-0 ' : 'px-8'"
               style="height: 100%"
             >
@@ -154,8 +154,10 @@
       </v-card>
     </v-container>
 
+
     <v-container fluid class="px-0 py-0">
       <v-img src="../assets/blackhole_main_img2.jpg" eager></v-img>
+
     </v-container>
     <v-container class="px-0 py-0" fluid>
       <div
@@ -246,7 +248,11 @@
         data-aos-duration="1000"
         data-aos-anchor-placement="center-bottom"
       >
-        <v-row justify="center" align="center">
+        <v-row
+          justify="center"
+          align="center"
+          class="d-flex flex-md-row flex-column"
+        >
           <v-card
             style="border: 10px solid #34163e"
             class="rounded-circle d-flex align-center justify-center text-center mx-auto mx-md-3 my-5 my-md-0 h6"
@@ -523,9 +529,11 @@
           </div>
           <v-img
             src="../assets/img-graph.png"
+
             class="mt-15 mb-10"
             eager
             contain
+
           ></v-img>
           <div class="mt-10 h6">
             <span class="text-purple font-weight-black"> 암기 3단계 :</span>
@@ -854,6 +862,12 @@
   </v-app>
 </template>
 
+<style  scoped>
+.mobile-flex {
+  flex: 0 0 100%; /* flex-grow, flex-shrink, flex-basis */
+}
+</style>
+
 <script>
 import Header from "@/components/Header.vue";
 import AOS from "aos";
@@ -919,7 +933,6 @@ export default {
 
   created() {
     window.addEventListener("resize", this.onWindowResize);
-    AOS.init();
   },
   destroyed() {
     window.removeEventListener("resize", this.onWindowResize);
@@ -928,6 +941,8 @@ export default {
   mounted() {
     this.screenWidth = screen.width;
     this.isMobile = this.screenWidth <= 960 ? true : false;
+    AOS.init();
+    AOS.refresh();
 
     // document.getElementById("scroll").scrollIntoView();
   },
