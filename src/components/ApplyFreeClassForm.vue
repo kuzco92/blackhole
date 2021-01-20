@@ -171,7 +171,7 @@ export default {
         form.enctype = "multipart/form-data";
         form.append("name", this.name);
         form.append("aHp", numberArr[0]);
-        form.append("bHp", numberArr[0]);
+        form.append("bHp", numberArr[1]);
         form.append("cHp", numberArr[2]);
         form.append("year", ymdArr[0]);
         form.append("month", ymdArr[1]);
@@ -179,7 +179,7 @@ export default {
         form.append("hour", hmArr[0]);
         form.append("min", hmArr[2]);
         form.append("grade", this.grade);
-        form.append("history", "New Website");
+        form.append("history", "New Website // real number:" + this.number);
         form.append("levelAdd", "1");
 
         axios
@@ -188,6 +188,12 @@ export default {
             console.log(res);
             this.$refs.form.reset();
             this.$emit("setSnackbar", true);
+            window.fbq("track", "CompleteRegistration", {
+              content_name: "무료 레벨 테스트 등록",
+              currency: "KRW",
+              status: "",
+              value: ""
+            });
           })
           .catch(err => {
             console.log(err);

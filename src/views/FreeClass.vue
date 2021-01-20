@@ -768,6 +768,7 @@ export default {
   mounted() {
     this.screenWidth = screen.width;
     this.isMobile = this.screenWidth <= 960 ? true : false;
+    window.fbq("track", "Lead", { content_name: "무료 레벨 테스트" });
   },
 
   methods: {
