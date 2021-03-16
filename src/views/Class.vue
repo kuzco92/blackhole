@@ -304,7 +304,7 @@
             <v-container class="pa-0 ma-10 mt-0" fluid>
               <v-row class="h5 nanum">
                 <v-col cols="12" md="6" class="pa-0">
-                  <span class="font-weight-black">주 5회</span> 3개월 과정(60회)
+                  <span class="font-weight-black">주 3회</span> 3개월 과정(60회)
                 </v-col>
                 <v-col cols="12" md="6" class="pa-0">
                   <span class="font-weight-black">462,000원</span>
@@ -313,24 +313,16 @@
               </v-row>
               <v-row class="h5 nanum">
                 <v-col cols="12" md="6" class="pa-0">
-                  <span class="font-weight-black">주 3회</span> 3개월 과정(36회)
+                  <span class="font-weight-black">주 2회</span> 3개월 과정(36회)
                 </v-col>
                 <v-col cols="12" md="6" class="pa-0">
                   <span class="font-weight-black">294,000원</span> (98,000원/월)
                 </v-col>
               </v-row>
-              <v-row class="h5 nanum">
-                <v-col cols="12" md="6" class="pa-0">
-                  <span class="font-weight-black">주 2회</span> 3개월 과정(24회)
-                </v-col>
-                <v-col cols="12" md="6" class="pa-0">
-                  <span class="font-weight-black">207,000원</span> (69,000원/월)
-                </v-col>
-              </v-row>
 
               <v-row class="h5 nanum mt-5">
                 <v-col cols="12" md="6" class="pa-0">
-                  <span class="font-weight-black">주 5회</span> 6개월
+                  <span class="font-weight-black">주 3회</span> 6개월
                   과정(120회)
                 </v-col>
                 <v-col cols="12" md="6" class="pa-0">
@@ -340,24 +332,16 @@
               </v-row>
               <v-row class="h5 nanum">
                 <v-col cols="12" md="6" class="pa-0">
-                  <span class="font-weight-black">주 3회</span> 6개월 과정(72회)
+                  <span class="font-weight-black">주 2회</span> 6개월 과정(72회)
                 </v-col>
                 <v-col cols="12" md="6" class="pa-0">
                   <span class="font-weight-black">588,000원</span> (98,000원/월)
                 </v-col>
               </v-row>
-              <v-row class="h5 nanum">
-                <v-col cols="12" md="6" class="pa-0">
-                  <span class="font-weight-black">주 2회</span> 6개월 과정(48회)
-                </v-col>
-                <v-col cols="12" md="6" class="pa-0">
-                  <span class="font-weight-black">414,000원</span> (69,000원/월)
-                </v-col>
-              </v-row>
 
               <v-row class="h5 nanum mt-5">
                 <v-col cols="12" md="6" class="pa-0">
-                  <span class="font-weight-black">주 5회</span> 1년 과정(240회)
+                  <span class="font-weight-black">주 3회</span> 1년 과정(240회)
                 </v-col>
                 <v-col cols="12" md="6" class="pa-0">
                   <span class="font-weight-black">1,848,000원</span>
@@ -366,19 +350,11 @@
               </v-row>
               <v-row class="h5 nanum">
                 <v-col cols="12" md="6" class="pa-0">
-                  <span class="font-weight-black">주 3회</span> 1년 과정(144회)
+                  <span class="font-weight-black">주 2회</span> 1년 과정(144회)
                 </v-col>
                 <v-col cols="12" md="6" class="pa-0">
                   <span class="font-weight-black">1,176,000원</span>
                   (98,000원/월)
-                </v-col>
-              </v-row>
-              <v-row class="h5 nanum">
-                <v-col cols="12" md="6" class="pa-0">
-                  <span class="font-weight-black">주 2회</span> 1년 과정(96회)
-                </v-col>
-                <v-col cols="12" md="6" class="pa-0">
-                  <span class="font-weight-black">828,000원</span> (69,000원/월)
                 </v-col>
               </v-row>
               <v-row>
