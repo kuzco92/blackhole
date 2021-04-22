@@ -99,7 +99,7 @@
                   </div>
                   <div class="white--text">
                     실시간 외국인 수업,
-                    <span class="font-weight-black h6">블랙홀 영어</span>
+                    <span class="font-weight-black h6">메가 블랙홀</span>
                   </div>
                 </v-col>
                 <v-col cols="12" md="6" align-self="start">
@@ -154,7 +154,7 @@
       </v-card>
     </v-container>
 
-    <v-container fluid class="px-0 py-0">
+    <v-container fluid class="px-0 py-0" id="about">
       <v-img src="../assets/blackhole_main_img2.jpg" eager></v-img>
     </v-container>
     <v-container class="px-0 py-0" fluid>
@@ -545,7 +545,7 @@
         </v-col>
       </v-row>
     </v-container>
-    <v-container fluid class="px-0 py-0">
+    <v-container fluid class="px-0 py-0" id="review">
       <v-card tile color="#e6ddf8" class="pt-10">
         <div
           data-aos="fade-up"
@@ -926,7 +926,15 @@ export default {
       ]
     };
   },
-
+  computed: {
+    options() {
+      return {
+        duration: 300,
+        offset: 0,
+        easing: "easeInOutCubic"
+      };
+    }
+  },
   created() {
     window.addEventListener("resize", this.onWindowResize);
   },
@@ -939,6 +947,13 @@ export default {
     this.isMobile = this.screenWidth <= 960 ? true : false;
     AOS.init();
     AOS.refresh();
+
+    let postion = this.$route.query.position;
+    if (postion == "about" || postion == "review") {
+      setTimeout(() => {
+        this.$vuetify.goTo("#" + postion, this.options);
+      }, 500);
+    }
 
     // document.getElementById("scroll").scrollIntoView();
   },
